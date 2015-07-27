@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (Web2C 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proj_report_outline.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: using.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: acm.bst
+Database file #1: sample.bib
+Warning--empty journal in kemps2012dynamic
+You've used 29 entries,
+            2253 wiz_defined-function locations,
+            742 strings with 10550 characters,
+and the built_in function-call counts, 12368 in all, are:
+= -- 1186
+> -- 560
+< -- 0
++ -- 230
+- -- 192
+* -- 970
+:= -- 1876
+add.period$ -- 90
+call.type$ -- 29
+change.case$ -- 168
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 509
+empty$ -- 1025
+format.name$ -- 192
+if$ -- 2719
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 28
+newline$ -- 146
+num.names$ -- 64
+pop$ -- 194
+preamble$ -- 1
+purify$ -- 140
+quote$ -- 0
+skip$ -- 366
+stack$ -- 0
+substring$ -- 860
+swap$ -- 185
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 1
+while$ -- 116
+width$ -- 31
+write$ -- 315
+(There was 1 warning)

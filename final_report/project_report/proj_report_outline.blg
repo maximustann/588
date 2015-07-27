@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (Web2C 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proj_report_outline.aux
+A level-1 auxiliary file: acknowledge.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: using.aux
+A level-1 auxiliary file: example.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: acm.bst
+Database file #1: sample.bib
+Warning--I didn't find a database entry for "GRM97GC"
+Warning--I didn't find a database entry for "Dum93a"
+Warning--I didn't find a database entry for "Dum93b"
+Warning--I didn't find a database entry for "GMS94"
+Warning--I didn't find a database entry for "Lam94"
+You've used 25 entries,
+            2253 wiz_defined-function locations,
+            733 strings with 9557 characters,
+and the built_in function-call counts, 10481 in all, are:
+= -- 1029
+> -- 434
+< -- 0
++ -- 183
+- -- 151
+* -- 819
+:= -- 1571
+add.period$ -- 78
+call.type$ -- 25
+change.case$ -- 147
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 423
+empty$ -- 882
+format.name$ -- 151
+if$ -- 2306
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 24
+newline$ -- 128
+num.names$ -- 52
+pop$ -- 163
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 308
+stack$ -- 0
+substring$ -- 783
+swap$ -- 154
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 0
+while$ -- 98
+width$ -- 27
+write$ -- 271
+(There were 5 warnings)

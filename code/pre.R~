@@ -1,0 +1,13 @@
+source("DataExtraction.R")
+predata <- function(noService=3, noCandLoc=3){
+	set.seed(1)
+	matrixSize <- noService * noCandLoc
+	cost_matrix <<- matrix(floor(rnorm(matrixSize * matrixSize, 100, 20)), 
+						  nrow = matrixSize, ncol = matrixSize)
+
+	frequency_matrix <<- matrix(data = floor(runif(matrixSize * matrixSize, 1, 120)), 
+							   nrow = matrixSize, ncol = matrixSize)
+
+	latency_matrix <<- extract(matrixSize)
+}
+

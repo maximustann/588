@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Web service Location-Allocation Problem Modeling}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Develop a Multi-Objective PSO based approach}{2}{0}{1}
+\beamer@sectionintoc {2}{Work Done}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Problem Modeling}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Algorithm Design}{4}{0}{2}
+\beamer@subsectionintoc {2}{3}{Experiment Design}{7}{0}{2}
+\beamer@subsectionintoc {2}{4}{Experimental Results}{8}{0}{2}
+\beamer@sectionintoc {3}{Future Plan}{9}{0}{3}

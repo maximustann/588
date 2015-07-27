@@ -1,0 +1,22 @@
+library(scatterplot3d)
+library(rgl)
+viennet <- function(x){
+	f1 <- 0.5*(x[1]^2+x[2]^2)+sin(x[1]^2+x[2]^2)
+	f2 <- 0.125*(3*x[1]-2*x[2]+4)^2+(1.0/27.0)*(x[1]-x[2]+1)^2+15
+	f3 <- 1.0/(x[1]^2+x[2]^2+1)-1.1*exp(-(x[1]^2+x[2]^2))
+	return(c(f1,f2,f3))
+}
+varcount <- 2
+fncount <- 3
+lbound <- c(-3,-3)
+ubound <- c(3,3)
+optmin <- 0
+
+## Run Solver (gn omitted)
+ex1 <- algorithm(viennet,varcnt=varcount,fncnt=fncount,
+			   lowerbound=lbound,upperbound=ubound,opt=optmin)
+## Access Pareto Object Fields
+#print(ex1$numsols)
+#print(ex1$objfnvalues)
+#print(ex1$paramvalues)
+plot3d(ex1$objfnvalues[,1],ex1$objfnvalues[,2],ex1$objfnvalues[,3])

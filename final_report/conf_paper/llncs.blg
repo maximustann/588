@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (Web2C 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: llncs.aux
+White space in argument---line 27 of file llncs.aux
+ : \citation{5552800,
+ :                    6076756}
+I'm skipping whatever remains of this command
+The style file: splncs03.bst
+Database file #1: llncs.bib
+You've used 23 entries,
+            2785 wiz_defined-function locations,
+            773 strings with 9862 characters,
+and the built_in function-call counts, 15441 in all, are:
+= -- 1350
+> -- 397
+< -- 36
++ -- 167
+- -- 139
+* -- 1016
+:= -- 1886
+add.period$ -- 39
+call.type$ -- 23
+change.case$ -- 161
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 1379
+empty$ -- 1379
+format.name$ -- 160
+if$ -- 3462
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 256
+newline$ -- 74
+num.names$ -- 48
+pop$ -- 416
+preamble$ -- 1
+purify$ -- 113
+quote$ -- 0
+skip$ -- 452
+stack$ -- 0
+substring$ -- 1078
+swap$ -- 827
+text.length$ -- 36
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 0
+while$ -- 126
+width$ -- 25
+write$ -- 257
+(There was 1 error message)

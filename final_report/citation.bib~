@@ -1,0 +1,150 @@
+@INPROCEEDINGS{637339,
+	author={Kennedy, J. and Eberhart, R.C.},
+	booktitle={Systems, Man, and Cybernetics, 1997. Computational Cybernetics and Simulation., 1997 IEEE International Conference on},
+	title={A discrete binary version of the particle swarm algorithm},
+	year={1997},
+	month={Oct},
+	volume={5},
+	pages={4104-4108 vol.5},
+	doi={10.1109/ICSMC.1997.637339},
+	ISSN={1062-922X},
+}
+
+@INPROCEEDINGS{4699768,
+	author={Abdul Latiff, N.M. and Tsimenidis, C.C. and Sharif, B.S. and Ladha, C.},
+	booktitle={Personal, Indoor and Mobile Radio Communications, 2008. PIMRC 2008. IEEE 19th International Symposium on},
+	title={Dynamic clustering using binary multi-objective Particle Swarm Optimization for wireless sensor networks},
+	year={2008},
+	month={Sept},
+	pages={1-5},
+	doi={10.1109/PIMRC.2008.4699768},
+}
+
+@INPROCEEDINGS{4523478,
+	author={Peng Chunhua and Xu Xuesong},
+	booktitle={Electric Utility Deregulation and Restructuring and Power Technologies, 2008. DRPT 2008. Third International Conference on},
+	title={A hybrid algorithm based on immune BPSO and N-1 principle for PMU multi-objective optimization placement},
+	year={2008},
+	month={April},
+	pages={610-614},
+	doi={10.1109/DRPT.2008.4523478},
+}
+
+@article{Shen2004145,
+	title = "Modified particle swarm optimization algorithm for variable selection in \{MLR\} and \{PLS\} modeling: \{QSAR\} studies of antagonism of angiotensin \{II\} antagonists ",
+	journal = "European Journal of Pharmaceutical Sciences ",
+	volume = "22",
+	number = "2–3",
+	pages = "145 - 152",
+	year = "2004",
+	note = "",
+	issn = "0928-0987",
+	doi = "http://dx.doi.org/10.1016/j.ejps.2004.03.002",
+	url = "http://www.sciencedirect.com/science/article/pii/S0928098704000624",
+	author = "Qi Shen and Jian-Hui Jiang and Chen-Xu Jiao and Guo-li Shen and Ru-Qin Yu",
+	keywords = "Particle swarm optimization",
+	keywords = "Quantitative structure-activity relationships",
+	keywords = "Variable selection",
+	keywords = "Antagonism "
+}
+
+@article{
+	year={2010},
+	issn={1865-9284},
+	journal={Memetic Computing},
+	volume={2},
+	number={1},
+	doi={10.1007/s12293-009-0028-5},
+	title={Hybrid immune algorithm with Lamarckian local search for multi-objective optimization},
+	url={http://dx.doi.org/10.1007/s12293-009-0028-5},
+	publisher={Springer-Verlag},
+	keywords={Multi-objective optimization; Artificial immune system; Memetic algorithm; Lamarckian learning},
+	author={Gong, Maoguo and Liu, Chao and Jiao, Licheng and Cheng, Gang},
+	pages={47-67},
+	language={English}
+}
+
+@TECHREPORT{Deb02runningperformance,
+	author = {Kalyanmoy Deb and Sachin Jain},
+	title = {Running performance Metrics for evolutionary multi-objective optimization},
+	institution = {},
+	year = {2002}
+}
+@ARTICLE{1304847,
+	author={Coello, C.A.C. and Pulido, G.T. and Lechuga, M.S.},
+	journal={Evolutionary Computation, IEEE Transactions on},
+	title={Handling multiple objectives with particle swarm optimization},
+	year={2004},
+	month={June},
+	volume={8},
+	number={3},
+	pages={256-279},
+	keywords={Pareto optimisation;evolutionary computation;Pareto dominance;constant handling mechanism;evolutionary multiobjective optimization;multiple objective handling;mutation operator;particle swarm optimization;Computer science;Constraint optimization;Data structures;Evolutionary computation;Genetic mutations;Particle swarm optimization;Proposals;Scholarships;Testing},
+	doi={10.1109/TEVC.2004.826067},
+	ISSN={1089-778X},
+}
+@incollection{
+	year={2003},
+	isbn={978-3-540-40602-0},
+	booktitle={Genetic and Evolutionary Computation — GECCO 2003},
+	volume={2723},
+	series={Lecture Notes in Computer Science},
+	editor={Cantú-Paz, Erick and Foster, JamesA. and Deb, Kalyanmoy and Davis, LawrenceDavid and Roy, Rajkumar and O’Reilly, Una-May and Beyer, Hans-Georg and Standish, Russell and Kendall, Graham and Wilson, Stewart and Harman, Mark and Wegener, Joachim and Dasgupta, Dipankar and Potter, MitchA. and Schultz, AlanC. and Dowsland, KathrynA. and Jonoska, Natasha and Miller, Julian},
+	doi={10.1007/3-540-45105-6_4},
+	title={A Non-dominated Sorting Particle Swarm Optimizer for Multiobjective Optimization},
+	url={http://dx.doi.org/10.1007/3-540-45105-6_4},
+	publisher={Springer Berlin Heidelberg},
+	author={Li, Xiaodong},
+	pages={37-48},
+	language={English}
+}
+@inproceedings{parsopoulos2002particle,
+  title={Particle swarm optimization method in multiobjective problems},
+  author={Parsopoulos, Konstantinos E and Vrahatis, Michael N},
+  booktitle={Proceedings of the 2002 ACM symposium on Applied computing},
+  pages={603--607},
+  year={2002},
+  organization={ACM}
+}
+
+@INPROCEEDINGS{488968,
+	author={Kennedy, J. and Eberhart, R.},
+	booktitle={Neural Networks, 1995. Proceedings., IEEE International Conference on},
+	title={Particle swarm optimization},
+	year={1995},
+	month={Nov},
+	volume={4},
+	pages={1942-1948 vol.4},
+	keywords={artificial intelligence;genetic algorithms;neural nets;search problems;simulation;artificial life;evolution;genetic algorithms;multidimensional search;neural network;nonlinear functions;optimization;particle swarm;simulation;social metaphor;Artificial neural networks;Birds;Educational institutions;Genetic algorithms;Humans;Marine animals;Optimization methods;Particle swarm optimization;Performance evaluation;Testing},
+	doi={10.1109/ICNN.1995.488968},
+}
+
+@ARTICLE{985692,
+	author={Clerc, M. and Kennedy, J.},
+	journal={Evolutionary Computation, IEEE Transactions on},
+	title={The particle swarm - explosion, stability, and convergence in a multidimensional complex space},
+	year={2002},
+	month={Feb},
+	volume={6},
+	number={1},
+	pages={58-73},
+	keywords={convergence of numerical methods;genetic algorithms;numerical stability;search problems;convergence;evolutionary computation;multidimensional complex space;optimization;particle swarm;particle trajectory;search spaces;stability;Algorithm design and analysis;Control system synthesis;Convergence;Evolutionary computation;Multidimensional systems;Optimization methods;Particle swarm optimization;Stability;Stochastic systems;Testing},
+	doi={10.1109/4235.985692},
+	ISSN={1089-778X},
+}
+@MISC{Fieldsend02amulti-objective,
+	author = {Jonathan E. Fieldsend and Ex Qf Uk and Sameer Singh},
+	title = {A Multi-Objective Algorithm based upon Particle Swarm Optimisation, an Efficient Data Structure and Turbulence.},
+	year = {2002}
+}
+@article{ray2002swarm,
+  title={A swarm metaphor for multiobjective design optimization},
+  author={Ray, Tapabrata and Liew, Kim Meow},
+  journal={Engineering Optimization},
+  volume={34},
+  number={2},
+  pages={141--153},
+  year={2002},
+  publisher={Taylor \& Francis}
+}
+

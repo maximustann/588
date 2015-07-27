@@ -1,0 +1,119 @@
+%% $RCSfile: using.tex,v $
+%% $Revision: 1.1 $
+%% $Date: 2010/04/23 01:57:05 $
+%% $Author: kevin $
+%%
+\chapter{Model Formulation}\label{C:modeling}
+\subsection{Model Formulation}
+\label{sec:model}
+To model service location-allocation problem, we need to make use of a set of matrices, to present input information and output solutions. 
+
+For service location-allocation problem, we need information of service usage, network latency, and service deployment cost to decide service location-allocation so that the overall network latency can be minimized with minimal deployment cost and within constraints.
+Assume a set of $S = \{ s_{1}, s_{2}, ...s_{s}, s_{x}\}$ services are
+requested from a set of locations $I = \{ i_{1}, i_{2}, ...i_{i}, i_{y} \}$. 
+The service providers allocate services to a set of candidate facility locations $J = \{ j_{1}, j_{2}, ...j_{j}, j_{z} \}$.
+
+
+In this paper, we will use the following matrices.
+\begin{center}
+{
+%\centering
+	\begin{tabular}{l*{2}{l}r}
+		\hline
+		\textbf{Matrices} \cr
+		$L$ & server network latency matrix $L = \{l_{ij}\}$ \cr
+		$A$ & service location matrix $A = \{a_{sj}\}$ \cr
+		$F$ & service invocation frequency matrix $F = \{f_{is}\}$ \cr
+		$C$ & cost matrix $C = \{c_{sj}\}$ \cr
+		$R$ & user response time matrix $R = \{r_{is}\}$ \cr
+		\hline
+	\end{tabular}
+%\\
+}
+\end{center}
+A \emph{service invocation frequency matrix}, $F= [f_{is}]$, is used to record services invocation frequencies from user centers, 
+where $f_{is}$ is an integer that indicates the number of invocations in a period of time from a user center to a service. 
+For example, $f_{13}$ = 85 denotes service $s_{1}$ is called 85 times in a predefined period of time.
+
+\parbox{.45\linewidth}{
+{\centering
+$
+F = \bbordermatrix{~ & s_{1} & s_{2} & s_{3}  \cr
+					i_{1}	&120 &35 &56	\cr
+					i_{2}	&14  &67 &24 \cr
+					i_{3}	&85 &25 &74 \cr}
+$
+\\}
+}
+\parbox{.45\linewidth}{
+{\centering
+$
+L = \bbordermatrix{~ & j_{1} & j_{2} & j_{3} \cr
+					i_{1}	&0 &5.776 &6.984	\cr
+					i_{2}	&5.776  &0 &2.035 \cr
+					i_{3}	&0.984 &1.135	&2.3 \cr}
+$
+\\}
+}
+
+A \emph{network latency matrix} $L = [l_{ij}]$, is used to record network latencies from user centers to 
+candidate locations. For example, the network latency between user center $i_{2}$ with candidate location $j_{1}$ 
+is 5.776s. These data could be collected by monitoring network latencies \cite{6076756} \cite{5552800}.
+
+The cost matrix, $C = [c_{sj}]$, is used to record the cost of deployment of services to candidate locations, 
+where $c_{sj}$ is an integer that indicates the cost of deploying a service to a location. 
+For example, $c_{12} = $ 80 denotes the cost of deploying service $s_{1}$ to location $j_{2}$ is 80 cost units.
+
+\parbox{.45\linewidth}{
+{\centering
+$
+C = \bbordermatrix{~ & j_{1} & j_{2} & j_{3}\cr
+					s_{1}	&130 &80 &60\cr
+					s_{2}	&96  &52 &86\cr
+					s_{3}	&37 &25 &54\cr}
+$
+\\}
+}
+\parbox{.45\linewidth}{
+{\centering
+$
+A = \bbordermatrix{~ & j_{1} & j_{2} & j_{3}\cr
+					s_{1}	&0 &1 &0	\cr
+					s_{2}	&0  &0 &1	\cr
+					s_{3}	&1 &1 &0	\cr}
+$
+\\}
+}
+
+To model the service location-allocation problem, we consider the following assumptions:
+\begin{enumerate}
+	\item The new WSP decides where to locate his facilities regardless of there is existed functional similar services from other WSPs.
+	\item The decision of service location-allocation is made only considering two factors: total network latency and total cost.
+	\item A static allocation policy is used by WSPs. In practice, Web services typically offer clients persistent and interactive services, which often span over multiple sessions. Therefore, a dynamic reallocation scheme is not practical as it may disrupt the continuity of the services.
+\end{enumerate}
+
+
+A \emph{service location-allocation matrix} $A = [a_{sj}]$ represents the actual service location-allocation, where $a_{sj}$  is a binary value 1 or 0 to indicate whether a service is allocate to a location or not.
+
+Using service location allocation matrix $A = [a_{sj}]$ and network latency matrix $L = [l_{ij}]$, we can compute user
+response time matrix $R = [r_{is}]$, 
+
+{\centering
+	\begin{equation}
+		r_{is} = MIN\{l_{ij} \mid j \in \{1, 2, ..., z\} \text{ and } a_{sj} = 1\}
+	\end{equation}
+\\}
+For example, we can use the two example matrices $L$ and $A$ presented above to construct the response time matrix $R$. 
+For each service $s$, by checking matrix $A$, we can find out which location the service has been deployed.
+Then we check matrix $L$, to find out its corresponding latency to each user center $i$. If there is
+more than one location, then the smallest latency is selected. Therefore, we can construct the response time matrix $R$ as:
+
+{\centering
+$
+R = \bbordermatrix{~ & s_{1} & s_{2} & s_{3}\cr
+					i_{1}	&5.776 &6.984 &0	\cr
+					i_{2}	&0  &2.035 &0	\cr
+					i_{3}	&1.135 &2.3 &0.984	\cr}
+$
+\\}
+
