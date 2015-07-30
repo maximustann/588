@@ -1,4 +1,4 @@
-library(mopsocd)
+#library(mopsocd)
 library(foreach)
 library(doMC)
 library(mco)
@@ -7,7 +7,7 @@ registerDoMC(8)
 
 source("preData.R")
 source("nsga2.R")
-
+source("mopsocd_origin.R")
 
 
 
