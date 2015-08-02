@@ -1,6 +1,8 @@
+source('log.R')
+
 mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound, 
     opt, popsize = 100, maxgen = 100, archivesize = 250, verbosity = 0, 
-    pMut = 0.5, w = 0.4, c1 = 1, c2 = 1) 
+    pMut = 0.5, w = 0.4, c1 = 1, c2 = 1, seed, problem) 
 {
     varcnt <- as.integer(varcnt)
     fncnt <- as.integer(fncnt)
@@ -327,6 +329,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
             print(archiveFit[1:ndomCtr, ])
             cat("\n")
         }
+		log(problem, seed, t, archiveVar, archiveFit)
     }
     if (verbosity >= 2) {
         cat("###############################\n")

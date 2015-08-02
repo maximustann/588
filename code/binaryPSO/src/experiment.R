@@ -187,8 +187,9 @@ run <- function(problem = 5){
 	bPSOtime <- vector()
 
 	#fire on all 8 cores
+	print("Start")
 	foreach(iter = 1:40) %dopar%{
-
+		cat("Generation: ", iter,"\n")
 		filename_bpso_time <- paste('../result/', problem, '/', iter, '_bpso_time.csv', sep = '')
 		filename_bpso <- paste('../result/', problem, '/', iter, '_bpso.csv', sep = '')
 		ptm <- proc.time()
@@ -197,6 +198,7 @@ run <- function(problem = 5){
 		write.csv(bPSOdata, filename_bpso, row.names = F, quote = F)
 		write.csv(bPSOtime, filename_bpso_time, row.names = F, quote = F)
 	}
+	print("Compiling...")
 	for(iter in 1:40){
 		filename_bpso <- paste('../result/', problem, '/', iter, "_bpso.csv", sep = "")
 		filename_bpso_time <- paste('../result/', problem, '/', iter, '_bpso_time.csv', sep = "")

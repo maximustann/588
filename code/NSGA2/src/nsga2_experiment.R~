@@ -4,22 +4,105 @@ source("ga.R")
 library(GA)
 library(mco)
 library(nsga2R)
-library(lpSolve)
 library(foreach)
 library(doMC)
 registerDoMC(8)
 
-run <- function(noService, noCandLoc, noUserCen, cost_limitation, initialisation = F){
+run <- function(initialisation = F){
+	#-------------------------------Set up Problem Start-----------------------------
+	if(problem == 1){
+		noService <- 20
+		noCandLoc <- 5
+		noUserCen <- 10
+		limitation <- 10000
+	} else if(problem == 2){
+		noService <- 50
+		noCandLoc <- 15
+		noUserCen <- 20
+		limitation <- 75000
+	} else if(problem == 3){
+		noService <- 100
+		noCandLoc <- 25
+		noUserCen <- 40
+		limitation <- 250000
+	} else if(problem == 4){
+		noService <- 200
+		noCandLoc <- 40
+		noUserCen <- 80
+		limitation <- 800000
+	} else {
+		noService <- 3
+		noCandLoc <- 3
+		noUserCen <- 3
+		limitation <- 900
+	}
+
+	#-------------------------------Set up Problem End-----------------------------
 	NSGAdata <- vector()
 	GAdata <- vector()
 	NSGAtime<- vector()
 	GAtime<- vector()
+
+	#------------------------------Proprocessing Functions Start------------------------
+	search_maximum_latency <- function(noService, noCandLoc, noUserCen){
+		initial_matrix <- matrix(c(rep(1, noService), rep(0, noService * (noCandLoc - 1))), nrow = noService)
+		latency <- 0.0
+		for(row_iter in 1:noService){
+			for(col_iter in 1:noCandLoc){
+				if(row_iter == 1 && col_iter == 1){
+					latency <- unNormalized_latency_fitness(initial_matrix, noService, noCandLoc, noUserCen)
+					next
+				}
+				num <- which(initial_matrix[row_iter, ] == 1)
+				initial_matrix[row_iter, num] <- 0
+				initial_matrix[row_iter, col_iter] <- 1
+				current_latency <- unNormalized_latency_fitness(initial_matrix, noService, noCandLoc, noUserCen)
+				if(current_latency > latency){
+					latency <- current_latency
+				}
+				else{
+					initial_matrix[row_iter, col_iter] <- 0
+					initial_matrix[row_iter, num] <- 1
+				}
+			}
+		}
+		latency
+	}
+	
+	search_minimum_cost <- function(noService, noCandLoc){
+		matrixSize <- noService * noCandLoc
+		mini_cost_matrix <- matrix(rep(0, matrixSize), nrow = noService)
+		for(row_iter in 1:noService){
+			pos <- which(cost_matrix[row_iter, ] == min(cost_matrix[row_iter, ]))[1]
+			mini_cost_matrix[row_iter, pos] <- 1
+		}
+		mini_cost_matrix
+	}
+
+	best_front <- function(gadata){
+		temp <- unique(gadata[, 1:2])
+		ga <- vector()
+		best_ga <- vector()
+		ranking <- fastNonDominatedSorting(temp)
+		rnkIndex <- integer()
+		i <- 1
+		while (i <= length(ranking)){
+			rnkIndex[ranking[[i]]] <- i
+			i <- i + 1
+		}
+		ga <- cbind(temp, rnkIndex)
+		best_ga <- ga[ga[, 3] == 1,]
+		print(best_ga)
+		best_ga
+	}
+	#------------------------------Proprocessing Functions End------------------------
+	#------------------------------Preprocessing Start-------------------------------
 	predata(noService, noCandLoc, noUserCen)
 	max_cost <- unNormalized_cost_fitness(matrix(rep(1, matrixSize * matrixSize), nrow = matrixSize), matrixSize)
 	min_cost <- unNormalized_cost_fitness(search_minimum_cost(matrixSize), matrixSize)
 	max_latency <- search_greatest_latency(matrixSize)
 	min_latency <- 0
-
+	#------------------------------Preprocessing End--------------------------------
 	foreach(iter = 1:40) %dopar%{
 		cat("Generation:", iter, '\n')
 		NSGAdata <- run_algorithm(matrixSize, iter, cost_limitation, max_cost, min_cost, max_latency, min_latency, initialisation)
@@ -79,13 +162,8 @@ run <- function(noService, noCandLoc, noUserCen, cost_limitation, initialisation
 		}
 	}
 
-	##lptime <- read.csv("1_time_lp.csv", header = T)
 	time_data <- rbind(NSGAtime, GAtime)
-	best_nsga <- best_nsga_front(NSGAdata)
-	#cat("row for best GA data: ", nrow(best_ga), "\n")
-	#cat("row for LP data: ", nrow(lpdata), "\n")
-	##lpdata <- read.csv("1_lp.csv", sep = ",", header = T)
-	#data <- total_normalised(best_ga, lpdata)[, 1:2]
+	best_nsga <- best_front(NSGAdata)
 	data <- rbind(best_nsga[, 1:2], GAdata)
 	colnames(data) <- c("costF", "latencyF")
 	if(initialisation == T){
@@ -98,78 +176,4 @@ run <- function(noService, noCandLoc, noUserCen, cost_limitation, initialisation
 	}
 	write.csv(data, filename, quote = F, row.names = F)
 	write.csv(time_data, filename_time, quote = F, row.names = F)
-}
-
-best_nsga_front <- function(gadata){
-	temp <- unique(gadata[, 1:2])
-	ga <- vector()
-	best_ga <- vector()
-	ranking <- fastNonDominatedSorting(temp)
-	rnkIndex <- integer()
-	i <- 1
-	while (i <= length(ranking)){
-		rnkIndex[ranking[[i]]] <- i
-		i <- i + 1
-	}
-	ga <- cbind(temp, rnkIndex)
-	best_ga <- ga[ga[, 3] == 1,]
-	print(best_ga)
-	best_ga
-}
-
-total_normalised <- function(gadata, lpdata){
-	#print(lpdata)
-	data <- rbind(gadata[, 1:2], lpdata)
-	normalized_data <- vector()
-	for(i in 1:ncol(data)){
-		min_value <- min(data[, i])
-		max_value <- max(data[, i])
-		a <- 0
-		b <- 1
-		normalized_data <- cbind(normalized_data, a + ((data[, i] - min_value) * (b - a) / (max_value - min_value)))
-	}
-	normalized_data
-}
-
-#euclidean_distance <- function(vect, weight_for_cost = 0.5){
-	#dist <- sqrt((weight_for_cost * vect[1])^2 + ((1 - weight_for_cost) * vect[2])^2)
-	#dist
-#}
-
-search_maximum_latency <- function(noService, noCandLoc, noUserCen){
-	initial_matrix <- matrix(c(rep(1, noService), rep(0, noService * (noCandLoc - 1))), nrow = noService)
-	#initial_matrix <- as.integer(initial_matrix)
-	#print(initial_matrix)
-	latency <- 0.0
-	for(row_iter in 1:noService){
-		for(col_iter in 1:noCandLoc){
-			if(row_iter == 1 && col_iter == 1){
-				latency <- unNormalized_latency_fitness(initial_matrix, noService, noCandLoc, noUserCen)
-				next
-			}
-			num <- which(initial_matrix[row_iter, ] == 1)
-			initial_matrix[row_iter, num] <- 0
-			initial_matrix[row_iter, col_iter] <- 1
-			current_latency <- unNormalized_latency_fitness(initial_matrix, noService, noCandLoc, noUserCen)
-			if(current_latency > latency){
-				latency <- current_latency
-			}
-			else{
-				initial_matrix[row_iter, col_iter] <- 0
-				initial_matrix[row_iter, num] <- 1
-			}
-		}
-	}
-	latency
-}
-
-search_minimum_cost <- function(noService, noCandLoc){
-	matrixSize <- noService * noCandLoc
-	mini_cost_matrix <- matrix(rep(0, matrixSize), nrow = noService)
-	for(row_iter in 1:noService){
-		pos <- which(cost_matrix[row_iter, ] == min(cost_matrix[row_iter, ]))[1]
-		mini_cost_matrix[row_iter, pos] <- 1
-	}
-	#print(mini_cost_matrix)
-	mini_cost_matrix
 }
