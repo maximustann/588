@@ -48,8 +48,7 @@ gen_best_front <- function(problem = 5, iter = 40, maxgen = 50){
 
 
 	path <- paste("../logData/", problem, '/', sep = '')
-	#foreach(i = 1:iter) %dopar% {
-	for(i in 1:iter){
+	foreach(i = 1:iter) %dopar% {
 		cat("iter", i, '\n')
 		iterDirect <- paste(path, i, '/', sep = '')
 		for(j in 1:maxgen){

@@ -41,8 +41,8 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
     initialize_vel <- function() {
         velocity[1:popsize, 1:varcnt] <<- 0
     }
-    evaluate <- function() {
-        popFit[1:popsize, ] <<- t(apply(popVar, 1, fn))
+    evaluate <- function(gen) {
+        popFit[1:popsize, ] <<- t(apply(popVar, 1, fn, gen))
     }
     store_pbests <- function() {
         pbestsVar[1:popsize, ] <<- popVar[1:popsize, ]
@@ -307,7 +307,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
     t <- 0
     initialize_pop()
     initialize_vel()
-    evaluate()
+    evaluate(0)
     store_pbests()
     insert_nondom()
     while (t < maxgen) {
@@ -319,7 +319,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
         compute_velocity()
         maintain_particles()
         mutate()
-        evaluate()
+        evaluate(t)
         update_archive()
         update_pbests()
         if (verbosity >= 3) {
@@ -329,7 +329,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
             print(archiveFit[1:ndomCtr, ])
             cat("\n")
         }
-		log(problem, seed, t, popVar, popFit)
+		log(problem, seed, t, archiveVar, archiveFit)
     }
     if (verbosity >= 2) {
         cat("###############################\n")
