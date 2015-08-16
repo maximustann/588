@@ -112,7 +112,7 @@ bpso <- function(fitFunctions, varcnt, obj, lowerbound, upperbound, c1, c2, maxg
 		updatePBest(pop)
 		updateGBest(pop)
 		updatePop()
-		log(problem, seed, iter, pop, fitness)
+		#log(problem, seed, iter, pop, fitness)
 		#plotme(fitness)
 	}
 	#-------------------Algorithm End--------------------------------

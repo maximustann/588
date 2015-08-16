@@ -13,32 +13,78 @@ source("mopsocd_origin.R")
 run <- function(problem = 5){
 
 	#----------------------Set up Problem Start------------------------------
-		if(problem == 1){
+	if(problem == 1){
 		noService <- 20
 		noCandLoc <- 5
 		noUserCen <- 10
-		limitation <- 10000
+		limitation <- noService * noCandLoc * 100
 	} else if(problem == 2){
+		noService <- 20
+		noCandLoc <- 10
+		noUserCen <- 10
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 3){
 		noService <- 50
 		noCandLoc <- 15
 		noUserCen <- 20
-		limitation <- 75000
-	} else if(problem == 3){
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 4){
+		noService <- 50
+		noCandLoc <- 15
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 5){
+		noService <- 50
+		noCandLoc <- 25
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 6){
+		noService <- 50
+		noCandLoc <- 25
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	}else if(problem == 7){
+		noService <- 100
+		noCandLoc <- 15
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 8){
+		noService <- 100
+		noCandLoc <- 15
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 9){
+		noService <- 100
+		noCandLoc <- 25
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 10){
 		noService <- 100
 		noCandLoc <- 25
 		noUserCen <- 40
-		limitation <- 250000
-	} else if(problem == 4){
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 11){
+		noService <- 200
+		noCandLoc <- 25
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 12){
+		noService <- 200
+		noCandLoc <- 25
+		noUserCen <- 80
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 13){
+		noService <- 200
+		noCandLoc <- 40
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 14){
 		noService <- 200
 		noCandLoc <- 40
 		noUserCen <- 80
-		limitation <- 800000
-	} else {
-		noService <- 3
-		noCandLoc <- 3
-		noUserCen <- 3
-		limitation <- 900
+		limitation <- noService * noCandLoc * 100
 	}
+
 	#----------------------Set up Problem End------------------------------
 	#---------------Parameter settings---------------
 	varcount <- noService * noCandLoc
@@ -82,10 +128,14 @@ run <- function(problem = 5){
 	normalized_cost_fitness <- function(chromosome, noService, noCandLoc, max_cost, min_cost, threshold){
 		cost <- unNormalized_cost_fitness(chromosome, noService, noCandLoc, threshold)
 		cost <- normalize(cost, max_cost, min_cost)
-		if(validation(chromosome, noService) == F){
-			#death penalty of cost
-			return(max_cost)
+		if(cost < 0){
+			death penalty of cost
+			return(1)
 		}
+		#if(validation(chromosome, noService) == F){
+
+			#return(max_cost)
+		#}
 		cost
 	}
 	unNormalized_cost_fitness <- function(chromosome, noService, noCandLoc, threshold){
@@ -197,7 +247,7 @@ run <- function(problem = 5){
 	
 	fitFunction <- function(chromosome, gen) {
 		if(gen != 50){
-			threshold <- threshold - (0.5 / (50 - gen))
+			threshold <- 0.7 - 0.5 / (50 - gen)
 		}
 		cost <- normalized_cost_fitness(chromosome, noService, noCandLoc, max_cost, min_cost, threshold)
 		latency <- normalized_latency_fitness(chromosome, noService, noCandLoc, noUserCen, max_latency, min_latency, threshold)

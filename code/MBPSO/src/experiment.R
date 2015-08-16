@@ -11,29 +11,74 @@ run <- function(problem = 5){
 		noService <- 20
 		noCandLoc <- 5
 		noUserCen <- 10
+		limitation <- noService * noCandLoc * 100
 	} else if(problem == 2){
+		noService <- 20
+		noCandLoc <- 10
+		noUserCen <- 10
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 3){
 		noService <- 50
 		noCandLoc <- 15
 		noUserCen <- 20
-	} else if(problem == 3){
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 4){
+		noService <- 50
+		noCandLoc <- 15
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 5){
+		noService <- 50
+		noCandLoc <- 25
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 6){
+		noService <- 50
+		noCandLoc <- 25
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	}else if(problem == 7){
+		noService <- 100
+		noCandLoc <- 15
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 8){
+		noService <- 100
+		noCandLoc <- 15
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 9){
+		noService <- 100
+		noCandLoc <- 25
+		noUserCen <- 20
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 10){
 		noService <- 100
 		noCandLoc <- 25
 		noUserCen <- 40
-	} else if(problem == 4){
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 11){
+		noService <- 200
+		noCandLoc <- 25
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 12){
+		noService <- 200
+		noCandLoc <- 25
+		noUserCen <- 80
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 13){
+		noService <- 200
+		noCandLoc <- 40
+		noUserCen <- 40
+		limitation <- noService * noCandLoc * 100
+	} else if(problem == 14){
 		noService <- 200
 		noCandLoc <- 40
 		noUserCen <- 80
-	} else {
-		noService <- 3
-		noCandLoc <- 3
-		noUserCen <- 3
+		limitation <- noService * noCandLoc * 100
 	}
-
-
 	#-------------------Set up Problem End----------------------------
-
-
-
 	varcount <- noService * noCandLoc
 	lbound <- rep(0, varcount)
 	ubound <- rep(1, varcount)

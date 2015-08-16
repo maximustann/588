@@ -1,4 +1,4 @@
-plotbpso <- function(number = 1, color = red, pchtype = 1){
+plotbpso <- function(number = 1, color = "red", pchtype = 1){
 	read_bpso_data <- function(filename){
 		data <- read.csv(filename, sep = ',', header = T)
 		n <- nrow(data)

@@ -25,7 +25,7 @@ algorithm <- function(noSerivce, noCandLoc, noUserCen, seed, cost_limitation, ma
 	cprob <- 0.8
 	generations <- 50
 	front <- vector()
-	front_pool <- vector()
+	#front_pool <- vector()
 #=============================================================================
 set.seed(seed)
 #========================Algorithm Starts=====================================
@@ -55,9 +55,8 @@ set.seed(seed)
 
 	parent <- cbind(parent, apply(cd, 1, sum))
 	#initialize the front_pool
-	front_pool <- parent[parent[, varNo + 3] == 1, ]
+	#front_pool <- parent[parent[, varNo + 3] == 1, ]
 
-	repair_time <- 0.0
 	for(iter in 1:generations){
 		#step 5, selection
 		matingPool <- tournamentSelection(parent, popSize, tourSize)
@@ -79,14 +78,10 @@ set.seed(seed)
 				childAfterM[j, ] <- repair_cost_maximum(childAfterM[j, ], cost_limitation, noSerivce, noCandLoc)
 			}
 		}
+		childAfterM <- cbind(childAfterM, t(apply(childAfterM, 1, fitness, noSerivce, noCandLoc, 
+												 noUserCen, max_cost, min_cost, max_latency, min_latency)))
 		
-		#check existed
-		childAfterMutation <- check_existed(childAfterM, front_pool, varNo)
-	#tmp_time <- proc.time()
-		fitness_value <- t(apply(childAfterMutation[[1]], 1, fitness, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency))
-	#repair_time <- repair_time + ((proc.time() - tmp_time)[1])
-		childAfterMutation[[1]] <- cbind(childAfterMutation[[1]], fitness_value)
-		childAfterM <- rbind(childAfterMutation[[1]], childAfterMutation[[2]])
+
 		parentNext <- rbind(parent[, 1:(varNo + objDim)], childAfterM)
 		ranking <- fastNonDominatedSorting(parentNext[, (varNo + 1) : (varNo + objDim)])
 		i <- 1
@@ -105,7 +100,7 @@ set.seed(seed)
 			front <- matrix(front, ncol = varNo + 4)
 		}
 		#update front_pool
-		front_pool <- front
+		#front_pool <- front
 		#plot(front[, (varNo + 1):(varNo + objDim)], xlim = origin_range_x, ylim = origin_range_y, col = 'red', pch = 4)
 	}
 	#par(new = T)
@@ -123,30 +118,30 @@ set.seed(seed)
 
 
 
-check_existed <- function(childAfterM, front_pool, varNo){
-	child_existed <- vector()
-	child_non_existed <- vector()
-	num_in_children <- nrow(childAfterM)
-	front_pool <- matrix(front_pool, nrow = 1)
-	num_in_front <- nrow(front_pool)
-	if(num_in_front == 0){
-		child_non_existed <- childAfterM
-		child_existed <- NULL
-		return(list(child_non_existed, child_existed))
-	}
-	for(i in 1:num_in_children){
-		for(j in 1:num_in_front){
-			if(identical(childAfterM[i, ], front_pool[j, 1:varNo])) {
-				child_existed <- rbind(child_existed, front_pool[j, 1:(varNo + 2)])
-				break
-			}
-			if(j == num_in_front){
-				child_non_existed <- rbind(childAfterM[i, ], child_non_existed)
-			}
-		}
-	}
-	list(child_non_existed, child_existed)
-}
+#check_existed <- function(childAfterM, front_pool, varNo){
+	#child_existed <- vector()
+	#child_non_existed <- vector()
+	#num_in_children <- nrow(childAfterM)
+	#front_pool <- matrix(front_pool, nrow = 1)
+	#num_in_front <- nrow(front_pool)
+	#if(num_in_front == 0){
+		#child_non_existed <- childAfterM
+		#child_existed <- NULL
+		#return(list(child_non_existed, child_existed))
+	#}
+	#for(i in 1:num_in_children){
+		#for(j in 1:num_in_front){
+			#if(identical(childAfterM[i, ], front_pool[j, 1:varNo])) {
+				#child_existed <- rbind(child_existed, front_pool[j, 1:(varNo + 2)])
+				#break
+			#}
+			#if(j == num_in_front){
+				#child_non_existed <- rbind(childAfterM[i, ], child_non_existed)
+			#}
+		#}
+	#}
+	#list(child_non_existed, child_existed)
+#}
 
 evaluate_front <- function(front, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency){
 	fitness_value <- t(apply(front[, 1:(noSerivce * noCandLoc)], 1, fitness, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency))
@@ -320,7 +315,7 @@ repair_service_minimum <- function(chromosome, noSerivce, noCandLoc){
 #Limitation of cost
 cost_constraint_check <- function(chromosome, limitation, noSerivce, noCandLoc){
 	chromosome_m <- matrix(chromosome, nrow = noSerivce)
-	cost <- sum(noSerivce * cost_matrix)
+	cost <- sum(chromosome_m * cost_matrix)
 	if(cost > limitation) return(F)
 	return(chromosome)
 }

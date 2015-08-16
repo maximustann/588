@@ -329,7 +329,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
             print(archiveFit[1:ndomCtr, ])
             cat("\n")
         }
-		#log(problem, seed, t, archiveVar, archiveFit)
+		log(problem, seed, t, archiveVar, archiveFit)
     }
     if (verbosity >= 2) {
         cat("###############################\n")
