@@ -10,7 +10,7 @@ source("mopsocd_origin.R")
 
 
 
-run <- function(problem = 5){
+run <- function(problem = 5, logS = F){
 
 	#----------------------Set up Problem Start------------------------------
 	if(problem == 1){
@@ -129,7 +129,7 @@ run <- function(problem = 5){
 		cost <- unNormalized_cost_fitness(chromosome, noService, noCandLoc, threshold)
 		cost <- normalize(cost, max_cost, min_cost)
 		if(cost < 0){
-			death penalty of cost
+			#death penalty of cost
 			return(1)
 		}
 		#if(validation(chromosome, noService) == F){
@@ -246,9 +246,11 @@ run <- function(problem = 5){
 	}
 	
 	fitFunction <- function(chromosome, gen) {
-		if(gen != 50){
-			threshold <- 0.7 - 0.5 / (50 - gen)
-		}
+		#if(gen != 50){
+			#threshold <- 0.7 - 0.5 / (50 - gen)
+			threshold <- -(1/5000)*gen^2 + 0.7
+			#threshold <- -(6/25000)*gen^2 + 0.8 #0.8~0.2
+		#}
 		cost <- normalized_cost_fitness(chromosome, noService, noCandLoc, max_cost, min_cost, threshold)
 		latency <- normalized_latency_fitness(chromosome, noService, noCandLoc, noUserCen, max_latency, min_latency, threshold)
 		return(c(cost, latency))
@@ -259,6 +261,7 @@ run <- function(problem = 5){
 		front <- vector()
 		bad_kids <- NULL
 		best_front <- vector()
+		#print(temp)
 		ranking <- fastNonDominatedSorting(temp)
 		rnkIndex <- integer()
 		i <- 1
@@ -276,6 +279,7 @@ run <- function(problem = 5){
 				bad_kids <- c(bad_kids, i)
 			}
 		}
+
 		if(is.null(bad_kids)){
 			return(best_front)
 		} else{
@@ -288,42 +292,53 @@ run <- function(problem = 5){
 	#-----------------------------------------------------
 
 	#Now it's time to run algorithm
+	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
 	mPSOdata <- vector()
 	mPSOtime <- vector()
 	#fire on all 8 cores
 	foreach(iter = 1:40) %dopar%{
-		filename_mpso_time <- paste('../result/', problem, '/', iter, "_mpso_time.csv", sep = '')
-		filename_mpso <- paste('../result/', problem, '/', iter, "_mpso.csv", sep = "")
+		filename_mpso_time <- paste('../result/', problem, '/run/', iter, "_mpso_time.csv", sep = '')
+		filename_mpso <- paste('../result/', problem, '/run/', iter, "_mpso.csv", sep = "")
 		mPSOtime <- vector()
-		cat("Iteration: ", iter, '\n')
+		cat("run: ", iter, '\n')
 		ptm <- proc.time()
 		#mPSO begins here
 		mpsoResult <- mopsocd(fitFunction, varcnt=varcount,
 					  fncnt=fncount, lowerbound=lbound, upperbound=ubound,
-					  opt=optim, maxgen=maxgen, popsize=popsize, seed = iter, problem = problem)
+					  opt=optim, maxgen=maxgen, popsize=popsize, seed = iter, problem = problem, logS = logS)
 		mPSOtime <- c(mPSOtime, (proc.time() - ptm)[1])
 		write.csv(matrix(mpsoResult$objfnvalues, ncol = 2), filename_mpso, row.names = F, quote = F)
 		write.csv(mPSOtime, filename_mpso_time, row.names = F, quote = F)
 	}
 	print("Start compiling...")
 	for(iter in 1:40){
-		filename_mpso <- paste('../result/', problem, '/', iter, "_mpso.csv", sep = "")
-		filename_mpso_time <- paste('../result/', problem,'/', iter, "_mpso_time.csv", sep = "")
+		filename_mpso <- paste('../result/', problem, '/run/', iter, "_mpso.csv", sep = "")
+		filename_mpso_time <- paste('../result/', problem,'/run/', iter, "_mpso_time.csv", sep = "")
 		mPSOdata <- rbind(mPSOdata, read.csv(filename_mpso, header = T, sep = ','))
 		mPSOtime <- rbind(mPSOtime, read.csv(filename_mpso_time, header = T))
 	}
 	
-	#best front for both
-	best_mpso <- best_front(mPSOdata)
+	totalFrontNum <- nrow(mPSOdata)
+	eachCoreNum <- floor(totalFrontNum/8) # 8 cores
+	#best front
+	tempBestfront <- foreach(iter = 1:8, .combine=rbind) %dopar%{
+						if(iter == 8){
+							best_front(mPSOdata[(1 + (iter - 1) * eachCoreNum):nrow(mPSOdata), ])
+						} else{
+							best_front(mPSOdata[(1 + (iter - 1) * eachCoreNum):(iter*eachCoreNum), ])
+						}
+					}
+	best_mpso <- best_front(tempBestfront)
 	names(best_mpso) <- c('costF', 'latencyF', 'rank')
 
 
 	#prepare filename
 	print("prepare writing file")
-	filename <- paste('../result/', problem, '/', problem, '.csv', sep = '')
-	mPSOtimeFilename <- paste('../result/', problem, '/', problem, "_mPSO_time.csv", sep='')
+	filename <- paste('../result/', problem, '/best/', problem, '.csv', sep = '')
+	mPSOtimeFilename <- paste('../result/', problem, '/best/', problem, "_mPSO_time.csv", sep='')
 
-	write.csv(best_mpso, filename, row.names = F, quote = F)
+	write.csv(best_mpso[, 1:2], filename, row.names = F, quote = F)
 	write.csv(mPSOtime, mPSOtimeFilename, row.names = F, quote = F)
 }
 

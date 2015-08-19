@@ -1,6 +1,5 @@
-source('preData.R')
 source('log.R')
-bpso <- function(fitFunctions, varcnt, obj, lowerbound, upperbound, c1, c2, maxgen, weight = 0.5, popsize, seed, problem){
+bpso <- function(fitFunctions, varcnt, obj, lowerbound, upperbound, c1, c2, maxgen, weight = 0.5, popsize, seed, problem, logS = F){
 
 	#parameters settings
 	set.seed(seed)
@@ -112,7 +111,9 @@ bpso <- function(fitFunctions, varcnt, obj, lowerbound, upperbound, c1, c2, maxg
 		updatePBest(pop)
 		updateGBest(pop)
 		updatePop()
-		#log(problem, seed, iter, pop, fitness)
+		if(logS == T){
+			log(problem, seed, iter, pop, fitness)
+		}
 		#plotme(fitness)
 	}
 	#-------------------Algorithm End--------------------------------

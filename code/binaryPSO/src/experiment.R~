@@ -1,10 +1,10 @@
 library(doMC)
 library(nsga2R)
 registerDoMC(8)
-
+source('preData.R')
 
 source("bpso.R")
-run <- function(problem = 5){
+run <- function(problem = 5, logS = F){
 
 	#-------------------Set up Problem Start----------------------------
 	if(problem == 1){
@@ -144,9 +144,6 @@ run <- function(problem = 5){
 	normalized_cost_fitness <- function(particle, noService, noCandLoc, max_cost, min_cost){
 		cost <- unNormalized_cost_fitness(particle, noService, noCandLoc)
 		cost <- normalize(cost, max_cost, min_cost)
-		if(cost < 0){
-			print("bad boy")
-		}
 		cost
 	}
 
@@ -240,33 +237,44 @@ run <- function(problem = 5){
 
 	#fire on all 8 cores
 	print("Start")
+	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
 	foreach(iter = 1:40) %dopar%{
-		cat("Generation: ", iter,"\n")
-		filename_bpso_time <- paste('../result/', problem, '/', iter, '_bpso_time.csv', sep = '')
-		filename_bpso <- paste('../result/', problem, '/', iter, '_bpso.csv', sep = '')
+		cat("run: ", iter,"\n")
+		filename_bpso_time <- paste('../result/', problem, '/run/', iter, '_bpso_time.csv', sep = '')
+		filename_bpso <- paste('../result/', problem, '/run/', iter, '_bpso.csv', sep = '')
 		ptm <- proc.time()
-		bPSOdata <- bpso(fitFunc, varcount, obj, lbound, ubound, c1, c2, maxgen, weight, popSize, iter, problem)
+		bPSOdata <- bpso(fitFunc, varcount, obj, lbound, ubound, c1, c2, maxgen, weight, popSize, iter, problem, logS)
 		bPSOtime <- c(bPSOtime, (proc.time() - ptm)[1])
 		write.csv(bPSOdata, filename_bpso, row.names = F, quote = F)
 		write.csv(bPSOtime, filename_bpso_time, row.names = F, quote = F)
 	}
 	print("Compiling...")
 	for(iter in 1:40){
-		filename_bpso <- paste('../result/', problem, '/', iter, "_bpso.csv", sep = "")
-		filename_bpso_time <- paste('../result/', problem, '/', iter, '_bpso_time.csv', sep = "")
+		filename_bpso <- paste('../result/', problem, '/run/', iter, "_bpso.csv", sep = "")
+		filename_bpso_time <- paste('../result/', problem, '/run/', iter, '_bpso_time.csv', sep = "")
 		bPSOdata <- rbind(bPSOdata, read.csv(filename_bpso, header = T, sep = ','))
 		bPSOtime <- rbind(bPSOtime, read.csv(filename_bpso_time, header = T))
 	}
+	totalFrontNum <- nrow(bPSOdata)
+	eachCoreNum <- floor(totalFrontNum/8) #8 cores
 	#best front
-	best_bpso <- best_front(bPSOdata)
+	tempBestfront <- foreach(iter = 1:8, .combine=rbind) %dopar%{
+					if(iter == 8){
+						best_front(bPSOdata[(1 + (iter - 1) * eachCoreNum):nrow(bPSOdata), ])
+					} else{
+						best_front(bPSOdata[(1 + (iter - 1) * eachCoreNum):(iter*eachCoreNum), ])
+					}
+				}
+	best_bpso <- best_front(tempBestfront)
 	names(best_bpso) <- c('costF', 'latencyF', 'rank')
 
 	#prepare file name 
-	filename <- paste('../result/', problem, '/', problem, '.csv', sep = '')
-	timeFilename <- paste('../result/', problem, '/', problem,'_time.csv', sep = '')
+	filename <- paste('../result/', problem, '/best/', problem, '.csv', sep = '')
+	timeFilename <- paste('../result/', problem, '/best/', problem,'_time.csv', sep = '')
 
 	#write final result
-	write.csv(best_bpso, filename, row.names = F, quote = F)
+	write.csv(best_bpso[, 1:2], filename, row.names = F, quote = F)
 	write.csv(bPSOdata, timeFilename, row.names = F, quote = F)
 	#---------------Run Algorithm End---------------------
 }

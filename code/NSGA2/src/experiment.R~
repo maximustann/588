@@ -6,7 +6,7 @@ library(foreach)
 library(doMC)
 registerDoMC(8)
 
-run <- function(problem = 5, initialisation = F){
+run <- function(problem = 5, logS = F, initialisation = F){
 	#-------------------------------Set up Problem Start-----------------------------
 	if(problem == 1){
 		noService <- 20
@@ -177,10 +177,13 @@ run <- function(problem = 5, initialisation = F){
 	max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen)
 	min_latency <- 0
 	#------------------------------Preprocessing End--------------------------------
+	print("Start")
+	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
 	foreach(iter = 1:40) %dopar%{
-		cat("Generation:", iter, '\n')
+		cat("run:", iter, '\n')
 
-		NSGAdata <- run_algorithm(noService, noCandLoc, noUserCen, iter, limitation, max_cost, min_cost, max_latency, min_latency, initialisation)
+		NSGAdata <- run_algorithm(noService, noCandLoc, noUserCen, iter, limitation, max_cost, min_cost, max_latency, min_latency, problem, logS, initialisation = F)
 		
 		if(initialisation == T){
 
@@ -192,8 +195,8 @@ run <- function(problem = 5, initialisation = F){
 		}
 		else{
 			NSGAtime <- NSGAdata[1, 3]
-			filename_nsga <- paste('../result/', problem, '/', iter, "_nsga.csv", sep = "")
-			filename_nsga_time <- paste("../result/", problem,'/', iter, "_time_nsga.csv", sep = "")
+			filename_nsga <- paste('../result/', problem, '/run/', iter, "_nsga.csv", sep = "")
+			filename_nsga_time <- paste("../result/", problem,'/run/', iter, "_time_nsga.csv", sep = "")
 			write.csv(NSGAdata[, 1:2], filename_nsga, quote = F, row.names = F)
 			write.csv(NSGAtime, filename_nsga_time, quote = F, row.names = F)
 		}
@@ -202,21 +205,31 @@ run <- function(problem = 5, initialisation = F){
 
 	for(iter in 1:40){
 		if(initialisation == T){
-			filename_nsga <- paste('../result/', problem, '/', iter, "_initialisation_nsga.csv", sep = "")
-			filename_nsga_time <- paste('../result/', problem, '/', iter, "_initialisation_time_nsga.csv", sep = "")
+			filename_nsga <- paste('../result/', problem, '/run/', iter, "_initialisation_nsga.csv", sep = "")
+			filename_nsga_time <- paste('../result/', problem, '/run/', iter, "_initialisation_time_nsga.csv", sep = "")
 			NSGAdata <- rbind(NSGAdata, read.csv(filename_nsga, header = T, sep = ','))
 			NSGAtime <- rbind(NSGAtime, read.csv(filename_nsga_time, header = T, sep = ","))
 		}
 		else{
-			filename_nsga <- paste('../result/', problem, '/', iter, "_nsga.csv", sep = "")
-			filename_nsga_time <- paste('../result/', problem, '/', iter, "_time_nsga.csv", sep = "")
+			filename_nsga <- paste('../result/', problem, '/run/', iter, "_nsga.csv", sep = "")
+			filename_nsga_time <- paste('../result/', problem, '/run/', iter, "_time_nsga.csv", sep = "")
 			NSGAdata <- rbind(NSGAdata, read.csv(filename_nsga, header = T, sep = ','))
 			NSGAtime <- rbind(NSGAtime, read.csv(filename_nsga_time, header = T, sep = ","))
 		}
 	}
-
+	
+	totalFrontNum <- nrow(NSGAdata)
+	eachCoreNum <- floor(totalFrontNum/8) # 8 cores
+	#best front
+	tempBestfront <- foreach(iter = 1:8, .combine=rbind) %dopar% {
+		if(iter == 8){
+			best_front(NSGAdata[(1 + (iter - 1) * eachCoreNum):nrow(NSGAdata), ])
+		} else{
+			best_front(NSGAdata[(1 + (iter - 1) * eachCoreNum):(iter*eachCoreNum), ])
+		}
+	}
 	time_data <- rbind(NSGAtime, GAtime)
-	best_nsga <- best_front(NSGAdata)
+	best_nsga <- best_front(tempBestfront)
 	data <- rbind(best_nsga[, 1:2], GAdata)
 	colnames(data) <- c("costF", "latencyF")
 	if(initialisation == T){
@@ -224,8 +237,8 @@ run <- function(problem = 5, initialisation = F){
 		filename_time <- paste('../result/', problem, '/', problem, "_initialisation_time.csv", sep = "")
 	}
 	else{
-		filename <- paste('../result/', problem, '/', problem,  ".csv", sep = "")
-		filename_time <- paste('../result/', problem, '/', problem, "_time.csv", sep = "")
+		filename <- paste('../result/', problem, '/best/', problem,  ".csv", sep = "")
+		filename_time <- paste('../result/', problem, '/best/', problem, "_time.csv", sep = "")
 	}
 	write.csv(data, filename, quote = F, row.names = F)
 	write.csv(time_data, filename_time, quote = F, row.names = F)

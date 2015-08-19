@@ -2,9 +2,11 @@ library(foreach)
 library(GA)
 library(mco)
 library(nsga2R)
-run_algorithm <- function(noSerivce, noCandLoc, noUserCen, seed = 1, cost_limitation, max_cost, min_cost, max_latency, min_latency, initialisation = F){
+source('log.R')
+run_algorithm <- function(noSerivce, noCandLoc, noUserCen, seed = 1, cost_limitation, max_cost, min_cost, max_latency, min_latency, problem, initialisation, logS){
 	ptm <- proc.time()
-	front <- algorithm(noSerivce, noCandLoc, noUserCen, seed, cost_limitation, max_cost, min_cost, max_latency, min_latency, initialisation)
+	front <- algorithm(noSerivce, noCandLoc, noUserCen, seed, cost_limitation, max_cost, min_cost, max_latency, min_latency, 
+					   problem, logS, initialisation)
 	print((proc.time() - ptm)[1])
 	fitness_value <- evaluate_front(front, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency)
 	fitness_value <- cbind(fitness_value, (proc.time() - ptm)[1])
@@ -14,7 +16,7 @@ run_algorithm <- function(noSerivce, noCandLoc, noUserCen, seed = 1, cost_limita
 
 
 
-algorithm <- function(noSerivce, noCandLoc, noUserCen, seed, cost_limitation, max_cost, min_cost, max_latency, min_latency, initialisation = F){
+algorithm <- function(noSerivce, noCandLoc, noUserCen, run, cost_limitation, max_cost, min_cost, max_latency, min_latency, problem, logS, initialisation = F){
 	popSize <- 50
 	objDim <- 2
 	varNo <- noSerivce * noCandLoc
@@ -27,7 +29,7 @@ algorithm <- function(noSerivce, noCandLoc, noUserCen, seed, cost_limitation, ma
 	front <- vector()
 	#front_pool <- vector()
 #=============================================================================
-set.seed(seed)
+set.seed(run)
 #========================Algorithm Starts=====================================
 	#	step 1, initialize the population
 	parent <- generate_population(noSerivce, noCandLoc, noUserCen, popSize, cost_limitation, initialisation)
@@ -58,6 +60,9 @@ set.seed(seed)
 	#front_pool <- parent[parent[, varNo + 3] == 1, ]
 
 	for(iter in 1:generations){
+		if(logS == T){
+			log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)])
+		}
 		#step 5, selection
 		matingPool <- tournamentSelection(parent, popSize, tourSize)
 		#print(matingPool)
@@ -78,6 +83,7 @@ set.seed(seed)
 				childAfterM[j, ] <- repair_cost_maximum(childAfterM[j, ], cost_limitation, noSerivce, noCandLoc)
 			}
 		}
+		#Evaluation with fitness function
 		childAfterM <- cbind(childAfterM, t(apply(childAfterM, 1, fitness, noSerivce, noCandLoc, 
 												 noUserCen, max_cost, min_cost, max_latency, min_latency)))
 		
@@ -99,13 +105,7 @@ set.seed(seed)
 		if (is.matrix(front) == F){
 			front <- matrix(front, ncol = varNo + 4)
 		}
-		#update front_pool
-		#front_pool <- front
-		#plot(front[, (varNo + 1):(varNo + objDim)], xlim = origin_range_x, ylim = origin_range_y, col = 'red', pch = 4)
 	}
-	#par(new = T)
-	#plot(parent[, (varNo + 1):(varNo + objDim)], xlim = origin_range_x, ylim = origin_range_y, col = 'red', pch = 3)
-	#plot(front[, (varNo + 1):(varNo + objDim)], xlim = origin_range_x, ylim = origin_range_y, bg = 'black', pch = 24)
 
 	result = list(functions = fitness, parameterDim = varNo, objectiveDim = objDim, popSize = popSize,
 				  tournamentSize = tourSize, generations = generations, XoverProb = cprob, mutationProb = mprob,
@@ -118,30 +118,6 @@ set.seed(seed)
 
 
 
-#check_existed <- function(childAfterM, front_pool, varNo){
-	#child_existed <- vector()
-	#child_non_existed <- vector()
-	#num_in_children <- nrow(childAfterM)
-	#front_pool <- matrix(front_pool, nrow = 1)
-	#num_in_front <- nrow(front_pool)
-	#if(num_in_front == 0){
-		#child_non_existed <- childAfterM
-		#child_existed <- NULL
-		#return(list(child_non_existed, child_existed))
-	#}
-	#for(i in 1:num_in_children){
-		#for(j in 1:num_in_front){
-			#if(identical(childAfterM[i, ], front_pool[j, 1:varNo])) {
-				#child_existed <- rbind(child_existed, front_pool[j, 1:(varNo + 2)])
-				#break
-			#}
-			#if(j == num_in_front){
-				#child_non_existed <- rbind(childAfterM[i, ], child_non_existed)
-			#}
-		#}
-	#}
-	#list(child_non_existed, child_existed)
-#}
 
 evaluate_front <- function(front, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency){
 	fitness_value <- t(apply(front[, 1:(noSerivce * noCandLoc)], 1, fitness, noSerivce, noCandLoc, noUserCen, max_cost, min_cost, max_latency, min_latency))
@@ -350,5 +326,3 @@ repair_cost_maximum <- function(chromosome, limitation, noSerivce, noCandLoc){
 		}
 	}
 }
-
-

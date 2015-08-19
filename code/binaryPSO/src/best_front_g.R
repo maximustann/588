@@ -18,7 +18,7 @@ gen_best_front <- function(problem = 5, iter = 40, maxgen = 50){
 			i <- i + 1
 		}
 		front <- cbind(temp, rnkIndex)
-		best_front <- front[front[, 3] == 1, ]
+		best_front <- front[front[, 3] == 1, 1:2]
 		best_front
 	}
 
@@ -32,7 +32,7 @@ gen_best_front <- function(problem = 5, iter = 40, maxgen = 50){
 			front_filename <- paste(genDirect, 'front.csv', sep='')
 			data <- read.csv(filename, header = T, sep = ',')
 			front <- best_front(data)
-			names(front) <- c("costF", "latencyF", "rnkIndex")
+			names(front) <- c("costF", "latencyF")
 			write.csv(front, front_filename, row.names = F, quote = F)
 		}
 	}

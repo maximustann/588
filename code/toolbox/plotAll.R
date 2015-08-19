@@ -1,0 +1,31 @@
+
+
+
+
+plotAll <- function(algorithms, problem, trueFront = F){
+
+	color <- c("red", "blue", "darkgreen", "purple")
+	pc <- c(0, 1, 4, 17, 23)
+	plotSingle <- function(algorithm, problem, color = "red", pchtype = 1){
+		filename <- paste("~/588_project/code/", algorithm, "/result/", problem, "/best/", problem, ".csv", sep = '')
+		data <- read.table(filename, sep =',', header = T)
+		plot(data[order(data[, 2]), 1:2], xlim = c(0, 1), ylim = c(0, 1), col = color, xlab = 'cost', ylab = 'latency', pch = pchtype, type = 'b')
+	}
+
+	if(trueFront == T){
+		filename <- paste("~/588_project/code/dataset/trueFront/", problem, ".csv", sep = '')
+		front <- read.table(filename, sep = ',', header = T)
+		plot(front[order(front[, 2]), 1:2], xlim = c(0, 1), ylim = c(0, 1), col = "black", xlab = 'cost', 
+			 ylab = 'latency', pch = 20, type = 'b')
+		par(new = T)
+	}
+
+	i <- 1
+	for(algorithm in algorithms){
+		plotSingle(algorithm, problem, color[i], pc[i])
+		par(new = T)
+		i <- i + 1
+	}
+	par(xpd = T)
+	legend("topright", algorithms, col = color[1:length(algorithms)], pch = pc[1:length(algorithms)])
+}

@@ -1,3 +1,4 @@
+source("best_front_g.R")
 
 plot_gen <- function(problem = 1, iter = 1, maxgen = 50){
 	path <- paste("../logData/", problem, '/', iter, '/', sep='')
