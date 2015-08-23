@@ -33,8 +33,8 @@ gen_best_front <- function(algorithm, problem = 5, iter = 40, maxgen = 50){
 			front_filename <- paste(genDirect, 'front.csv', sep='')
 			data <- read.csv(filename, header = T, sep = ',')
 			front <- best_front(data)
-			names(front) <- c("costF", "latencyF")
-			write.csv(front, front_filename, row.names = F, quote = F)
+			#names(front) <- c("costF", "latencyF")
+			write.table(front, front_filename, row.names = F, col.names = F, quote = F)
 		}
 	}
 	

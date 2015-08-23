@@ -23,7 +23,7 @@ gen_best_front <- function(problem = 5, iter = 40, maxgen = 50){
 	}
 
 
-	path <- paste("../logData/", problem, '/', sep = '')
+	path <- paste("/home/st-james1/tanboxi/588_project/code/NSPSO/logData/", problem, '/', sep = '')
 	foreach(i = 1:iter) %dopar% {
 		iterDirect <- paste(path, i, '/', sep = '')
 		for(j in 1:maxgen){

@@ -1,0 +1,10 @@
+
+plothv <- function(algorithms = c("MOPSOCD", "binaryPSO", "NSPSO", "NSGA2"), problem = 1){
+	color <- c("red", "blue", "darkgreed", 'purple')
+	max_value <- c(0, 0)
+	pc <- c(0,1,4,17)
+	for(algorithm in algorithms){
+		filename <- paste("/home/st-james1/tanboxi/588_project/code/")
+	}
+
+}

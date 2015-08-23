@@ -209,6 +209,13 @@ run <- function(problem = 5, logS = F){
 		latency
 	}
 
+	search_minimum_latency <- function(noService, noCandLoc, noUserCen){
+			minimum_latency <- 0
+			#ideal situation
+			chromosome <- matrix(rep(1, noService * noCandLoc), nrow = noService)
+			minimum_latency <- unNormalized_latency_fitness(chromosome, noService, noCandLoc, noUserCen)
+			minimum_latency
+		}
 	search_minimum_cost <- function(noService, noCandLoc){
 		matrixSize <- noService * noCandLoc
 		mini_cost_matrix <- matrix(rep(0, matrixSize), nrow = noService)
@@ -223,11 +230,22 @@ run <- function(problem = 5, logS = F){
 
 	#---------------Pre-processing Start-----------------
 	predata(noService, noCandLoc, noUserCen)
-	min_latency <- 0
-	max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen)
+	normFilename <- paste("/home/st-james1/tanboxi/588_project/code/dataset/norm", noService, "_", noCandLoc, "_", noUserCen, ".csv", sep = '')
+	if(file.exists(normFilename)){
+		normData <- as.vector(as.matrix(read.table(normFilename, header = F, sep = ',')))
+		#print(normData)
+		min_latency <- normData[1]
+		max_latency <- normData[2]
+		min_cost <- normData[3]
+		max_cost <- normData[4]
+	} else{
+		min_latency <- search_minimum_latency(noService, noCandLoc, noUserCen, threshold)
+		max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen, threshold)
 
-	min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
-	max_cost <- sum(cost_matrix)
+		min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
+		max_cost <- sum(cost_matrix)
+		write.table(c(min_latency, max_latency, min_cost, max_cost), normFilename, row.names = F, col.names = F, sep = ',')
+	}
 	
 	#---------------Pre-processing End-------------------
 
@@ -237,12 +255,12 @@ run <- function(problem = 5, logS = F){
 
 	#fire on all 8 cores
 	print("Start")
-	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
-	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/best/', sep = ''), showWarnings = F)
 	foreach(iter = 1:40) %dopar%{
 		cat("run: ", iter,"\n")
-		filename_bpso_time <- paste('../result/', problem, '/run/', iter, '_bpso_time.csv', sep = '')
-		filename_bpso <- paste('../result/', problem, '/run/', iter, '_bpso.csv', sep = '')
+		filename_bpso_time <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/run/', iter, '_bpso_time.csv', sep = '')
+		filename_bpso <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/run/', iter, '_bpso.csv', sep = '')
 		ptm <- proc.time()
 		bPSOdata <- bpso(fitFunc, varcount, obj, lbound, ubound, c1, c2, maxgen, weight, popSize, iter, problem, logS)
 		bPSOtime <- c(bPSOtime, (proc.time() - ptm)[1])
@@ -251,8 +269,8 @@ run <- function(problem = 5, logS = F){
 	}
 	print("Compiling...")
 	for(iter in 1:40){
-		filename_bpso <- paste('../result/', problem, '/run/', iter, "_bpso.csv", sep = "")
-		filename_bpso_time <- paste('../result/', problem, '/run/', iter, '_bpso_time.csv', sep = "")
+		filename_bpso <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/run/', iter, "_bpso.csv", sep = "")
+		filename_bpso_time <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/run/', iter, '_bpso_time.csv', sep = "")
 		bPSOdata <- rbind(bPSOdata, read.csv(filename_bpso, header = T, sep = ','))
 		bPSOtime <- rbind(bPSOtime, read.csv(filename_bpso_time, header = T))
 	}
@@ -270,8 +288,8 @@ run <- function(problem = 5, logS = F){
 	names(best_bpso) <- c('costF', 'latencyF', 'rank')
 
 	#prepare file name 
-	filename <- paste('../result/', problem, '/best/', problem, '.csv', sep = '')
-	timeFilename <- paste('../result/', problem, '/best/', problem,'_time.csv', sep = '')
+	filename <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/best/', problem, '.csv', sep = '')
+	timeFilename <- paste('/home/st-james1/tanboxi/588_project/code/binaryPSO/result/', problem, '/best/', problem,'_time.csv', sep = '')
 
 	#write final result
 	write.csv(best_bpso[, 1:2], filename, row.names = F, quote = F)

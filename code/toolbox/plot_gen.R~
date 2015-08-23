@@ -1,6 +1,6 @@
 
 plot_gen <- function(algorithm, problem = 1, iter = 1, maxgen = 50){
-	path <- paste("../logData/", problem, '/', iter, '/', sep='')
+	path <- paste("../", algorithm, "/logData/", problem, '/', iter, '/', sep='')
 
 	mydata <- list()
 	for(i in 1:maxgen){

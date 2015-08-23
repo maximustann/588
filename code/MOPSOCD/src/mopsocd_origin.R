@@ -330,6 +330,7 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
             cat("\n")
         }
 		if(logS == T){
+			#print(popFit)
 			log(problem, seed, t, archiveVar, archiveFit)
 		}
     }

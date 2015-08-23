@@ -330,7 +330,8 @@ mopsocd <- function (fn, gn = NULL, varcnt, fncnt, lowerbound, upperbound,
             cat("\n")
         }
 		if(logS == T){
-			log(problem, seed, t, archiveVar, archiveFit)
+			#print(popFit)
+			#log(problem, seed, t, archiveVar, archiveFit)
 		}
     }
     if (verbosity >= 2) {

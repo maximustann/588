@@ -144,6 +144,13 @@ run <- function(problem = 5, logS = F, initialisation = F){
 		latency
 	}
 	
+	search_minimum_latency <- function(noService, noCandLoc, noUserCen){
+			minimum_latency <- 0
+			#ideal situation
+			chromosome <- matrix(rep(1, noService * noCandLoc), nrow = noService)
+			minimum_latency <- unNormalized_latency_fitness(chromosome, noService, noCandLoc, noUserCen)
+			minimum_latency
+		}
 	search_minimum_cost <- function(noService, noCandLoc){
 		matrixSize <- noService * noCandLoc
 		mini_cost_matrix <- matrix(rep(0, matrixSize), nrow = noService)
@@ -172,14 +179,26 @@ run <- function(problem = 5, logS = F, initialisation = F){
 	#------------------------------Proprocessing Functions End------------------------
 	#------------------------------Preprocessing Start-------------------------------
 	predata(noService, noCandLoc, noUserCen)
-	max_cost <- sum(cost_matrix)
-	min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
-	max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen)
-	min_latency <- 0
+	normFilename <- paste("/home/st-james1/tanboxi/588_project/code/dataset/norm", noService, "_", noCandLoc, "_", noUserCen, ".csv", sep = '')
+	if(file.exists(normFilename)){
+		normData <- as.vector(as.matrix(read.table(normFilename, header = F, sep = ',')))
+		#print(normData)
+		min_latency <- normData[1]
+		max_latency <- normData[2]
+		min_cost <- normData[3]
+		max_cost <- normData[4]
+	} else{
+		min_latency <- search_minimum_latency(noService, noCandLoc, noUserCen, threshold)
+		max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen, threshold)
+
+		min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
+		max_cost <- sum(cost_matrix)
+		write.table(c(min_latency, max_latency, min_cost, max_cost), normFilename, row.names = F, col.names = F, sep = ',')
+	}
 	#------------------------------Preprocessing End--------------------------------
 	print("Start")
-	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
-	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/best/', sep = ''), showWarnings = F)
 	foreach(iter = 1:40) %dopar%{
 		cat("run:", iter, '\n')
 
@@ -188,15 +207,15 @@ run <- function(problem = 5, logS = F, initialisation = F){
 		if(initialisation == T){
 
 			NSGAtime <- NSGAdata[1, 3]
-			filename_nsga <- paste("../result/", problem, '/', iter, "_initialisation_nsga.csv", sep = "")
+			filename_nsga <- paste("/home/st-james1/tanboxi/588_project/code/NSGA2/result/", problem, '/', iter, "_initialisation_nsga.csv", sep = "")
 			filename_nsga_time <- paste("../result/", problem, '/', iter, "_initialisation_time_nsga.csv", sep = "")
 			write.csv(NSGAdata[, 1:2], filename_nsga, quote = F, row.names = F)
 			write.csv(NSGAtime, filename_nsga_time, quote = F, row.names = F)
 		}
 		else{
 			NSGAtime <- NSGAdata[1, 3]
-			filename_nsga <- paste('../result/', problem, '/run/', iter, "_nsga.csv", sep = "")
-			filename_nsga_time <- paste("../result/", problem,'/run/', iter, "_time_nsga.csv", sep = "")
+			filename_nsga <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', iter, "_nsga.csv", sep = "")
+			filename_nsga_time <- paste("/home/st-james1/tanboxi/588_project/code/NSGA2/result/", problem,'/run/', iter, "_time_nsga.csv", sep = "")
 			write.csv(NSGAdata[, 1:2], filename_nsga, quote = F, row.names = F)
 			write.csv(NSGAtime, filename_nsga_time, quote = F, row.names = F)
 		}
@@ -205,14 +224,14 @@ run <- function(problem = 5, logS = F, initialisation = F){
 
 	for(iter in 1:40){
 		if(initialisation == T){
-			filename_nsga <- paste('../result/', problem, '/run/', iter, "_initialisation_nsga.csv", sep = "")
-			filename_nsga_time <- paste('../result/', problem, '/run/', iter, "_initialisation_time_nsga.csv", sep = "")
+			filename_nsga <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', iter, "_initialisation_nsga.csv", sep = "")
+			filename_nsga_time <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', iter, "_initialisation_time_nsga.csv", sep = "")
 			NSGAdata <- rbind(NSGAdata, read.csv(filename_nsga, header = T, sep = ','))
 			NSGAtime <- rbind(NSGAtime, read.csv(filename_nsga_time, header = T, sep = ","))
 		}
 		else{
-			filename_nsga <- paste('../result/', problem, '/run/', iter, "_nsga.csv", sep = "")
-			filename_nsga_time <- paste('../result/', problem, '/run/', iter, "_time_nsga.csv", sep = "")
+			filename_nsga <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', iter, "_nsga.csv", sep = "")
+			filename_nsga_time <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/run/', iter, "_time_nsga.csv", sep = "")
 			NSGAdata <- rbind(NSGAdata, read.csv(filename_nsga, header = T, sep = ','))
 			NSGAtime <- rbind(NSGAtime, read.csv(filename_nsga_time, header = T, sep = ","))
 		}
@@ -233,12 +252,12 @@ run <- function(problem = 5, logS = F, initialisation = F){
 	data <- rbind(best_nsga[, 1:2], GAdata)
 	colnames(data) <- c("costF", "latencyF")
 	if(initialisation == T){
-		filename <- paste('../result/', problem, '/', problem, "_initialisation.csv", sep = "")
-		filename_time <- paste('../result/', problem, '/', problem, "_initialisation_time.csv", sep = "")
+		filename <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/', problem, "_initialisation.csv", sep = "")
+		filename_time <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/', problem, "_initialisation_time.csv", sep = "")
 	}
 	else{
-		filename <- paste('../result/', problem, '/best/', problem,  ".csv", sep = "")
-		filename_time <- paste('../result/', problem, '/best/', problem, "_time.csv", sep = "")
+		filename <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/best/', problem,  ".csv", sep = "")
+		filename_time <- paste('/home/st-james1/tanboxi/588_project/code/NSGA2/result/', problem, '/best/', problem, "_time.csv", sep = "")
 	}
 	write.csv(data, filename, quote = F, row.names = F)
 	write.csv(time_data, filename_time, quote = F, row.names = F)

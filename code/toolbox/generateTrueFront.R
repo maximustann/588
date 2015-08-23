@@ -21,6 +21,6 @@ generateTrueFront <- function(algorithms = c("MOPSOCD", "binaryPSO", "NSGA2", "N
 	}
 	for(i in problem){
 		trueFront <- findTrueFront(i)
-		write.table(trueFront, paste("../dataset/trueFront/", i, ".csv", sep = ''), row.names = F, quote = F, sep = ',')
+		write.table(trueFront, paste("../dataset/trueFront/", i, ".csv", sep = ''), row.names = F, col.names = F, quote = F, sep = ',')
 	}
 }

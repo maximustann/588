@@ -60,7 +60,9 @@ set.seed(run)
 	#front_pool <- parent[parent[, varNo + 3] == 1, ]
 
 	for(iter in 1:generations){
-		#log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)])
+		if(logS == T){
+			log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)])
+		}
 		#step 5, selection
 		matingPool <- tournamentSelection(parent, popSize, tourSize)
 		#print(matingPool)

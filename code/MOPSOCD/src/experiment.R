@@ -10,7 +10,7 @@ source("mopsocd_origin.R")
 
 
 
-run <- function(problem = 5, logS = F){
+run <- function(problem = 5, logS){
 
 	#----------------------Set up Problem Start------------------------------
 	if(problem == 1){
@@ -94,7 +94,7 @@ run <- function(problem = 5, logS = F){
 	optim <- 0
 	threshold <- 0.7
 	maxgen <- 50
-	popsize <- 100
+	popsize <- 50
 	#---------------Parameter settings---------------
 	#--------------------------------Fitness Functions------------------------------------------------
 
@@ -155,6 +155,9 @@ run <- function(problem = 5, logS = F){
 		#cat("value = ", value, "max_value = ", max_value, "min_value", min_value, "\n")
 		normalized_data <- vector()
 		normalized_data <- (value - min_value) / (max_value - min_value)
+		#if(normalized_data < 0){
+			#cat("Debug: ", debug, value, max_value, min_value, '\n')
+		#}
 		normalized_data
 	}
 
@@ -198,6 +201,13 @@ run <- function(problem = 5, logS = F){
 		}
 		latency
 	}
+	search_minimum_latency <- function(noService, noCandLoc, noUserCen, threshold){
+		minimum_latency <- 0
+		#ideal situation
+		chromosome <- matrix(rep(1, noService * noCandLoc), nrow = noService)
+		minimum_latency <- unNormalized_latency_fitness(chromosome, noService, noCandLoc, noUserCen, threshold)
+		minimum_latency
+	}
 	
 	search_minimum_cost <- function(noService, noCandLoc){
 		matrixSize <- noService * noCandLoc
@@ -211,11 +221,23 @@ run <- function(problem = 5, logS = F){
 	}
 	#====================pre-processing functions===================================================
 	predata(noService, noCandLoc, noUserCen)
-	min_latency <- 0
-	max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen, threshold)
+	
+	normFilename <- paste("/home/st-james1/tanboxi/588_project/code/dataset/norm", noService, "_", noCandLoc, "_", noUserCen, ".csv", sep = '')
+	if(file.exists(normFilename)){
+		normData <- as.vector(as.matrix(read.table(normFilename, header = F, sep = ',')))
+		#print(normData)
+		min_latency <- normData[1]
+		max_latency <- normData[2]
+		min_cost <- normData[3]
+		max_cost <- normData[4]
+	} else{
+		min_latency <- search_minimum_latency(noService, noCandLoc, noUserCen, threshold)
+		max_latency <- search_maximum_latency(noService, noCandLoc, noUserCen, threshold)
 
-	min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
-	max_cost <- sum(cost_matrix)
+		min_cost <- sum(search_minimum_cost(noService, noCandLoc) * cost_matrix)
+		max_cost <- sum(cost_matrix)
+		write.table(c(min_latency, max_latency, min_cost, max_cost), normFilename, row.names = F, col.names = F, sep = ',')
+	}
 	#---------------Pre-processing-------------------
 
 	
@@ -279,6 +301,10 @@ run <- function(problem = 5, logS = F){
 				bad_kids <- c(bad_kids, i)
 			}
 		}
+		#best_front <- best_front[-which(best_front[, 2] == 1), ]
+		if(as.logical(match(1, best_front[, 2], nomatch = 0))){
+			best_front <- best_front[-which(best_front[, 2] == 1),]
+		}
 
 		if(is.null(bad_kids)){
 			return(best_front)
@@ -292,14 +318,14 @@ run <- function(problem = 5, logS = F){
 	#-----------------------------------------------------
 
 	#Now it's time to run algorithm
-	dir.create(paste('../result/', problem, '/run/', sep = ''), showWarnings = F)
-	dir.create(paste('../result/', problem, '/best/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/run/', sep = ''), showWarnings = F)
+	dir.create(paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/best/', sep = ''), showWarnings = F)
 	mPSOdata <- vector()
 	mPSOtime <- vector()
 	#fire on all 8 cores
 	foreach(iter = 1:40) %dopar%{
-		filename_mpso_time <- paste('../result/', problem, '/run/', iter, "_mpso_time.csv", sep = '')
-		filename_mpso <- paste('../result/', problem, '/run/', iter, "_mpso.csv", sep = "")
+		filename_mpso_time <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/run/', iter, "_mpso_time.csv", sep = '')
+		filename_mpso <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/run/', iter, "_mpso.csv", sep = "")
 		mPSOtime <- vector()
 		cat("run: ", iter, '\n')
 		ptm <- proc.time()
@@ -313,8 +339,8 @@ run <- function(problem = 5, logS = F){
 	}
 	print("Start compiling...")
 	for(iter in 1:40){
-		filename_mpso <- paste('../result/', problem, '/run/', iter, "_mpso.csv", sep = "")
-		filename_mpso_time <- paste('../result/', problem,'/run/', iter, "_mpso_time.csv", sep = "")
+		filename_mpso <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/run/', iter, "_mpso.csv", sep = "")
+		filename_mpso_time <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem,'/run/', iter, "_mpso_time.csv", sep = "")
 		mPSOdata <- rbind(mPSOdata, read.csv(filename_mpso, header = T, sep = ','))
 		mPSOtime <- rbind(mPSOtime, read.csv(filename_mpso_time, header = T))
 	}
@@ -335,8 +361,8 @@ run <- function(problem = 5, logS = F){
 
 	#prepare filename
 	print("prepare writing file")
-	filename <- paste('../result/', problem, '/best/', problem, '.csv', sep = '')
-	mPSOtimeFilename <- paste('../result/', problem, '/best/', problem, "_mPSO_time.csv", sep='')
+	filename <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/best/', problem, '.csv', sep = '')
+	mPSOtimeFilename <- paste('/home/st-james1/tanboxi/588_project/code/MOPSOCD/result/', problem, '/best/', problem, "_mPSO_time.csv", sep='')
 
 	write.csv(best_mpso[, 1:2], filename, row.names = F, quote = F)
 	write.csv(mPSOtime, mPSOtimeFilename, row.names = F, quote = F)

@@ -1,0 +1,29 @@
+
+plothvigd <- function(algorithms = c("MOPSOCD", "binaryPSO", "NSPSO", "NSGA2"), problem = 1, hv_igd = 'hv'){
+	color <- c("red", "blue", "darkgreen", 'purple')
+	max_value <- c(0, 0)
+	pc <- c(0,1,4,17)
+	i <- 1
+	data <- list()
+	for(algorithm in algorithms){
+		filename <- paste("/home/st-james1/tanboxi/588_project/code/", algorithm, 
+						  	"/result/", problem, "/best/", hv_igd, ".csv", sep='')
+		data[[i]] <- read.table(filename, sep=',', header = T)
+		temp <- data[[i]][which(data[[i]][,1] == max(data[[i]][, 1])), ]
+		if(temp[1] > max_value[1]) max_value <- temp
+		i <- i + 1
+	}
+	plotSingle <- function(algorithm, problem, color = "red", pchtype = 1, data, max_value, count, hv_igd){
+		plot(data[, 2], data[, 1], xlim = c(0, 50), ylim = c(0, max_value[, 1]), col = color, xlab = 'generation', 
+			 ylab = hv_igd, pch = pchtype, type = 'l')
+	}
+	i <- 1
+	for(algorithm in algorithms){
+		plotSingle(algorithm, problem, color[i], pc[i], data[[i]], max_value, i, hv_igd)
+		par(new = T)
+		i <- i + 1
+	}
+	par(xpd = T)
+	legend("bottomleft", algorithms, col = color[1:length(algorithms)], 
+		   pch = pc[1:length(algorithms)])
+}

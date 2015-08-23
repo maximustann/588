@@ -1,7 +1,7 @@
 log <- function(problem, iter, gen, pop, fitness){
 	#cat("iter: ", iter, '\n')
 	#cat("gen: ", gen, '\n')
-	path <- paste("../logData/", problem, '/', sep = '')
+	path <- paste("/home/st-james1/tanboxi/588_project/code/binaryPSO/logData/", problem, '/', sep = '')
 	iterDirect <- paste(path, iter, '/', sep = '')
 	dir.create(iterDirect, mode = "0777")
 	genDirect <- paste(iterDirect, gen, '/', sep = '')
