@@ -20,6 +20,13 @@ gen_best_front <- function(algorithm, problem = 5, iter = 40, maxgen = 50){
 		}
 		front <- cbind(temp, rnkIndex)
 		best_front <- front[front[, 3] == 1, 1:2]
+
+		if(as.logical(match(1, best_front[, 2], nomatch = 0))){
+			best_front <- best_front[-which(best_front[, 2] == 1), ]
+		}
+		if(as.logical(match(1, best_front[, 1], nomatch = 0))){
+			best_front<- best_front[-which(best_front[, 1] == 1), ]
+		}
 		best_front
 	}
 
@@ -34,7 +41,7 @@ gen_best_front <- function(algorithm, problem = 5, iter = 40, maxgen = 50){
 			data <- read.csv(filename, header = T, sep = ',')
 			front <- best_front(data)
 			#names(front) <- c("costF", "latencyF")
-			write.table(front, front_filename, row.names = F, col.names = F, quote = F)
+			write.table(front, front_filename, row.names = F, col.names = F, quote = F, sep=',')
 		}
 	}
 	

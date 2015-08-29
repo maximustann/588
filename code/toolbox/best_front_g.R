@@ -20,6 +20,13 @@ gen_best_front <- function(algorithm, problem = 5, iter = 40, maxgen = 50){
 		}
 		front <- cbind(temp, rnkIndex)
 		best_front <- front[front[, 3] == 1, 1:2]
+
+		if(as.logical(match(1, best_front[, 2], nomatch = 0))){
+			best_front <- best_front[-which(best_front[, 2] == 1), ]
+		}
+		if(as.logical(match(1, best_front[, 1], nomatch = 0))){
+			best_front<- best_front[-which(best_front[, 1] == 1), ]
+		}
 		best_front
 	}
 

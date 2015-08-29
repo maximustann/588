@@ -9,8 +9,8 @@ log <- function(problem, iter, gen, pop, fitness){
 
 	filefront <- paste(genDirect, 'front.csv', sep = '')
 	filefitness <- paste(genDirect, 'fitness.csv', sep = '')
-	filePop <- paste(genDirect, 'pop.csv', sep = '')
+	#filePop <- paste(genDirect, 'pop.csv', sep = '')
 	write.table(fitness, filefront, row.names = F, col.names = F, sep=',')
 	write.table(fitness, filefitness, row.names = F, quote = F, sep = ',')
-	write.table(pop, filePop, row.names = F, quote = F, sep = ',')
+	#write.table(pop, filePop, row.names = F, quote = F, sep = ',')
 }

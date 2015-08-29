@@ -111,16 +111,19 @@ run <- function(problem = 5, logS){
 				if(num_of_service > 1){
 					response_matrix <- c(response_matrix, min(latency_matrix[user_iter, deployed_service]))
 				}
-				else{
+				else if (num_of_service  == 1){
 					response_matrix <- c(response_matrix, latency_matrix[user_iter, deployed_service])
+				}
+				else {
+					response_matrix <- c(response_matrix, abs(rnorm(1, 0, 1)))
 				}
 			}
 		}
 		response_matrix <- matrix(response_matrix, nrow = noUserCen, byrow = T)
-		if(ncol(response_matrix) < ncol(frequency_matrix)){
+		#if(ncol(response_matrix) < ncol(frequency_matrix)){
 			#death penalty of latency
-			return(max_latency)
-		}
+			#return(max_latency)
+		#}
 		latency <- sum(response_matrix * frequency_matrix)
 		latency
 	}
@@ -128,20 +131,16 @@ run <- function(problem = 5, logS){
 	normalized_cost_fitness <- function(chromosome, noService, noCandLoc, max_cost, min_cost, threshold){
 		cost <- unNormalized_cost_fitness(chromosome, noService, noCandLoc, threshold)
 		cost <- normalize(cost, max_cost, min_cost)
-		if(cost < 0){
-			#death penalty of cost
-			return(1)
-		}
-		#if(validation(chromosome, noService) == F){
-
-			#return(max_cost)
-		#}
 		cost
 	}
 	unNormalized_cost_fitness <- function(chromosome, noService, noCandLoc, threshold){
 		chromosome <- sapply(chromosome, function(x, threshold) if(x > threshold) 1 else 0, threshold)
 		chromosome <- matrix(chromosome, nrow = noService)
 		cost <- sum(chromosome * cost_matrix)
+		#if(cost < min_cost){
+			#death penalty of cost
+			#return(max_cost)
+		#}
 		cost
 	}
 	
@@ -331,7 +330,7 @@ run <- function(problem = 5, logS){
 		ptm <- proc.time()
 		#mPSO begins here
 		mpsoResult <- mopsocd(fitFunction, varcnt=varcount,
-					  fncnt=fncount, lowerbound=lbound, upperbound=ubound,
+					  fncnt=fncount, gn = constraint, lowerbound=lbound, upperbound=ubound,
 					  opt=optim, maxgen=maxgen, popsize=popsize, seed = iter, problem = problem, logS = logS)
 		mPSOtime <- c(mPSOtime, (proc.time() - ptm)[1])
 		write.csv(matrix(mpsoResult$objfnvalues, ncol = 2), filename_mpso, row.names = F, quote = F)

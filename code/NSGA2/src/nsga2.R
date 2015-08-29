@@ -61,7 +61,16 @@ set.seed(run)
 
 	for(iter in 1:generations){
 		if(logS == T){
-			log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)])
+			tempfront <- parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)]
+			if(as.logical(match(1, tempfront[, 2], nomatch = 0))){
+				tempfront <- tempfront[-which(tempfront[, 2] == 1), ]
+				if(as.logical(match(1, tempfront[, 1], nomatch = 0))){
+					tempfront <- tempfront[-which(tempfront[, 1] == 1), ]
+			}
+				log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], tempfront)
+			} else {
+				log(problem, run, iter, parent[parent[, varNo + 3] == 1, 1:varNo], parent[parent[, varNo + 3] == 1, (varNo + 1):(varNo + objDim)])
+			}
 		}
 		#step 5, selection
 		matingPool <- tournamentSelection(parent, popSize, tourSize)

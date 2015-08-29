@@ -139,7 +139,15 @@ nspso <- function(fitFunc, varcnt, objDim, lowerbound, upperbound, c1, c2, maxge
 		}
 		front <- pop[pop[, "rnkIndex"] == 1, (varNo + 1):(varNo + objDim)]
 		if(logS == T){
-			log(problem, seed, iter, pop[pop[, "rnkIndex"] == 1, 1:varNo], front[, 1:2])
+			if(as.logical(match(1, front[, 2], nomatch = 0))){
+				tempfront <- front[-which(front[, 2] == 1), ]
+				if(as.logical(match(1, tempfront[, 1], nomatch = 0))){
+					tempfront <- front[-which(tempfront[, 1] == 1), ]
+			}
+				log(problem, seed, iter, pop[pop[, "rnkIndex"] == 1, 1:varNo], tempfront[, 1:2])
+			} else{
+				log(problem, seed, iter, pop[pop[, "rnkIndex"] == 1, 1:varNo], front[, 1:2])
+			}
 		}
 		pop <- pop[, 1:varNo]
 		w <- w - (0.4 / iter)

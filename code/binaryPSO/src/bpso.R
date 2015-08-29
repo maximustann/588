@@ -112,7 +112,16 @@ bpso <- function(fitFunctions, varcnt, obj, lowerbound, upperbound, c1, c2, maxg
 		updateGBest(pop)
 		updatePop()
 		if(logS == T){
-			log(problem, seed, iter, pop, fitness)
+			if(as.logical(match(1, fitness[, 2], nomatch = 0))){
+				tempfitness <- fitness[-which(fitness[, 2] == 1), ]
+			
+				if(as.logical(match(1, tempfitness[, 1], nomatch = 0))){
+				tempfitness <- tempfitness[-which(tempfitness[, 1] == 1), ]
+				}
+				log(problem, seed, iter, pop, tempfitness)
+			} else{
+				log(problem, seed, iter, pop, fitness)
+			}
 		}
 		#plotme(fitness)
 	}

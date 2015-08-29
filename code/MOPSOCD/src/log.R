@@ -8,7 +8,7 @@ log <- function(problem, iter, gen, pop, fitness){
 	dir.create(genDirect, mode = "0777")
 
 	filefitness <- paste(genDirect, 'fitness.csv', sep = '')
-	filePop <- paste(genDirect, 'pop.csv', sep = '')
+	#filePop <- paste(genDirect, 'pop.csv', sep = '')
 	write.csv(fitness, filefitness, row.names = F, quote = F)
-	write.csv(pop, filePop, row.names = F, quote = F)
+	#write.csv(pop, filePop, row.names = F, quote = F)
 }
