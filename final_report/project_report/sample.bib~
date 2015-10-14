@@ -142,13 +142,12 @@
 }
 @article{key:article,
 	author = {Sneha Desai and Sushant Bahadure and Faruk Kazi and Navdeep Singh},
-	title = {Article: Multi-Objective Constrained Optimization using Discrete Mechanics and NSGA-II Approach},
+	title = {Article: Multi-Objective Constrained Optimization using Discrete Mechanics and {NSGA-II} Approach},
 	journal = {International Journal of Computer Applications},
 	year = {2012},
 	volume = {57},
 	number = {20},
 	pages = {14-20},
-	note = {Full text available}
 }
 @inproceedings{Liu,
 	author = {Liu, Yutu and Ngu, Anne H. and Zeng, Liang Z.},
@@ -172,7 +171,7 @@
 	volume={36},
 	number={11-12},
 	doi={10.1007/s00170-006-0921-8},
-	title={Optimization of electrical discharge machining characteristics of WC/Co composites using non-dominated sorting genetic algorithm (NSGA-II)},
+	title={Optimization of electrical discharge machining characteristics of WC/Co composites using non-dominated sorting genetic algorithm ({NSGA-II})},
 	publisher={Springer-Verlag},
 	keywords={WC/Co composite; Electrical discharge machining (EDM); Non-dominated sorting genetic algorithm (NSGA-II); Modeling},
 	author={Kanagarajan, D. and Karthikeyan, R. and Palanikumar, K. and Davim, J.Paulo},
@@ -371,7 +370,7 @@
   publisher={INFORMS}
 }
 
-@article{man1996genetic,
+@article{man,
   title={Genetic algorithms: concepts and applications},
   author={Man, Kim-Fung and Tang, Kit-Sang and Kwong, Sam},
   journal={IEEE Transactions on Industrial Electronics},
@@ -425,7 +424,6 @@
 	journal={Cybernetics, IEEE Transactions on},
 	title={Particle Swarm Optimization for Feature Selection in Classification: A Multi-Objective Approach},
 	year={2013},
-	month={Dec},
 	volume={43},
 	number={6},
 	pages={1656-1671},
@@ -448,7 +446,6 @@
 		doi = {10.1145/2504730.2504740},
 		acmid = {2504740},
 		publisher = {ACM},
-		address = {New York, NY, USA},
 		keywords = {DNS, EC2, azure, cloud computing, trace analysis, web service},
 	} 
 @ARTICLE{1304847,
@@ -456,7 +453,6 @@
 	journal={Evolutionary Computation, IEEE Transactions on},
 	title={Handling multiple objectives with particle swarm optimization},
 	year={2004},
-	month={June},
 	volume={8},
 	number={3},
 	pages={256-279},
@@ -470,7 +466,6 @@
 	booktitle={Genetic and Evolutionary Computation — GECCO 2003},
 	volume={2723},
 	series={Lecture Notes in Computer Science},
-	editor={Cantú-Paz, Erick and Foster, JamesA. and Deb, Kalyanmoy and Davis, LawrenceDavid and Roy, Rajkumar and O’Reilly, Una-May and Beyer, Hans-Georg and Standish, Russell and Kendall, Graham and Wilson, Stewart and Harman, Mark and Wegener, Joachim and Dasgupta, Dipankar and Potter, MitchA. and Schultz, AlanC. and Dowsland, KathrynA. and Jonoska, Natasha and Miller, Julian},
 	doi={10.1007/3-540-45105-6_4},
 	title={A Non-dominated Sorting Particle Swarm Optimizer for Multiobjective Optimization},
 	url={http://dx.doi.org/10.1007/3-540-45105-6_4},
@@ -484,7 +479,6 @@
 	booktitle={Evolutionary Computation, 1999. CEC 99. Proceedings of the 1999 Congress on},
 	title={The Pareto archived evolution strategy: a new baseline algorithm for Pareto multiobjective optimisation},
 	year={1999},
-	month={},
 	volume={1},
 	pages={-105 Vol. 1},
 	doi={10.1109/CEC.1999.781913},}
@@ -515,13 +509,12 @@
 	doi = {10.1145/1068009.1068047},
 	acmid = {1068047},
 	publisher = {ACM},
-	address = {New York, NY, USA},
 	keywords = {crowding distance, multiobjective optimization, particle swarm optimization},
 } 
 @inproceedings{Dan:2008,
 	author = {Dan, Asit and Johnson, Robert D. and Carrato, Tony},
 	title = {SOA Service Reuse by Design},
-	booktitle = {Proceedings of the 2Nd International Workshop on Systems Development in SOA Environments},
+	booktitle = {Proceedings of the 2Nd International Workshop on Systems Development in {SOA} Environments},
 	series = {SDSOA '08},
 	year = {2008},
 	isbn = {978-1-60558-029-6},
@@ -532,7 +525,6 @@
 	doi = {10.1145/1370916.1370923},
 	acmid = {1370923},
 	publisher = {ACM},
-	address = {New York, NY, USA},
 	keywords = {business glossary, service enhancement, service level agreement, service monitoring and management, service registry, service reuse, soa governance},
 } 
 @article{Papazoglou,
@@ -542,7 +534,6 @@
 	issue_date = {July      2007},
 	volume = {16},
 	number = {3},
-	month = jul,
 	year = {2007},
 	issn = {1066-8888},
 	pages = {389--415},
@@ -551,7 +542,6 @@
 	doi = {10.1007/s00778-007-0044-3},
 	acmid = {1265298},
 	publisher = {Springer-Verlag New York, Inc.},
-	address = {Secaucus, NJ, USA},
 	keywords = {Application and service integration, Asynchronous and event-driven processing, Enterprise bus, Service oriented architecture, Web services},
 } 
 
@@ -562,7 +552,6 @@
     editor = {{IBM} and Microsoft and {and others}},
     howpublished = {http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html},
     keywords = {bpel},
-    month = apr,
     organization = {Organization for the Advancement of Structured Information Standards (OASIS)},
     posted-at = {2008-10-30 14:56:28},
     priority = {1},
@@ -582,7 +571,6 @@
 	booktitle={Neural Networks, 1995. Proceedings., IEEE International Conference on},
 	title={Particle swarm optimization},
 	year={1995},
-	month={Nov},
 	volume={4},
 	pages={1942-1948 vol.4},
 	doi={10.1109/ICNN.1995.488968},
@@ -592,9 +580,414 @@
 	booktitle={Systems, Man, and Cybernetics, 1997. Computational Cybernetics and Simulation., 1997 IEEE International Conference on},
 	title={A discrete binary version of the particle swarm algorithm},
 	year={1997},
-	month={Oct},
 	volume={5},
 	pages={4104-4108 vol.5},
 	doi={10.1109/ICSMC.1997.637339},
 	ISSN={1062-922X},
 }
+@incollection{nsga2_cri,
+	year={2013},
+	isbn={978-3-642-35322-2},
+	booktitle={Soft Computing Applications in Optimization, Control, and Recognition},
+	volume={294},
+	series={Studies in Fuzziness and Soft Computing},
+	editor={Melin, Patricia and Castillo, Oscar},
+	doi={10.1007/978-3-642-35323-9_13},
+	title={High-Performance Architecture for the Modified NSGA-II},
+	url={http://dx.doi.org/10.1007/978-3-642-35323-9_13},
+	publisher={Springer Berlin Heidelberg},
+	keywords={Genetic Algorithm; Multi-Objective Optimization; Pareto Optimal; NSGA – II},
+	author={Domínguez, Josué and Montiel-Ross, Oscar and Sepúlveda, Roberto},
+	pages={321-341},
+	language={English}
+}
+@MISC{Zitzler99evolutionaryalgorithms,
+    author = {Eckart Zitzler},
+    title = {Evolutionary Algorithms for Multiobjective Optimization: Methods and Applications},
+    year = {1999}
+}
+
+@ARTICLE{7083783,
+	author={Guzek, M. and Bouvry, P. and Talbi, E.-G.},
+	journal={Computational Intelligence Magazine, IEEE},
+	title={A Survey of Evolutionary Computation for Resource Management of Processing in Cloud Computing},
+	year={2015},
+	volume={10},
+	number={2},
+	pages={53-67},
+	keywords={cloud computing;contracts;evolutionary computation;cloud computing;cloud-related technique;computing industry;evolutionary computation;optimization model;resource management;resource virtualization;service level agreements;Cloud computing;Industries;Resource management;Resource virtualization;Strategic planning},
+	doi={10.1109/MCI.2015.2405351},
+	ISSN={1556-603X},
+	}
+
+	@inproceedings{Phan8,
+		author = {Phan, Dung H. and Suzuki, Junichi and Carroll, Raymond and Balasubramaniam, Sasitharan and Donnelly, William and Botvich, Dmitri},
+		title = {Evolutionary Multiobjective Optimization for Green Clouds},
+		booktitle = {Proceedings of the 14th Annual Conference Companion on Genetic and Evolutionary Computation},
+		series = {GECCO '12},
+		year = {2012},
+		isbn = {978-1-4503-1178-6},
+		location = {Philadelphia, Pennsylvania, USA},
+		pages = {19--26},
+		numpages = {8},
+		url = {http://doi.acm.org/10.1145/2330784.2330788},
+		doi = {10.1145/2330784.2330788},
+		acmid = {2330788},
+		publisher = {ACM},
+		keywords = {cloud computing, evolutionary multiobjective optimization, internet data centers, renewable energy, sustainability},
+	} 
+@INPROCEEDINGS{6557869,
+	author={Kessaci, Y. and Melab, N. and Talbi, E.-G.},
+	booktitle={Evolutionary Computation (CEC), 2013 IEEE Congress on},
+	title={A pareto-based genetic algorithm for optimized assignment of VM requests on a cloud brokering environment},
+	year={2013},
+	pages={2496-2503},
+	doi={10.1109/CEC.2013.6557869},
+	}
+@article{knowles2000,
+  title={Approximating the nondominated front using the Pareto archived evolution strategy},
+  author={Knowles, Joshua D and Corne, David W},
+  journal={Evolutionary computation},
+  volume={8},
+  number={2},
+  pages={149--172},
+  year={2000},
+  publisher={MIT Press}
+}
+@article{kemps2012dynamic,
+	title={Dynamic web service deployment in a cloud environment},
+	author={Kemps-Snijders, Marc and Brouwer, Matthijs and Kunst, Jan Pieter and Visser, Tom},
+	year={2012}
+}
+@phdthesis{Sun:2003:,
+ author = {Sun, Yi},
+ title = {A Location Model for Web Services Intermediaries},
+ year = {2003},
+ note = {AAI3120151},
+ publisher = {University of Florida},
+}
+
+@article{Huang:2013:,
+	author = {Huang, Xiaodi},
+	title = {{UsageQoS}: Estimating the {QoS} of Web Services Through Online User Communities},
+	journal = {ACM Trans. Web},
+	issue_date = {December 2013},
+	volume = {8},
+	number = {1},
+	year = {2013},
+	issn = {1559-1131},
+	pages = {1:1--1:31},
+	articleno = {1},
+	numpages = {31},
+	url = {http://doi.acm.org/10.1145/2532635},
+	doi = {10.1145/2532635},
+	acmid = {2532635},
+	publisher = {ACM},
+	keywords = {QoS, Web services, online social network, propagation},
+}
+
+@INPROCEEDINGS{1004478,
+	author={Laskari, E.C. and Parsopoulos, K.E. and Vrahatis, M.N.},
+	booktitle={Evolutionary Computation, 2002. CEC '02. Proceedings of the 2002 Congress on},
+	title={Particle swarm optimization for integer programming},
+	year={2002},
+	volume={2},
+	pages={1582-1587},
+	keywords={evolutionary computation;integer programming;optimisation;branch and bound technique;integer programming;particle swarm optimization;Artificial intelligence;Combinatorial mathematics;Graph theory;Linear programming;Logic;Neural networks;Particle swarm optimization;Production;Productivity;Testing},
+	doi={10.1109/CEC.2002.1004478},
+}
+@ARTICLE{4120263,
+	author={Haupt, Randy L.},
+	journal={Antennas and Propagation, IEEE Transactions on},
+	title={Antenna Design With a Mixed Integer Genetic Algorithm},
+	year={2007},
+	volume={55},
+	number={3},
+	pages={577-582},
+	keywords={antenna theory;electromagnetic wave polarisation;genetic algorithms;integer programming;microstrip antenna arrays;antenna design;binary values;circularly polarized patch antenna array;integer genetic algorithm;Algorithm design and analysis;Biological cells;Cost function;Genetic algorithms;Linear programming;Microstrip antenna arrays;Microstrip antennas;Patch antennas;Phased arrays;Polarization;Antenna arrays;genetic algorithms (GAs);microstrip antennas;optimization methods;phased arrays},
+	doi={10.1109/TAP.2007.891510},
+	ISSN={0018-926X},
+}
+@article{liu2013discrete,
+  title={Discrete optimization problems of linear array synthesis by using real number particle swarm optimization},
+  author={Liu, Dong and Feng, Quanyuan and Wang, Wei-Bo},
+  journal={Progress In Electromagnetics Research},
+  volume={133},
+  pages={407--424},
+  year={2013},
+  publisher={EMW Publishing}
+}
+
+@article{Anghinolfi200973,
+	title = "A new discrete particle swarm optimization approach for the single-machine total weighted tardiness scheduling problem with sequence-dependent setup times ",
+	journal = "European Journal of Operational Research ",
+	volume = "193",
+	number = "1",
+	pages = "73 - 85",
+	year = "2009",
+	note = "",
+	issn = "0377-2217",
+	doi = "http://dx.doi.org/10.1016/j.ejor.2007.10.044",
+	url = "http://www.sciencedirect.com/science/article/pii/S0377221707010727",
+	author = "Davide Anghinolfi and Massimo Paolucci",
+	keywords = "Metaheuristics",
+	keywords = "Particle swarm optimization",
+	keywords = "Scheduling "
+}
+
+@inproceedings{Auger:2009,
+	author = {Auger, Anne and Bader, Johannes and Brockhoff, Dimo and Zitzler, Eckart},
+	title = {Theory of the Hypervolume Indicator: Optimal {$\mu$}-distributions and the Choice of the Reference Point},
+	booktitle = {Proceedings of the Tenth ACM SIGEVO Workshop on Foundations of Genetic Algorithms},
+	series = {FOGA '09},
+	year = {2009},
+	isbn = {978-1-60558-414-0},
+	location = {Orlando, Florida, USA},
+	pages = {87--102},
+	numpages = {16},
+	url = {http://doi.acm.org/10.1145/1527125.1527138},
+	doi = {10.1145/1527125.1527138},
+	acmid = {1527138},
+	publisher = {ACM},
+	keywords = {hypervolume indicator, multiobjective optimization},
+}
+
+@article{coello2002theoretical,
+	title={Theoretical and numerical constraint-handling techniques used with evolutionary algorithms: a survey of the state of the art},
+	author={Coello, Carlos A Coello},
+	journal={Computer methods in applied mechanics and engineering},
+	volume={191},
+	number={11},
+	pages={1245--1287},
+	year={2002},
+	publisher={North-Holland}
+}
+
+@TECHREPORT{veldhuizen99,
+    author = {David A. Van Veldhuizen and David A. Van Veldhuizen},
+    title = {Multiobjective Evolutionary Algorithms: Classifications, Analyses, and New Innovations},
+    institution = {Evolutionary Computation},
+    year = {1999}
+}
+
+@INPROCEEDINGS{870296,
+	author={Van Veldhuizen, D.A. and Lamont, G.B.},
+	booktitle={Evolutionary Computation, 2000. Proceedings of the 2000 Congress on},
+	title={On measuring multiobjective evolutionary algorithm performance},
+	year={2000},
+	volume={1},
+	pages={204-211 vol.1},
+	keywords={evolutionary computation;MOEA performance comparison;evolutionary algorithms;multiobjective EA;multiobjective evolutionary algorithm performance;optimization problems;Algorithm design and analysis;Design optimization;Evolutionary computation;Military computing;Space technology;Testing},
+	doi={10.1109/CEC.2000.870296},
+	}
+
+	@INPROCEEDINGS{1501598,
+		author={Villalobos-Arias, M.A. and Pulido, G.T. and Coello, C.A.C.},
+		booktitle={Swarm Intelligence Symposium, 2005. SIS 2005. Proceedings 2005 IEEE},
+		title={A proposal to use stripes to maintain diversity in a multi-objective particle swarm optimizer},
+		year={2005},
+		pages={22-29},
+		keywords={evolutionary computation;particle swarm optimisation;search problems;diversity maintains mechanism;multiobjective evolutionary algorithm;multiobjective particle swarm optimizer;objective function space;search engine;stripes;Design optimization;Evolutionary computation;Pareto optimization;Particle swarm optimization;Proposals;Search engines},
+		doi={10.1109/SIS.2005.1501598},}
+
+		@Inproceedings {export:141114,
+			author       = {Chuanxiong Guo and Guohan Lu and Helen Wang and Shuang Yang and Chao Kong and
+				Peng Sun and Wenfei Wu and Yongguang Zhang},
+			booktitle    = {ACM CONEXT 2010},
+			publisher    = {Association for Computing Machinery, Inc.},
+			title        = {SecondNet: A Data Center Network Virtualization Architecture with Bandwidth
+				Guarantees},
+			url          = {http://research.microsoft.com/apps/pubs/default.aspx?id=141114},
+			year         = {2010},
+		}
+
+@Inproceedings {export:149565,
+	author       = {Hitesh Ballani and Paolo Costa and Thomas Karagiannis and Ant Rowstron},
+	publisher    = {ACM SIGCOMM},
+	title        = {Towards Predictable Datacenter Networks},
+	url          = {http://research.microsoft.com/apps/pubs/default.aspx?id=149565},
+	year         = {2011},
+}
+
+@INPROCEEDINGS{6217521,
+	author={Larumbe, F. and Sansò, B.},
+	booktitle={Cluster, Cloud and Grid Computing (CCGrid), 2012 12th IEEE/ACM International Symposium on},
+	title={Optimal Location of Data Centers and Software Components in Cloud Computing Network Design},
+	year={2012},
+	pages={841-844},
+	doi={10.1109/CCGrid.2012.124},
+	}
+
+@inproceedings{Verbancsics,
+	author = {Verbancsics, Phillip and Stanley, Kenneth O.},
+	title = {Transfer Learning Through Indirect Encoding},
+	booktitle = {Proceedings of the 12th Annual Conference on Genetic and Evolutionary Computation},
+	series = {GECCO '10},
+	year = {2010},
+	isbn = {978-1-4503-0072-8},
+	location = {Portland, Oregon, USA},
+	pages = {547--554},
+	numpages = {8},
+	url = {http://doi.acm.org/10.1145/1830483.1830587},
+	doi = {10.1145/1830483.1830587},
+	acmid = {1830587},
+	publisher = {ACM},
+	keywords = {artifical neural networks, generative and developmental systems, robocup soccer, task transfer},
+} 
+
+@book{olivas,
+	title={Handbook of Research on Machine Learning Applications and Trends: Algorithms, Methods, and Techniques: Algorithms, Methods, and Techniques},
+	author={Olivas, Emilio Soria},
+	year={2009},
+	publisher={IGI Global}
+}
+
+@article{man1996genetic,
+	title={Genetic algorithms: concepts and applications},
+	author={Man, Kim-Fung and Tang, Kit-Sang and Kwong, Sam},
+	journal={IEEE Transactions on Industrial Electronics},
+	volume={43},
+	number={5},
+	pages={519--534},
+	year={1996},
+	publisher={New York, NY: Institute of Electrical and Electronics Engineers, c1982-}
+}
+@article{back1997evolutionary,
+	title={Evolutionary computation: Comments on the history and current state},
+	author={B{\"a}ck, Thomas and Hammel, Ulrich and Schwefel, Hans-Paul},
+	journal={Evolutionary computation, IEEE Transactions on},
+	volume={1},
+	number={1},
+	pages={3--17},
+	year={1997},
+	publisher={IEEE}
+}
+@inproceedings{de1992genetic,
+  title={Are genetic algorithms function optimizers?},
+  author={De Jong, Kenneth A},
+  booktitle={PPSN},
+  volume={2},
+  pages={3--14},
+  year={1992}
+}
+@article{de1993genetic,
+  title={Genetic algorithms are NOT function optimizers},
+  author={De Jong, Kenneth A},
+  journal={Foundations of genetic algorithms},
+  volume={2},
+  pages={5--17},
+  year={1993}
+}
+@article{holland1962outline,
+  title={Outline for a logical theory of adaptive systems},
+  author={Holland, John H},
+  journal={Journal of the ACM (JACM)},
+  volume={9},
+  number={3},
+  pages={297--314},
+  year={1962},
+  publisher={ACM}
+}
+@article{fogel1962autonmous,
+  title={Autonomous automata},
+  author={Fogel, Lawrence J},
+  journal={Industrial Research},
+  volume={4},
+  number={2},
+  pages={14--19},
+  year={1962}
+}
+@book{rechenberg1971,
+  title={Optimierung technischer Systeme nach Prinzipien der biologischen Evolution},
+  author={Rechenberg, Ingo},
+  year={1971}
+}
+@book{schwefel1975,
+  title={Evolutionsstrategie und numerische Optimierung},
+  author={Schwefel, H-P},
+  year={1975},
+  publisher={Technische Universit{\"a}t Berlin}
+}
+@inproceedings{klock,
+  title={Two-phase nozzle and hollow core jet experiments},
+  author={Klockgether, Jurgen and Schwefel, Hans-Paul},
+  booktitle={Proc. 11th Symp. Engineering Aspects of Magnetohydrodynamics},
+  pages={141--148},
+  year={1970},
+  organization={Pasadena, CA: California Institute of Technology}
+}
+@inproceedings{hassan2005,
+  title={A comparison of particle swarm optimization and the genetic algorithm},
+  author={Hassan, Rania and Cohanim, Babak and De Weck, Olivier and Venter, Gerhard},
+  booktitle={Proceedings of the 1st AIAA multidisciplinary design optimization specialist conference},
+  pages={1--13},
+  year={2005}
+}
+@inproceedings{godinez2010,
+	title={An experimental comparison of multiobjective algorithms: Nsga-ii and omopso},
+	author={Godinez, Adriana Cortes and Espinosa, Luis Ernesto Mancilla and Montes, Efr{\'e}n Mezura},
+	booktitle={Electronics, Robotics and Automotive Mechanics Conference (CERMA), 2010},
+	pages={28--33},
+	year={2010},
+	organization={IEEE}
+}
+
+@book{bougue,
+  title={Web services foundations},
+  author={Bouguettaya, Athman and Sheng, Quan Z and Daniel, Florian},
+  year={2014},
+  publisher={Springer}
+}
+
+@INPROCEEDINGS{5598294,
+	author={Younge, A.J. and von Laszewski, G. and Lizhe Wang and Lopez-Alarcon, S. and Carithers, W.},
+	booktitle={Green Computing Conference, 2010 International},
+	title={Efficient resource management for Cloud computing environments},
+	year={2010},
+	pages={357-364},
+	keywords={distributed processing;environmental factors;power aware computing;resource allocation;software architecture;virtual machines;cloud computing architecture;data center;distributed system;green computing;live migration;power-aware scheduling technique;variable resource management;virtual machine design;Hardware;Virtual machining;Cloud Computing;Green Computing;Scheduling;Virtualization},
+	doi={10.1109/GREENCOMP.2010.5598294},
+	}
+@inproceedings{Schien,
+	author = {Schien, Daniel and Shabajee, Paul and Wood, Stephen G. and Preist, Chris},
+	title = {A Model for Green Design of Online News Media Services},
+	booktitle = {Proceedings of the 22Nd International Conference on World Wide Web},
+	series = {WWW '13},
+	year = {2013},
+	isbn = {978-1-4503-2035-1},
+	location = {Rio de Janeiro, Brazil},
+	pages = {1111--1122},
+	numpages = {12},
+	url = {http://dl.acm.org/citation.cfm?id=2488388.2488485},
+	acmid = {2488485},
+	publisher = {International World Wide Web Conferences Steering Committee},
+	address = {Republic and Canton of Geneva, Switzerland},
+	keywords = {carbon footprinting, digital media, green software engineering, sustainability},
+}
+@book{abraham2005evolutionary,
+  title={Evolutionary multiobjective optimization},
+  author={Abraham, Ajith and Jain, Lakhmi},
+  year={2005},
+  publisher={Springer}
+}
+@article{coello2006evolutionary,
+  title={Evolutionary multi-objective optimization: a historical view of the field},
+  author={Coello, Carlos A Coello},
+  journal={Computational Intelligence Magazine, IEEE},
+  volume={1},
+  number={1},
+  pages={28--36},
+  year={2006},
+  publisher={IEEE}
+}
+@article{coello1998two,
+  title={Two new GA-based methods for multiobjective optimization},
+  author={Coello, Carlos A Coello and Christiansen, Alan D},
+  journal={Civil Engineering Systems},
+  volume={15},
+  number={3},
+  pages={207--243},
+  year={1998},
+  publisher={Taylor \& Francis}
+}
+

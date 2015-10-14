@@ -1,57 +1,53 @@
-This is BibTeX, Version 0.99d (Web2C 2013)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
-A level-1 auxiliary file: acknowledge.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: using.aux
-A level-1 auxiliary file: example.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "GRM97GC"
-Warning--I didn't find a database entry for "Dum93a"
-Warning--I didn't find a database entry for "Dum93b"
-Warning--I didn't find a database entry for "GMS94"
-Warning--I didn't find a database entry for "Lam94"
-You've used 25 entries,
+Warning--empty booktitle in export:149565
+Warning--empty publisher in rechenberg1971
+Warning--empty school in Sun:2003:
+You've used 62 entries,
             2253 wiz_defined-function locations,
-            733 strings with 9557 characters,
-and the built_in function-call counts, 10481 in all, are:
-= -- 1029
-> -- 434
+            925 strings with 16102 characters,
+and the built_in function-call counts, 23972 in all, are:
+= -- 2334
+> -- 1027
 < -- 0
-+ -- 183
-- -- 151
-* -- 819
-:= -- 1571
-add.period$ -- 78
-call.type$ -- 25
-change.case$ -- 147
++ -- 438
+- -- 358
+* -- 1855
+:= -- 3678
+add.period$ -- 190
+call.type$ -- 62
+change.case$ -- 355
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 423
-empty$ -- 882
-format.name$ -- 151
-if$ -- 2306
+cite$ -- 65
+duplicate$ -- 956
+empty$ -- 2002
+format.name$ -- 358
+if$ -- 5176
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 24
-newline$ -- 128
-num.names$ -- 52
-pop$ -- 163
+int.to.str$ -- 62
+missing$ -- 64
+newline$ -- 313
+num.names$ -- 126
+pop$ -- 406
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 299
 quote$ -- 0
-skip$ -- 308
+skip$ -- 658
 stack$ -- 0
-substring$ -- 783
-swap$ -- 154
+substring$ -- 1687
+swap$ -- 313
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
-warning$ -- 0
-while$ -- 98
-width$ -- 27
-write$ -- 271
-(There were 5 warnings)
+type$ -- 238
+warning$ -- 3
+while$ -- 231
+width$ -- 64
+write$ -- 653
+(There were 3 warnings)

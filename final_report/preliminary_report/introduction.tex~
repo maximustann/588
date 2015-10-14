@@ -79,7 +79,7 @@ a critical parameter: transfermation threshold, plays an important role in deter
 We have done the first objective of the project. The second objective is not fully 
 finished for the following reasons: 1.The impact of parameter settings was not fully studied. 2. The effectiveness was not fully verified. 
 
-Therefore, in the second half of the project, we mainly focus on: Further improved the algorithm based on analyze the parameter settings. Develop a single-objective based PSO and compare the result of it with multi-objective based PSO.
+Therefore, in the second half of the project, we mainly focus on: Further improved the algorithm based on analyze the parameter settings. Develop a single-objective based PSO and compare the result of it with the result of multi-objective based PSO.
 %During the study we discovered that there is no common model that generally fits all multi-objective 
 %optimization algorithms. 
 %Although most Evolutionary Multiobjective Optimization (EMO) algorithms share similar representation, there are

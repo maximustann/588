@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for cust$pm$ headers
+\usepackage{lastpage} % Required to dete$pm$ine the last page for the footer
+\usepackage{extr$pm$arks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert $pm$ages
+\usepackage{lips$pm$} % Used for inserting d$pm$my 'Lor$pm$ ips$pm$' text into the t$pm$plate
+\usepackage{algorit$pm$, algpseudocode}
+\usepackage{$pm$$pm$ath}
+\usepackage{$pm$ss$pm$b}
+\usepackage{algorit$pm$, algpseudocode}
+
+\usepackage{bera}% optional: just to have a nice$pm$ono-spaced font
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label$pm$y-label}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+$pm$ulticol$pm$n{5}{|l|}{HV}                                                                                                                 & $\pm$ulticol$\pm$n{4}{l|}{IGD}                                                                      \\ \hline
+   & binaryPSO           & MOPSOCD             & NSPSO                 & NSGA2                                                           & binaryPSO             & MOPSOCD               & NSPSO                 & NSGA2                 \\ \hline
+1  & 8.97e-1 $\pm$ 1.56e-2 & 8.32e-1 $\pm$ 4.45e-2 & 7.57E-01 $\pm$ 1.87E-02 & 8.27E-01 $\pm$ 1.34E-02                                           & 4.57E-01 $\pm$ 2.45E-02 & 3.73E-02 $\pm$ 1.03E-02 & 1.62E-01 $\pm$ 3.45E-02 & 1.89E-01 $\pm$ 3.21E-02 \\ \hline
+2  & 6.14e-1 $\pm$ 1.01e-2 & 7.25e-1 $\pm$ 1.14e-2 & 5.96E-01 $\pm$ 1.08E-02 & 6.06E-01 $\pm$ 1.23E-02                                           & 4.25E-01 $\pm$ 1.54E-02 & 3.15E-02 $\pm$ 7.92E-03 & 1.51E-01 $\pm$ 1.46E-02 & 1.86E-01 $\pm$ 1.81E-02 \\ \hline
+3  & 6.89e-1 $\pm$ 7.43e-3 & 8.10e-1 $\pm$ 1.26e-2 & 6.15E-01 $\pm$ 1.11E-02 & 5.94E-01 $\pm$ 7.36E-03                                           & 2.99E-01 $\pm$ 8.94E-03 & 7.03E-03 $\pm$ 1.92E-03 & 1.02E-01 $\pm$ 6.35E-03 & 1.55E-01 $\pm$ 7.25E-03 \\ \hline
+4  & 7.12e-1 $\pm$ 8.00e-3 & 8.25e-1 $\pm$ 1.16e-2 & 6.27E-01 $\pm$ 1.12E-02 & 6.06E-01 $\pm$ 7.45E-03                                           & 2.95E-01 $\pm$ 8.62E-03 & 5.80E-03 $\pm$ 1.37E-03 & 1.07E-01 $\pm$ 8.55E-03 & 1.65E-01 $\pm$ 9.11E-03 \\ \hline
+5  & 6.67e-1 $\pm$ 6.83e-3 & 8.40e-1 $\pm$ 1.39e-2 & 6.05E-01 $\pm$ 9.30E-03 & 5.75E-01 $\pm$ 4.67E-03                                           & 2.43E-01 $\pm$ 5.02E-03 & 3.74E-03 $\pm$ 1.02E-03 & 1.12E-01 $\pm$ 7.93E-03 & 1.71E-01 $\pm$ 6.89E-03 \\ \hline
+6  & 6.25e-1 $\pm$ 5.20e-3 & 8.10e-1 $\pm$ 1.40e-2 & 5.87E-01 $\pm$ 6.96E-03 & 5.54E-01 $\pm$ 6.41E-03                                           & 2.83E-01 $\pm$ 5.88E-03 & 5.81E-03 $\pm$ 1.95E-03 & 1.13E-01 $\pm$ 5.06E-03 & 1.79E-01 $\pm$ 8.01E-03 \\ \hline
+7  & 6.32e-1 $\pm$ 5.98e-3 & 7.92e-1 $\pm$ 1.49e-2 & 6.00E-01 $\pm$ 8.27E-03 & 5.64E-01 $\pm$ 4.96E-03                                           & 2.67E-01 $\pm$ 7.92E-03 & 7.13E-03 $\pm$ 1.70E-03 & 1.05E-01 $\pm$ 4.58E-03 & 1.70E-01 $\pm$ 6.48E-03 \\ \hline
+8  & 6.51e-1 $\pm$ 7.79e-3 & 8.07e-1 $\pm$ 1.54e-2 & 6.14E-01 $\pm$ 7.88E-03 & 5.77E-01 $\pm$ 5.06E-03                                           & 2.71E-01 $\pm$ 5.86E-03 & 8.77E-03 $\pm$ 1.90E-03 & 1.15E-01 $\pm$ 5.81E-03 & 1.85E-01 $\pm$ 6.17E-03 \\ \hline
+9  & 6.19e-1 $\pm$ 4.89e-3 & 8.32e-1 $\pm$ 1.61e-2 & 5.97E-01 $\pm$ 8.86E-03 & 5.55E-01 $\pm$ 3.88E-03                                           & 2.16E-01 $\pm$ 3.22E-03 & 3.58E-03 $\pm$ 1.53E-03 & 1.05E-01 $\pm$ 5.33E-03 & 1.71E-01 $\pm$ 3.56E-03 \\ \hline
+10 & 5.85e-1 $\pm$ 4.89e-3 & 7.98e-1 $\pm$ 1.28e-2 & 5.79E-01 $\pm$ 7.87E-03 & 5.35E-01 $\pm$ 4.93E-03                                           & 2.55E-01 $\pm$ 3.91E-03 & 4.30E-03 $\pm$ 1.75E-03 & 1.12E-01 $\pm$ 4.97E-03 & 1.87E-01 $\pm$ 5.62E-03 \\ \hline
+11 & 5.54e-1 $\pm$ 2.92e-3 & 7.91e-1 $\pm$ 1.15e-2 & 5.71E-01 $\pm$ 8.70E-03 & 5.20E-01 $\pm$ 2.61E-03                                           & 2.44E-01 $\pm$ 3.36E-03 & 5.19E-03 $\pm$ 1.81E-03 & 1.22E-01 $\pm$ 4.22E-03 & 2.02E-01 $\pm$ 2.74E-03 \\ \hline
+12 & 5.62e-1 $\pm$ 3.31e-3 & 8.02e-1 $\pm$ 1.02e-2 & 5.78E-01 $\pm$ 9.44E-03 & 5.23E-01 $\pm$ 3.26E-03                                           & 2.39E-01 $\pm$ 2.50E-03 & 3.12E-03 $\pm$ 6.71E-04 & 1.23E-01 $\pm$ 4.15E-03 & 2.00E-01 $\pm$ 3.08E-03 \\ \hline
+13 & 5.62e-1 $\pm$ 2.92e-3 & 8.32e-1 $\pm$ 1.19e-2 & 5.85E-01 $\pm$ 7.72E-03 & \begin{tabular}[c]{@{}l@{}}5.29E-01\\ $\pm$ 2.89E-03\end{tabular} & 2.21E-01 $\pm$ 2.01E-03 & 2.63E-03 $\pm$ 7.63E-04 & 1.19E-01 $\pm$ 3.46E-03 & 1.98E-01 $\pm$ 3.04E-03 \\ \hline
+14 & 5.65e-1 $\pm$ 3.03e-3 & 8.31e-1 $\pm$ 1.50e-2 & 5.88E-01 $\pm$ 8.89E-03 & 5.33E-01 $\pm$ 2.49E-03                                           & 2.46E-01 $\pm$ 1.83E-03 & 3.66E-03 $\pm$ 1.75E-03 & 1.30E-01 $\pm$ 3.85E-03 & 2.19E-01 $\pm$ 3.24E-03 \\ \hline
+\end{tabular}
+\end{table}
+
+\end{doc$pm$ent}

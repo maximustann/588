@@ -1,0 +1,36 @@
+\chapter{Conclusions and Future Work}\label{C:clu}
+\section{Conclusions}
+The goal of this project is to develop a PSO-based approach to Web service location allocation problem by considering two 
+objectives - cost and network latency. The goal is achieved by accomplishing four objectives.
+
+First, we model the Web service location allocation problem as a multi-objective optimization problem with respect to network latency and cost. Then we develop a formulation so that the problem can be solved by an optimization algorithm.
+
+Second, we develop a BPSO approach which employs an linear aggregation method to combine two objectives. 
+It uses a ``death penalty'' constraint handling approach. We conducted eight experiments including six normal size problems and two small problems.  The results shown BPSO adapted the model well and provided good solutions. It also shows the BPSO is trying to look for the optimal solution. However because the search spaces are too large in most the problems, BPSO fails
+to find the optimal solution. The major drawback of BPSO with aggregation approach is that its solutions are not diverse enough. Therefore, in the next step, we treat each objective separately and develop a NSPSO-basd approach.
+
+Third, We apply NSPSO with a Pareto front to solve this problem. In order to overcome the drawback of BPSO with aggregation approach, we take each objective as a fitness funciton.  In order to make a comparison with other approaches, we also adopt
+a common EMO - NSGA-II to solve this problem. We conduct 14 experiments over three algorithms: BPSO, NSPSO and NSGA-II.
+The results show NSPSO provides the best diversity among three algorithms. Therefore the objective is achieved. However,
+The results also reveal three algorithms have low scalability that could not handle big datasets very well. In addition, although NSPSO provides a good diversity, it is still not cover the complete Pareto front. Hence, a BMOPSOCD is developed 
+in the next chapter.
+
+Fourth, we proposed a BMOPSOCD approach to solve the Web service location allocation problem. The objective is to further improve the scalability and diversity. To achieve this objective, we introduce a rounding function mechansim which
+not only makes a continuous algorithm compatible with binary problems but also significantly improved the quality of solutions.
+Specifically, three types of rounding functions were developed.
+From the experiments, we could observed that the solutions from BMOPSOCD with dynamic rounding functions have a great diversity that almost coverage the whole Pareto front. Meanwhile, it also has great scalability that does not affect by the 
+problem size.
+
+\section{Future Work}
+In this project, although we have successfully achieved the goal of developing a PSO-based algorithm that produce good solutions, 
+there are still some limitations. Firstly, our model can be further improved by considering service composition. 
+For now, the problem model considers each service as an atomic service. 
+As the service composition has become a hot research area, it is expected that the composited services will become the mainstream.
+The service composition workflow has a significant impact on the allocation of atomic service because the dataflow between
+services could not be neglected. Therefore, the location of each atomic service is highly related to the previous and the next service in a workflow.
+Secondly, more potential objectives need to considered, for example, the availability problem. In order to avoid single point failure, 
+WSPs normally deploy multiple services in different candidate locations to keep the availability. Green economy could also being considered. As the issue
+of global warming becomes a world-wide challenge, deploying a service to a location that close to a power plant 
+In addition, we consider one constraint in this project. In a pratical situation, there might be other constraints such as the overall cost, bandwidth requirements and so on. In the next step, we will address these issues.
+
+

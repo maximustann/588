@@ -1,0 +1,42 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Objectives}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Major Contributions}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Organisation}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Evolutionary Computation}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Particle Swarm Optimization \(PSO\)}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Binary PSO}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.3}{Multi-objective PSO}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Related work on Service Location-allocation}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Traditional Service Location-allocation Methods}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{EC Approaches\(Non-PSO\) for Service Location-allocation}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.3}{EC Approaches for Resource Management of Processing in Cloud Computing}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.4}{Summary}{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Single-objective Binary Particle Swarm Optimization}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Fitness Functions}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Particle Representation}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Constraint Function and Constraint Handling}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Multi-objective Particle Swarm Optimization with Crowding Distance}{}% 20
+\BOOKMARK [1][-]{section.4.1}{MOPSOCD based algorithm for service location-allocation}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Constraint Function and Constraint Handling}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Fitness Function}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.4}{Rounding Function}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.4.1}{Static Rounding Function}{section.4.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.2}{Dynamic Rounding Function}{section.4.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Experimental Design and Results}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Datasets}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.1.1}{Cost}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.2}{Service Invocation Frequency}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.3}{Network Latency}{section.5.1}% 31
+\BOOKMARK [1][-]{section.5.2}{Experimental Design}{chapter.5}% 32
+\BOOKMARK [2][-]{subsection.5.2.1}{Performance Metrics}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.2}{Static Rounding Function}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.3}{Dynamic Rounding Function}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.4}{MOPSOCD with dynamic rounding function versus NSPSO, NSGA-II and BPSO}{section.5.2}% 36
+\BOOKMARK [1][-]{section.5.3}{Experimental Results and Discussion}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.3.1}{Static Rounding Function}{section.5.3}% 38
+\BOOKMARK [2][-]{subsection.5.3.2}{Dynamic Rounding Function}{section.5.3}% 39
+\BOOKMARK [2][-]{subsection.5.3.3}{MOPSOCD with dynamic rounding function versus NSPSO, NSGA-II and BPSO}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.4}{Summary}{section.5.3}% 41
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 42

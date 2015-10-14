@@ -164,10 +164,10 @@ $
 %\emph{service location-allocation matrix} $A = [a_{sj}]$ represents the actual service location allocation, where $a_{sj}$ is
 %a binary value 1 or 0 to indicate whether a service is allocate to a location or not. 
 %
-A' = \bbordermatrix{~ & j_{1} & j_{2} & j_{3}\cr
-				s_{1}	&0.12 &0.87 &0.42	\cr
-				s_{2}	&0.07  &0.32 &0.95	\cr
-				s_{3}	&0.76 &0.64 &0.27	\cr}
+%A' = \bbordermatrix{~ & j_{1} & j_{2} & j_{3}\cr
+				%s_{1}	&0.12 &0.87 &0.42	\cr
+				%s_{2}	&0.07  &0.32 &0.95	\cr
+				%s_{3}	&0.76 &0.64 &0.27	\cr}
 
 %\begin{equation}
 	%\label{eq:1}

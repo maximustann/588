@@ -1,0 +1,139 @@
+%% $RCSfile: proj_report_outline.tex,v $
+%% $Revision: 1.2 $
+%% $Date: 2010/04/23 02:40:16 $
+%% $Author: kevin $
+
+\documentclass[11pt
+              , a4paper
+              , twoside
+              , openright
+              ]{report}
+
+\usepackage{graphicx,psfig,amsmath,float,epstopdf,multirow,mathtools,changepage,amssymb}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{float} % lets you have non-floating floats
+\usepackage{url} % for typesetting urls
+\usepackage{caption}
+\usepackage{program}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{algorithm, algpseudocode}
+\usepackage{etoolbox}
+\usepackage{hhline}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+\let\bbordermatrix\bordermatrix
+\patchcmd{\bbordermatrix}{8.75}{4.75}{}{}
+\patchcmd{\bbordermatrix}{\left(}{\left[}{}{}
+\patchcmd{\bbordermatrix}{\right)}{\right]}{}{}
+
+
+
+\usepackage{float} % lets you have non-floating floats
+
+\usepackage{url} % for typesetting urls
+
+%
+%  We don't want figures to float so we define
+%
+\newfloat{fig}{thp}{lof}[chapter]
+\floatname{fig}{Figure}
+
+%% These are standard LaTeX definitions for the document
+%%                            
+\title{Web Service Location Allocation}
+\author{Boxiong Tan}
+
+%% This file can be used for creating a wide range of reports
+%%  across various Schools
+%%
+%% Set up some things, mostly for the front page, for your specific document
+%
+% Current options are:
+%  [ecs|msor]              Which school you are in.
+%
+%  [mcompsci]  Which degree you are doing
+%                          You can also specify any other degree by name
+%                          (see below)
+%  [font|image]            Use a font or an image for the VUW logo
+%                          The font option will only work on ECS systems
+%
+\usepackage[font,ecs,mcompsci]{vuwproject}
+
+% You should specifiy your supervisor here with
+%     \supervisor{Firstname Lastname}
+% use \supervisors if there is more than one supervisor
+\supervisors{Hui Ma, Yi Mei, Mengjie Zhang}
+% Unless you've used the bschonscomp or mcompsci
+%  options above use
+%   \otherdegree{OTHER DEGREE OR DIPLOMA NAME}
+% here to specify degree
+
+% Comment this out if you want the date printed.
+\date{}
+
+\begin{document}
+
+% Make the page numbering roman, until after the contents, etc.
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+With the ever increasing number of functional similar Web services being available on the Internet, 
+the market competition is becoming intense. 
+Web service providers realized that good Quality of Service (QoS) is a key of business success
+and low network latency is a critical measurement of good QoS.
+Because network latency is related to geometric location,
+a straightforward way to reduce network latency is to allocate services to proper locations. 
+Hence, it is necessary to provide an effective Web services allocation algorithm to WSPs. 
+In this project, we model the Web service location allocation 
+problem as a multi-objective optimization problem that minimize overall network latency and total cost. 
+We use PSO-based with aggregation approach and with a Pareto front 
+approach. We further develop a new BMOPSOCD with rounding function approach to improve the quality of solutions. 
+The result shows that BMOPSOCD could provide a diverse solutions which covers the whole Pareto front. 
+In addition, it has a good scalability that does not affect by the problem size.
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+%\include{acknowledge}
+
+\tableofcontents
+
+% we want a list of the figures we defined
+ \listof{fig}{Figures}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% individual chapters included here
+\include{introduction}
+\include{using}
+% \include{example}
+ \include{conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\bibliographystyle{ieeetr}
+\bibliographystyle{acm}
+\bibliography{sample}
+
+
+\end{document}

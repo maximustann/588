@@ -7,18 +7,107 @@
 \newblock {\em European Journal of Operational Research 194}, 1 (2009), 64 --
   77.
 
+\bibitem{abraham2005evolutionary}
+{\sc Abraham, A., and Jain, L.}
+\newblock {\em Evolutionary multiobjective optimization}.
+\newblock Springer, 2005.
+
+\bibitem{Anghinolfi200973}
+{\sc Anghinolfi, D., and Paolucci, M.}
+\newblock A new discrete particle swarm optimization approach for the
+  single-machine total weighted tardiness scheduling problem with
+  sequence-dependent setup times.
+\newblock {\em European Journal of Operational Research 193}, 1 (2009), 73 --
+  85.
+
+\bibitem{Anisetti}
+{\sc Anisetti, M., Ardagna, C.~A., Damiani, E., and Saonara, F.}
+\newblock A test-based security certification scheme for web services.
+\newblock {\em ACM Trans. Web 7}, 2 (May 2013), 5:1--5:41.
+
+\bibitem{Auger:2009}
+{\sc Auger, A., Bader, J., Brockhoff, D., and Zitzler, E.}
+\newblock Theory of the hypervolume indicator: Optimal {$\mu$}-distributions
+  and the choice of the reference point.
+\newblock In {\em Proceedings of the Tenth ACM SIGEVO Workshop on Foundations
+  of Genetic Algorithms\/} (2009), FOGA '09, ACM, pp.~87--102.
+
+\bibitem{back1997evolutionary}
+{\sc B{\"a}ck, T., Hammel, U., and Schwefel, H.-P.}
+\newblock Evolutionary computation: Comments on the history and current state.
+\newblock {\em Evolutionary computation, IEEE Transactions on 1}, 1 (1997),
+  3--17.
+
+\bibitem{export:149565}
+{\sc Ballani, H., Costa, P., Karagiannis, T., and Rowstron, A.}
+\newblock Towards predictable datacenter networks.
+\newblock ACM SIGCOMM.
+
+\bibitem{bougue}
+{\sc Bouguettaya, A., Sheng, Q.~Z., and Daniel, F.}
+\newblock {\em Web services foundations}.
+\newblock Springer, 2014.
+
 \bibitem{Multiobjective}
 {\sc Caramia, M.}
 \newblock Multi-objective optimization.
 \newblock In {\em Multi-objective Management in Freight Logistics}. Springer
   London, 2008, pp.~11--36.
 
+\bibitem{cha2008design}
+{\sc Cha, S.-J., Hwang, Y.-Y., Chang, Y.-S., Kim, K.-O., and Lee, K.-C.}
+\newblock Design and evaluation of experiment methods for improving performance
+  in gis web services.
+\newblock {\em International Journal of Multimedia and Ubiquitous Engineering
+  3}, 1 (2008), 27--43.
+
+\bibitem{1304847}
+{\sc Coello, C., Pulido, G., and Lechuga, M.}
+\newblock Handling multiple objectives with particle swarm optimization.
+\newblock {\em Evolutionary Computation, IEEE Transactions on 8}, 3 (2004),
+  256--279.
+
+\bibitem{coello2002theoretical}
+{\sc Coello, C. A.~C.}
+\newblock Theoretical and numerical constraint-handling techniques used with
+  evolutionary algorithms: a survey of the state of the art.
+\newblock {\em Computer methods in applied mechanics and engineering 191}, 11
+  (2002), 1245--1287.
+
+\bibitem{coello2006evolutionary}
+{\sc Coello, C. A.~C.}
+\newblock Evolutionary multi-objective optimization: a historical view of the
+  field.
+\newblock {\em Computational Intelligence Magazine, IEEE 1}, 1 (2006), 28--36.
+
+\bibitem{coello1998two}
+{\sc Coello, C. A.~C., and Christiansen, A.~D.}
+\newblock Two new ga-based methods for multiobjective optimization.
+\newblock {\em Civil Engineering Systems 15}, 3 (1998), 207--243.
+
+\bibitem{Micro}
+{\sc Coello Coello~Coello, C., and Toscano~Pulido, G.}
+\newblock A micro-genetic algorithm for multiobjective optimization.
+\newblock In {\em Evolutionary Multi-Criterion Optimization}, E.~Zitzler,
+  L.~Thiele, K.~Deb, C.~Coello~Coello, and D.~Corne, Eds., vol.~1993 of {\em
+  Lecture Notes in Computer Science}. Springer Berlin Heidelberg, 2001,
+  pp.~126--140.
+
 \bibitem{Dan:2008}
 {\sc Dan, A., Johnson, R.~D., and Carrato, T.}
 \newblock Soa service reuse by design.
 \newblock In {\em Proceedings of the 2Nd International Workshop on Systems
-  Development in SOA Environments\/} (New York, NY, USA, 2008), SDSOA '08, ACM,
-  pp.~25--28.
+  Development in {SOA} Environments\/} (2008), SDSOA '08, ACM, pp.~25--28.
+
+\bibitem{de1992genetic}
+{\sc De~Jong, K.~A.}
+\newblock Are genetic algorithms function optimizers?
+\newblock In {\em PPSN\/} (1992), vol.~2, pp.~3--14.
+
+\bibitem{de1993genetic}
+{\sc De~Jong, K.~A.}
+\newblock Genetic algorithms are not function optimizers.
+\newblock {\em Foundations of genetic algorithms 2\/} (1993), 5--17.
 
 \bibitem{996017}
 {\sc Deb, K., Pratap, A., Agarwal, S., and Meyarivan, T.}
@@ -26,35 +115,68 @@
 \newblock {\em Evolutionary Computation, IEEE Transactions on 6}, 2 (2002),
   182--197.
 
-\bibitem{Deb06referencepoint}
-{\sc Deb, K., Sundar, J., N, U. B.~R., and Chaudhuri, S.}
-\newblock Reference point based multi-objective optimization using evolutionary
-  algorithms.
-\newblock In {\em International Journal of Computational Intelligence
-  Research\/} (2006), Springer-Verlag, pp.~635--642.
-
 \bibitem{key:article}
 {\sc Desai, S., Bahadure, S., Kazi, F., and Singh, N.}
 \newblock Article: Multi-objective constrained optimization using discrete
-  mechanics and nsga-ii approach.
+  mechanics and {NSGA-II} approach.
 \newblock {\em International Journal of Computer Applications 57}, 20 (2012),
   14--20.
-\newblock Full text available.
 
-\bibitem{nsga2_cri}
-{\sc Domínguez, J., Montiel-Ross, O., and Sepúlveda, R.}
-\newblock High-performance architecture for the modified nsga-ii.
-\newblock In {\em Soft Computing Applications in Optimization, Control, and
-  Recognition}, P.~Melin and O.~Castillo, Eds., vol.~294 of {\em Studies in
-  Fuzziness and Soft Computing}. Springer Berlin Heidelberg, 2013,
-  pp.~321--341.
+\bibitem{Flach}
+{\sc Flach, T., Dukkipati, N., Terzis, A., Raghavan, B., Cardwell, N., Cheng,
+  Y., Jain, A., Hao, S., Katz-Bassett, E., and Govindan, R.}
+\newblock Reducing web latency: The virtue of gentle aggression.
+\newblock {\em SIGCOMM Comput. Commun. Rev. 43}, 4 (Aug. 2013), 159--170.
+
+\bibitem{fogel1962autonmous}
+{\sc Fogel, L.~J.}
+\newblock Autonomous automata.
+\newblock {\em Industrial Research 4}, 2 (1962), 14--19.
+
+\bibitem{godinez2010}
+{\sc Godinez, A.~C., Espinosa, L. E.~M., and Montes, E.~M.}
+\newblock An experimental comparison of multiobjective algorithms: Nsga-ii and
+  omopso.
+\newblock In {\em Electronics, Robotics and Automotive Mechanics Conference
+  (CERMA), 2010\/} (2010), IEEE, pp.~28--33.
+
+\bibitem{goldberg1988genetic}
+{\sc Goldberg, D.~E., and Holland, J.~H.}
+\newblock Genetic algorithms and machine learning.
+\newblock {\em Machine learning 3}, 2 (1988), 95--99.
+
+\bibitem{export:141114}
+{\sc Guo, C., Lu, G., Wang, H., Yang, S., Kong, C., Sun, P., Wu, W., and Zhang,
+  Y.}
+\newblock Secondnet: A data center network virtualization architecture with
+  bandwidth guarantees.
+\newblock In {\em ACM CONEXT 2010\/} (2010), Association for Computing
+  Machinery, Inc.
+
+\bibitem{hassan2005}
+{\sc Hassan, R., Cohanim, B., De~Weck, O., and Venter, G.}
+\newblock A comparison of particle swarm optimization and the genetic
+  algorithm.
+\newblock In {\em Proceedings of the 1st AIAA multidisciplinary design
+  optimization specialist conference\/} (2005), pp.~1--13.
+
+\bibitem{4120263}
+{\sc Haupt, R.~L.}
+\newblock Antenna design with a mixed integer genetic algorithm.
+\newblock {\em Antennas and Propagation, IEEE Transactions on 55}, 3 (2007),
+  577--582.
 
 \bibitem{He}
 {\sc He, K., Fisher, A., Wang, L., Gember, A., Akella, A., and Ristenpart, T.}
 \newblock Next stop, the cloud: Understanding modern web service deployment in
   ec2 and azure.
 \newblock In {\em Proceedings of the 2013 Conference on Internet Measurement
-  Conference\/} (New York, NY, USA, 2013), IMC '13, ACM, pp.~177--190.
+  Conference\/} (2013), IMC '13, ACM, pp.~177--190.
+
+\bibitem{holland1962outline}
+{\sc Holland, J.~H.}
+\newblock Outline for a logical theory of adaptive systems.
+\newblock {\em Journal of the ACM (JACM) 9}, 3 (1962), 297--314.
 
 \bibitem{EnhancedGenetic}
 {\sc Huang, H., Ma, H., and Zhang, M.}
@@ -64,18 +186,17 @@
   Lecture Notes in Computer Science}. Springer International Publishing, 2014,
   pp.~223--230.
 
+\bibitem{Huang:2013:}
+{\sc Huang, X.}
+\newblock {UsageQoS}: Estimating the {QoS} of web services through online user
+  communities.
+\newblock {\em ACM Trans. Web 8}, 1 (2013), 1:1--1:31.
+
 \bibitem{distanceMetrics}
 {\sc Huffaker, B., Fomenkov, M., Plummer, D., Moore, D., and claffy, k.}
 \newblock {Distance Metrics in the Internet}.
 \newblock In {\em IEEE International Telecommunications Symposium (ITS)\/}
   (Brazil, Sep 2002), IEEE, pp.~200--202.
-
-\bibitem{Hwang11aninteger}
-{\sc Hwang, J., Park, S., and Kong, I.~Y.}
-\newblock An integer programming-based local search for large-scale maximal
-  covering problems.
-\newblock {\em International Journal on Computer Science and Engineering\/}
-  (2011), 837--843.
 
 \bibitem{916684}
 {\sc Jamin, S., Jin, C., Kurc, A., Raz, D., and Shavitt, Y.}
@@ -92,7 +213,7 @@
 \bibitem{OptimizationElectrical}
 {\sc Kanagarajan, D., Karthikeyan, R., Palanikumar, K., and Davim, J.}
 \newblock Optimization of electrical discharge machining characteristics of
-  wc/co composites using non-dominated sorting genetic algorithm (nsga-ii).
+  wc/co composites using non-dominated sorting genetic algorithm ({NSGA-II}).
 \newblock {\em The International Journal of Advanced Manufacturing Technology
   36}, 11-12 (2008), 1124--1132.
 
@@ -100,49 +221,153 @@
 {\sc Kennedy, J., and Eberhart, R.}
 \newblock Particle swarm optimization.
 \newblock In {\em Neural Networks, 1995. Proceedings., IEEE International
-  Conference on\/} (Nov 1995), vol.~4, pp.~1942--1948 vol.4.
+  Conference on\/} (1995), vol.~4, pp.~1942--1948 vol.4.
 
 \bibitem{637339}
 {\sc Kennedy, J., and Eberhart, R.}
 \newblock A discrete binary version of the particle swarm algorithm.
 \newblock In {\em Systems, Man, and Cybernetics, 1997. Computational
-  Cybernetics and Simulation., 1997 IEEE International Conference on\/} (Oct
-  1997), vol.~5, pp.~4104--4108 vol.5.
+  Cybernetics and Simulation., 1997 IEEE International Conference on\/} (1997),
+  vol.~5, pp.~4104--4108 vol.5.
 
-\bibitem{man1996genetic}
-{\sc Man, K.-F., Tang, K.-S., and Kwong, S.}
-\newblock Genetic algorithms: concepts and applications.
-\newblock {\em IEEE Transactions on Industrial Electronics 43}, 5 (1996),
-  519--534.
+\bibitem{6557869}
+{\sc Kessaci, Y., Melab, N., and Talbi, E.-G.}
+\newblock A pareto-based genetic algorithm for optimized assignment of vm
+  requests on a cloud brokering environment.
+\newblock In {\em Evolutionary Computation (CEC), 2013 IEEE Congress on\/}
+  (2013), pp.~2496--2503.
+
+\bibitem{klock}
+{\sc Klockgether, J., and Schwefel, H.-P.}
+\newblock Two-phase nozzle and hollow core jet experiments.
+\newblock In {\em Proc. 11th Symp. Engineering Aspects of
+  Magnetohydrodynamics\/} (1970), Pasadena, CA: California Institute of
+  Technology, pp.~141--148.
+
+\bibitem{knowles2000}
+{\sc Knowles, J.~D., and Corne, D.~W.}
+\newblock Approximating the nondominated front using the pareto archived
+  evolution strategy.
+\newblock {\em Evolutionary computation 8}, 2 (2000), 149--172.
+
+\bibitem{Kritikos}
+{\sc Kritikos, K., Pernici, B., Plebani, P., Cappiello, C., Comuzzi, M.,
+  Benrernou, S., Brandic, I., Kert{\'e}sz, A., Parkin, M., and Carro, M.}
+\newblock A survey on service quality description.
+\newblock {\em ACM Comput. Surv. 46}, 1 (July 2013), 1:1--1:58.
+
+\bibitem{6217521}
+{\sc Larumbe, F., and Sansò, B.}
+\newblock Optimal location of data centers and software components in cloud
+  computing network design.
+\newblock In {\em Cluster, Cloud and Grid Computing (CCGrid), 2012 12th
+  IEEE/ACM International Symposium on\/} (2012), pp.~841--844.
+
+\bibitem{1004478}
+{\sc Laskari, E., Parsopoulos, K., and Vrahatis, M.}
+\newblock Particle swarm optimization for integer programming.
+\newblock In {\em Evolutionary Computation, 2002. CEC '02. Proceedings of the
+  2002 Congress on\/} (2002), vol.~2, pp.~1582--1587.
+
+\bibitem{NSPSO}
+{\sc Li, X.}
+\newblock A non-dominated sorting particle swarm optimizer for multiobjective
+  optimization.
+\newblock In {\em Genetic and Evolutionary Computation — GECCO 2003},
+  vol.~2723 of {\em Lecture Notes in Computer Science}. Springer Berlin
+  Heidelberg, 2003, pp.~37--48.
+
+\bibitem{liu2013discrete}
+{\sc Liu, D., Feng, Q., and Wang, W.-B.}
+\newblock Discrete optimization problems of linear array synthesis by using
+  real number particle swarm optimization.
+\newblock {\em Progress In Electromagnetics Research 133\/} (2013), 407--424.
+
+\bibitem{olivas}
+{\sc Olivas, E.~S.}
+\newblock {\em Handbook of Research on Machine Learning Applications and
+  Trends: Algorithms, Methods, and Techniques: Algorithms, Methods, and
+  Techniques}.
+\newblock IGI Global, 2009.
 
 \bibitem{std/ws-bpel2}
 {\sc Organization for the Advancement of Structured Information Standards
   (OASIS)}.
 \newblock {\em Web Services Business Process Execution Language ({WS-BPEL})
-  Version 2.0}, Apr. 2007.
+  Version 2.0}, 2007.
 
 \bibitem{Papazoglou}
 {\sc Papazoglou, M.~P., and Heuvel, W.-J.}
 \newblock Service oriented architectures: Approaches, technologies and research
   issues.
-\newblock {\em The VLDB Journal 16}, 3 (July 2007), 389--415.
+\newblock {\em The VLDB Journal 16}, 3 (2007), 389--415.
+
+\bibitem{Phan8}
+{\sc Phan, D.~H., Suzuki, J., Carroll, R., Balasubramaniam, S., Donnelly, W.,
+  and Botvich, D.}
+\newblock Evolutionary multiobjective optimization for green clouds.
+\newblock In {\em Proceedings of the 14th Annual Conference Companion on
+  Genetic and Evolutionary Computation\/} (2012), GECCO '12, ACM, pp.~19--26.
 
 \bibitem{Ran}
 {\sc Ran, S.}
 \newblock A model for web services discovery with {QoS}.
 \newblock {\em SIGecom Exch. 4}, 1 (2003), 1--10.
 
+\bibitem{Raquel}
+{\sc Raquel, C.~R., and Naval, Jr., P.~C.}
+\newblock An effective use of crowding distance in multiobjective particle
+  swarm optimization.
+\newblock In {\em Proceedings of the 7th Annual Conference on Genetic and
+  Evolutionary Computation\/} (2005), GECCO '05, ACM, pp.~257--264.
+
+\bibitem{rechenberg1971}
+{\sc Rechenberg, I.}
+\newblock {\em Optimierung technischer Systeme nach Prinzipien der biologischen
+  Evolution}.
+\newblock 1971.
+
+\bibitem{Schien}
+{\sc Schien, D., Shabajee, P., Wood, S.~G., and Preist, C.}
+\newblock A model for green design of online news media services.
+\newblock In {\em Proceedings of the 22Nd International Conference on World
+  Wide Web\/} (Republic and Canton of Geneva, Switzerland, 2013), WWW '13,
+  International World Wide Web Conferences Steering Committee, pp.~1111--1122.
+
+\bibitem{Schwefel1975}
+{\sc Schwefel, H.-P.}
+\newblock {\em Evolutionsstrategie und numerische Optimierung}.
+\newblock Technische Universit{\"a}t Berlin, 1975.
+
+\bibitem{Sun:2003:}
+{\sc Sun, Y.}
+\newblock {\em A Location Model for Web Services Intermediaries}.
+\newblock PhD thesis, 2003.
+\newblock AAI3120151.
+
 \bibitem{Sun}
 {\sc Sun, Y., and Koehler, G.~J.}
 \newblock A location model for a web service intermediary.
 \newblock {\em Decis. Support Syst. 42}, 1 (2006), 221--236.
 
-\bibitem{Vanrompay}
-{\sc Vanrompay, Y., Rigole, P., and Berbers, Y.}
-\newblock Genetic algorithm-based optimization of service composition and
-  deployment.
-\newblock In {\em Proceedings of the 3rd International Workshop on Services
-  Integration in Pervasive Environments\/} (2008), SIPE '08, ACM, pp.~13--18.
+\bibitem{870296}
+{\sc Van~Veldhuizen, D., and Lamont, G.}
+\newblock On measuring multiobjective evolutionary algorithm performance.
+\newblock In {\em Evolutionary Computation, 2000. Proceedings of the 2000
+  Congress on\/} (2000), vol.~1, pp.~204--211 vol.1.
+
+\bibitem{veldhuizen99}
+{\sc Veldhuizen, D. A.~V., and Veldhuizen, D. A.~V.}
+\newblock Multiobjective evolutionary algorithms: Classifications, analyses,
+  and new innovations.
+\newblock Tech. rep., Evolutionary Computation, 1999.
+
+\bibitem{1501598}
+{\sc Villalobos-Arias, M., Pulido, G., and Coello, C.}
+\newblock A proposal to use stripes to maintain diversity in a multi-objective
+  particle swarm optimizer.
+\newblock In {\em Swarm Intelligence Symposium, 2005. SIS 2005. Proceedings
+  2005 IEEE\/} (2005), pp.~22--29.
 
 \bibitem{6076756}
 {\sc Zhang, Y., Zheng, Z., and Lyu, M.}

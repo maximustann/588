@@ -1,0 +1,1778 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.29)  9 OCT 2015 10:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**proj_report_outline.tex
+(./proj_report_outline.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./psfig.sty
+\@unused=\write3
+\ps@stream=\read1
+\p@intvaluex=\dimen105
+\p@intvaluey=\dimen106
+
+psfig/tex 1.10-dvips
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen107
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen116
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip48
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count105
+\l_MT_multwidth_dim=\dimen119
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen120
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen121
+\l_MT_above_intertext_sep=\dimen122
+\l_MT_below_intertext_sep=\dimen123
+\l_MT_above_shortintertext_sep=\dimen124
+\l_MT_below_shortintertext_sep=\dimen125
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count106
+\cp@tempcnt=\count107
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box30
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen126
+\captionmargin@=\dimen127
+\captionwidth=\dimen128
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
+)
+\c@ContinuedFloat=\count108
+Package caption Info: float package is loaded.
+Package caption Info: threeparttable package is loaded.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/program/program.sty
+\@gtempa=\dimen133
+\@gtempa=\dimen134
+\@gtempa=\dimen135
+\@gtempa=\dimen136
+\@gtempa=\dimen137
+\@gtempa=\dimen138
+\@gtempa=\dimen139
+\@gtempa=\dimen140
+\@gtempa=\dimen141
+\@gtempa=\dimen142
+\@gtempa=\dimen143
+\@gtempa=\dimen144
+\@gtempa=\dimen145
+\@gtempa=\dimen146
+\@gtempa=\dimen147
+\@gtempa=\dimen148
+\@gtempa=\dimen149
+\@gtempa=\dimen150
+\@gtempa=\dimen151
+\@gtempa=\dimen152
+\@gtempa=\dimen153
+\@gtempa=\dimen154
+\@gtempa=\dimen155
+\@gtempa=\dimen156
+\@gtempa=\dimen157
+\@gtempa=\dimen158
+\@gtempa=\dimen159
+\@gtempa=\dimen160
+\@gtempa=\dimen161
+\@gtempa=\dimen162
+\@gtempa=\dimen163
+\@gtempa=\dimen164
+\@gtempa=\dimen165
+\@gtempa=\dimen166
+\@gtempa=\dimen167
+\@gtempa=\dimen168
+\@gtempa=\dimen169
+\@gtempa=\dimen170
+\@gtempa=\dimen171
+\@gtempa=\dimen172
+\@gtempa=\dimen173
+\@gtempa=\dimen174
+\@gtempa=\dimen175
+\@gtempa=\dimen176
+\@gtempa=\dimen177
+\@gtempa=\dimen178
+\@gtempa=\dimen179
+\@gtempa=\dimen180
+\@gtempa=\dimen181
+\@gtempa=\dimen182
+\c@programline=\count109
+\old@nxttabmar=\count110
+\symeulerletters=\mathgroup6
+\powersetbox=\box31
+LaTeX Font Info:    Try loading font information for U+msa on input line 839.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 839.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+eur on input line 839.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen183
+\extrarowheight=\dimen184
+\NC@list=\toks22
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+\TX@col@width=\dimen185
+\TX@old@table=\dimen186
+\TX@old@col=\dimen187
+\TX@target=\dimen188
+\TX@delta=\dimen189
+\TX@cols=\count111
+\TX@ftn=\toks23
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+\everycr=\toks24
+\minrowclearance=\skip52
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks25
+\c@algorithm=\count112
+)
+(./algpseudocode.sty
+Package: algpseudocode 
+ (./algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count113
+\c@ALG@rem=\count114
+\c@ALG@nested=\count115
+\ALG@tlm=\skip53
+\ALG@thistlm=\skip54
+\c@ALG@Lnr=\count116
+\c@ALG@blocknr=\count117
+\c@ALG@storecount=\count118
+\c@ALG@tmpcounter=\count119
+\ALG@tmplength=\skip55
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count120
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count121
+\c@subtable=\count122
+)
+\@float@every@fig=\toks26
+\c@fig=\count123
+
+(./vuwproject.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup7
+)
+! Font \vuwf=vuw20 scaled 2074 not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   \relax 
+l.76 \font\vuwf  = vuw20 scaled\magstep4
+                                        
+? 
+VUW Honours reports modifications -- Mar 1995
+Modified to handle different degrees 2003
+Modified to handle duplex printing properly 2006
+\@abstract=\box32
+) (./proj_report_outline.aux (./introduction.aux) (./using.aux
+
+LaTeX Warning: Label `eq:cost_prime' multiply defined.
+
+
+LaTeX Warning: Label `eq:latency_prime' multiply defined.
+
+
+LaTeX Warning: Label `fig:flatten' multiply defined.
+
+
+LaTeX Warning: Label `fig:transfer' multiply defined.
+
+
+LaTeX Warning: Label `tab:results' multiply defined.
+
+) (./conclusion.aux))
+\openout1 = `proj_report_outline.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 77.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen190
+\scratchbox=\box33
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen191
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks28
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Missing character: There is no V in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no W in font nullfont!
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 93.
+
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 93.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 93.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 93.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 93.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 93.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 93.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 93.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 93.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 93.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 93.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
+ [-1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [0]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 97.
+
+(./proj_report_outline.toc [1
+
+
+])
+\tf@toc=\write4
+\openout4 = `proj_report_outline.toc'.
+
+ [2] (./proj_report_outline.lof)
+\tf@lof=\write5
+\openout5 = `proj_report_outline.lof'.
+
+ [3
+
+] [4
+
+]
+\openout2 = `introduction.aux'.
+
+
+(./introduction.tex
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
+[1
+
+
+] [2]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 104.
+
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+
+Overfull \hbox (0.78825pt too wide) in paragraph at lines 123--129
+\OT1/ppl/m/n/10.95 The re-port is or-ga-nized as fol-lows. Chap-ter 2[] pro-vid
+es back-ground in-for-ma-tion. Chap-
+ []
+
+[3] [4
+
+]
+Chapter 2.
+<pics/web1.png, id=38, 843.65187pt x 536.50438pt>
+File: pics/web1.png Graphic file (type png)
+ <use pics/web1.png>
+Package pdftex.def Info: pics/web1.png used on input line 150.
+(pdftex.def)             Requested size: 176.40439pt x 112.17805pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 151.
+
+<pics/web2.png, id=40, 843.65187pt x 518.43687pt>
+File: pics/web2.png Graphic file (type png)
+ <use pics/web2.png>
+Package pdftex.def Info: pics/web2.png used on input line 154.
+(pdftex.def)             Requested size: 176.40439pt x 108.4003pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 157.
+ [5 <./pics/web1.png> <./pics/web2.png>]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 206.
+ [6] [7]
+Overfull \hbox (12.36057pt too wide) in paragraph at lines 268--275
+\OT1/ppl/m/n/10.95 Several multi-objective op-ti-miza-tion al-go-rithms are bas
+ed on PSO such as Multi-objective
+ []
+
+)
+Overfull \hbox (6.45956pt too wide) in paragraph at lines 329--109
+\OT1/ppl/m/n/10.95 Previous re-searchers have stud-ied Web ser-vices location-a
+llocation prob-lem with single-
+ []
+
+
+Overfull \hbox (8.35316pt too wide) in paragraph at lines 329--109
+\OT1/ppl/m/n/10.95 multi-objective al-go-rithms. From pre-vi-ous study, we foun
+d evo-lu-tion-ary multi-objective
+ []
+
+[8] [9]
+\openout2 = `using.aux'.
+
+ (./using.tex [10
+
+
+
+]
+Chapter 3.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 74.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 74.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 74.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 74.
+[11]
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184       \end{align}
+                       
+? 
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.202       \end{align}
+                       
+? 
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+
+ []
+
+<pics/psorepresentation.png, id=72, 435.87843pt x 189.70876pt>
+File: pics/psorepresentation.png Graphic file (type png)
+
+<use pics/psorepresentation.png>
+Package pdftex.def Info: pics/psorepresentation.png used on input line 269.
+(pdftex.def)             Requested size: 308.71104pt x 134.36125pt.
+ [13] [14 <./pics/psorepresentation.png>]
+Underfull \vbox (badness 1033) has occurred while \output is active []
+
+ [15]
+<pics/latency_density.png, id=83, 466.53505pt x 473.69049pt>
+File: pics/latency_density.png Graphic file (type png)
+
+<use pics/latency_density.png>
+Package pdftex.def Info: pics/latency_density.png used on input line 404.
+(pdftex.def)             Requested size: 220.50885pt x 223.88498pt.
+ [16 <./pics/latency_density.png>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.450 }
+       
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.450 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.450 }
+       
+? 
+
+Overfull \hbox (3.4451pt too wide) in paragraph at lines 492--492
+[][] 
+ []
+
+<pics/binary1.png, id=87, 485.1392pt x 437.91327pt>
+File: pics/binary1.png Graphic file (type png)
+ <use pics/binary1.png>
+Package pdftex.def Info: pics/binary1.png used on input line 516.
+(pdftex.def)             Requested size: 132.30666pt x 119.42755pt.
+
+<pics/binary2.png, id=88, 485.1392pt x 437.91327pt>
+File: pics/binary2.png Graphic file (type png)
+ <use pics/binary2.png>
+Package pdftex.def Info: pics/binary2.png used on input line 520.
+(pdftex.def)             Requested size: 132.30666pt x 119.42755pt.
+
+<pics/binary3.png, id=89, 485.1392pt x 437.91327pt>
+File: pics/binary3.png Graphic file (type png)
+ <use pics/binary3.png>
+Package pdftex.def Info: pics/binary3.png used on input line 524.
+(pdftex.def)             Requested size: 132.30666pt x 119.42755pt.
+
+<pics/binary4.png, id=90, 481.56148pt x 437.91327pt>
+File: pics/binary4.png Graphic file (type png)
+ <use pics/binary4.png>
+Package pdftex.def Info: pics/binary4.png used on input line 528.
+(pdftex.def)             Requested size: 132.30666pt x 120.31627pt.
+
+<pics/binary5.png, id=91, 480.1304pt x 435.76663pt>
+File: pics/binary5.png Graphic file (type png)
+ <use pics/binary5.png>
+Package pdftex.def Info: pics/binary5.png used on input line 532.
+(pdftex.def)             Requested size: 132.30666pt x 120.07889pt.
+
+<pics/binary6.png, id=92, 479.41486pt x 436.48218pt>
+File: pics/binary6.png Graphic file (type png)
+ <use pics/binary6.png>
+Package pdftex.def Info: pics/binary6.png used on input line 536.
+(pdftex.def)             Requested size: 132.30666pt x 120.45589pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pics/binaryevolve1.png, id=93, 485.85475pt x 402.85158pt>
+File: pics/binaryevolve1.png Graphic file (type png)
+
+<use pics/binaryevolve1.png>
+Package pdftex.def Info: pics/binaryevolve1.png used on input line 546.
+(pdftex.def)             Requested size: 176.40439pt x 146.26814pt.
+
+<pics/binaryevolve2.png, id=94, 482.27702pt x 440.0599pt>
+File: pics/binaryevolve2.png Graphic file (type png)
+
+<use pics/binaryevolve2.png>
+Package pdftex.def Info: pics/binaryevolve2.png used on input line 550.
+(pdftex.def)             Requested size: 176.40439pt x 160.95963pt.
+
+<pics/binaryevolve3.png, id=95, 478.69931pt x 441.491pt>
+File: pics/binaryevolve3.png Graphic file (type png)
+
+<use pics/binaryevolve3.png>
+Package pdftex.def Info: pics/binaryevolve3.png used on input line 554.
+(pdftex.def)             Requested size: 176.40439pt x 162.69565pt.
+
+<pics/binaryevolve4.png, id=96, 481.56148pt x 440.77545pt>
+File: pics/binaryevolve4.png Graphic file (type png)
+
+<use pics/binaryevolve4.png>
+Package pdftex.def Info: pics/binaryevolve4.png used on input line 558.
+(pdftex.def)             Requested size: 176.40439pt x 161.46347pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.587 7 \sim
+             50 & 0.099   & 001100   \\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.587 7 \sim 50 &
+                  0.099   & 001100   \\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.605 7 \sim
+             50    & 0.021   & 1111000000000000   \\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.605 7 \sim 50    &
+                     0.021   & 1111000000000000   \\ \hline
+? 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17]
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 642--658
+[]$[]$ $[]$
+ []
+
+[18 <./pics/binary1.png> <./pics/binary2.png> <./pics/binary3.png> <./pics/bina
+ry4.png> <./pics/binary5.png> <./pics/binary6.png>] [19 <./pics/binaryevolve1.p
+ng> <./pics/binaryevolve2.png> <./pics/binaryevolve3.png> <./pics/binaryevolve4
+.png>] [20
+
+]
+Chapter 4.
+
+LaTeX Warning: Reference `alg:NSPSO' on page 21 undefined on input line 678.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.683 \begin{algorithm}[!h]
+                           
+? 
+! Undefined control sequence.
+\@float@Hx ...ltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.683 \begin{algorithm}[!h]
+                           
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.683 \begin{algorithm}[!h]
+                           
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--690
+
+ []
+
+! Undefined control sequence.
+\endalgorithm ...oatbox \global \setbox \@currbox 
+                                                  \float@makebox \columnwidt...
+l.726 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.726 \end{algorithm}
+                     
+? 
+! Undefined control sequence.
+\caption@ORI@float@makebox ...i \unvbox \@currbox 
+                                                  \else \unvbox \@currbox \i...
+l.726 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \par 
+l.726 \end{algorithm}
+                     
+? 
+[21]
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.767 \begin{algorithm}[!h]
+                           
+? 
+! Undefined control sequence.
+\@float@Hx ...ltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.767 \begin{algorithm}[!h]
+                           
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.767 \begin{algorithm}[!h]
+                           
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--775
+
+ []
+
+! Undefined control sequence.
+\endalgorithm ...oatbox \global \setbox \@currbox 
+                                                  \float@makebox \columnwidt...
+l.800 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.800 \end{algorithm}
+                     
+? 
+! Undefined control sequence.
+\caption@ORI@float@makebox ...i \unvbox \@currbox 
+                                                  \else \unvbox \@currbox \i...
+l.800 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \par 
+l.800 \end{algorithm}
+                     
+? 
+<pics/mutation.png, id=113, 513.04544pt x 138.1001pt>
+File: pics/mutation.png Graphic file (type png)
+ <use pics/mutation.png>
+Package pdftex.def Info: pics/mutation.png used on input line 816.
+(pdftex.def)             Requested size: 220.50885pt x 59.35658pt.
+
+<pics/crossover.png, id=114, 992.95969pt x 212.29312pt>
+File: pics/crossover.png Graphic file (type png)
+
+<use pics/crossover.png>
+Package pdftex.def Info: pics/crossover.png used on input line 829.
+(pdftex.def)             Requested size: 308.71104pt x 66.0013pt.
+
+
+LaTeX Warning: Reference `alg:repairfunctions' on page 22 undefined on input li
+ne 836.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.846 \begin{algorithm}[!h]
+                           
+? 
+! Undefined control sequence.
+\@float@Hx ...ltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.846 \begin{algorithm}[!h]
+                           
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.846 \begin{algorithm}[!h]
+                           
+? 
+
+! Package algorithmicx Error: Some blocks are not closed!!!.
+
+See the algorithmicx package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.870 	\end{algorithmic}
+                        
+? 
+! Undefined control sequence.
+\endalgorithm ...oatbox \global \setbox \@currbox 
+                                                  \float@makebox \columnwidt...
+l.872 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.872 \end{algorithm}
+                     
+? 
+! Undefined control sequence.
+\caption@ORI@float@makebox ...i \unvbox \@currbox 
+                                                  \else \unvbox \@currbox \i...
+l.872 \end{algorithm}
+                     
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \par 
+l.872 \end{algorithm}
+                     
+? 
+[22 <./pics/mutation.png> <./pics/crossover.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 949.
+
+<pics/nsgabpso1.png, id=120, 477.98376pt x 437.19772pt>
+File: pics/nsgabpso1.png Graphic file (type png)
+
+<use pics/nsgabpso1.png>
+Package pdftex.def Info: pics/nsgabpso1.png used on input line 952.
+(pdftex.def)             Requested size: 132.30666pt x 121.02026pt.
+
+<pics/nsgabpso2.png, id=121, 477.98376pt x 435.76663pt>
+File: pics/nsgabpso2.png Graphic file (type png)
+
+<use pics/nsgabpso2.png>
+Package pdftex.def Info: pics/nsgabpso2.png used on input line 956.
+(pdftex.def)             Requested size: 132.30666pt x 120.62413pt.
+
+<pics/nsgabpso3.png, id=122, 478.69931pt x 436.48218pt>
+File: pics/nsgabpso3.png Graphic file (type png)
+
+<use pics/nsgabpso3.png>
+Package pdftex.def Info: pics/nsgabpso3.png used on input line 960.
+(pdftex.def)             Requested size: 132.30666pt x 120.63571pt.
+
+<pics/nsgabpso4.png, id=123, 480.1304pt x 434.33554pt>
+File: pics/nsgabpso4.png Graphic file (type png)
+
+<use pics/nsgabpso4.png>
+Package pdftex.def Info: pics/nsgabpso4.png used on input line 964.
+(pdftex.def)             Requested size: 132.30666pt x 119.68454pt.
+
+<pics/nsgabpso5.png, id=124, 480.84595pt x 434.33554pt>
+File: pics/nsgabpso5.png Graphic file (type png)
+
+<use pics/nsgabpso5.png>
+Package pdftex.def Info: pics/nsgabpso5.png used on input line 968.
+(pdftex.def)             Requested size: 132.30666pt x 119.5056pt.
+ <pics/nsgabpso6.png, id=125, 477.26822pt x 433.62pt>
+File: pics/nsgabpso6.png Graphic file (type png)
+
+<use pics/nsgabpso6.png>
+Package pdftex.def Info: pics/nsgabpso6.png used on input line 972.
+(pdftex.def)             Requested size: 132.30666pt x 120.20195pt.
+ <pics/nsgabpso7.png, id=126, 475.83713pt x 433.62pt>
+File: pics/nsgabpso7.png Graphic file (type png)
+
+<use pics/nsgabpso7.png>
+Package pdftex.def Info: pics/nsgabpso7.png used on input line 976.
+(pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
+
+<pics/nsgabpso8.png, id=127, 476.55267pt x 434.33554pt>
+File: pics/nsgabpso8.png Graphic file (type png)
+
+<use pics/nsgabpso8.png>
+Package pdftex.def Info: pics/nsgabpso8.png used on input line 980.
+(pdftex.def)             Requested size: 132.30666pt x 120.58586pt.
+
+<pics/nsgabpso9.png, id=128, 472.2594pt x 431.47337pt>
+File: pics/nsgabpso9.png Graphic file (type png)
+
+<use pics/nsgabpso9.png>
+Package pdftex.def Info: pics/nsgabpso9.png used on input line 984.
+(pdftex.def)             Requested size: 132.30666pt x 120.87755pt.
+
+<pics/nsgabpso10.png, id=129, 479.41486pt x 434.33554pt>
+File: pics/nsgabpso10.png Graphic file (type png)
+
+<use pics/nsgabpso10.png>
+Package pdftex.def Info: pics/nsgabpso10.png used on input line 988.
+(pdftex.def)             Requested size: 132.30666pt x 119.86348pt.
+
+<pics/nsgabpso11.png, id=130, 482.27702pt x 435.76663pt>
+File: pics/nsgabpso11.png Graphic file (type png)
+
+<use pics/nsgabpso11.png>
+Package pdftex.def Info: pics/nsgabpso11.png used on input line 992.
+(pdftex.def)             Requested size: 132.30666pt x 119.54695pt.
+
+<pics/nsgabpso12.png, id=131, 480.1304pt x 435.05109pt>
+File: pics/nsgabpso12.png Graphic file (type png)
+
+<use pics/nsgabpso12.png>
+Package pdftex.def Info: pics/nsgabpso12.png used on input line 996.
+(pdftex.def)             Requested size: 132.30666pt x 119.88171pt.
+
+<pics/nsgabpso13.png, id=132, 477.98376pt x 435.05109pt>
+File: pics/nsgabpso13.png Graphic file (type png)
+
+<use pics/nsgabpso13.png>
+Package pdftex.def Info: pics/nsgabpso13.png used on input line 1000.
+(pdftex.def)             Requested size: 132.30666pt x 120.42606pt.
+
+<pics/nsgabpso14.png, id=133, 484.42366pt x 433.62pt>
+File: pics/nsgabpso14.png Graphic file (type png)
+
+<use pics/nsgabpso14.png>
+Package pdftex.def Info: pics/nsgabpso14.png used on input line 1004.
+(pdftex.def)             Requested size: 132.30666pt x 118.42873pt.
+
+
+LaTeX Warning: Float too large for page by 34.5414pt on input line 1009.
+
+[23] [24 <./pics/nsgabpso1.png> <./pics/nsgabpso2.png> <./pics/nsgabpso3.png> <
+./pics/nsgabpso4.png> <./pics/nsgabpso5.png> <./pics/nsgabpso6.png> <./pics/nsg
+abpso7.png> <./pics/nsgabpso8.png> <./pics/nsgabpso9.png> <./pics/nsgabpso10.pn
+g> <./pics/nsgabpso11.png> <./pics/nsgabpso12.png> <./pics/nsgabpso13.png> <./p
+ics/nsgabpso14.png>] [25] [26
+
+]
+Chapter 5.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1070 \begin{algorithm}[!h]
+                            
+? 
+! Undefined control sequence.
+\@float@Hx ...ltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1070 \begin{algorithm}[!h]
+                            
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1070 \begin{algorithm}[!h]
+                            
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1081 		\State
+                Initialize a population $P$ with random real values $\in$ (0...
+
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1081 		\State
+                Initialize a population $P$ with random real values $\in$ (0...
+
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1082 		\State
+                Initialize velocity[i] = 0
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1082 		\State
+                Initialize velocity[i] = 0
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1083 		\State
+                Each individual $i$ in $P$ using the rounding function and t...
+
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1083 		\State
+                Each individual $i$ in $P$ using the rounding function and t...
+
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1084 		\State
+                Initialize personal best of each individual $i$.
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1084 		\State
+                Initialize personal best of each individual $i$.
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1085 		\State
+                Initialize $GBEST$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1085 		\State
+                Initialize $GBEST$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1086 		\State
+                Initialize $Archive$ with non-dominated vectors found in $P$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1086 		\State
+                Initialize $Archive$ with non-dominated vectors found in $P$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1088 		\Repeat
+                
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1088 		\Repeat
+                
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1102 		\State
+                return $Archive$
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1102 		\State
+                return $Archive$
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1103 	\end{algorithmic}
+                         
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1103 	\end{algorithmic}
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1103 	\end{algorithmic}
+                         
+? 
+! Undefined control sequence.
+\endalgorithm ...oatbox \global \setbox \@currbox 
+                                                  \float@makebox \columnwidt...
+l.1105 \end{algorithm}
+                      
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1105 \end{algorithm}
+                      
+? 
+! Undefined control sequence.
+\caption@ORI@float@makebox ...i \unvbox \@currbox 
+                                                  \else \unvbox \@currbox \i...
+l.1105 \end{algorithm}
+                      
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \par 
+l.1105 \end{algorithm}
+                      
+? 
+[27] <pics/flatten.png, id=150, 404.99821pt x 168.15297pt>
+File: pics/flatten.png Graphic file (type png)
+
+<use pics/flatten.png>
+Package pdftex.def Info: pics/flatten.png used on input line 1117.
+(pdftex.def)             Requested size: 308.71104pt x 128.18243pt.
+ [28 <./pics/flatten.png>]
+<pics/transfer.png, id=154, 631.82584pt x 294.80435pt>
+File: pics/transfer.png Graphic file (type png)
+ <use pics/transfer.png>
+Package pdftex.def Info: pics/transfer.png used on input line 1237.
+(pdftex.def)             Requested size: 308.71104pt x 144.04153pt.
+
+[29] [30 <./pics/transfer.png>]
+<pics/dynamic.png, id=162, 472.97495pt x 433.62pt>
+File: pics/dynamic.png Graphic file (type png)
+ <use pics/dynamic.png>
+Package pdftex.def Info: pics/dynamic.png used on input line 1304.
+(pdftex.def)             Requested size: 220.50885pt x 202.16054pt.
+
+Underfull \vbox (badness 3312) has occurred while \output is active []
+
+ [31]
+Overfull \hbox (4.80666pt too wide) in paragraph at lines 1331--1344
+[]\OT1/ppl/m/n/10.95 The com-mon pa-ram-e-ter set-tings are shown in Ta-ble 5.1
+[]. Specif-i-cally, we ap-ply quadratic
+ []
+
+[32 <./pics/dynamic.png>]
+<pics/static_threshold_problem_2.png, id=171, 480.84595pt x 480.84595pt>
+File: pics/static_threshold_problem_2.png Graphic file (type png)
+
+<use pics/static_threshold_problem_2.png>
+Package pdftex.def Info: pics/static_threshold_problem_2.png used on input line
+ 1363.
+(pdftex.def)             Requested size: 216.10109pt x 216.09985pt.
+
+<pics/static_threshold_problem_3.png, id=172, 482.27702pt x 467.96614pt>
+File: pics/static_threshold_problem_3.png Graphic file (type png)
+
+<use pics/static_threshold_problem_3.png>
+Package pdftex.def Info: pics/static_threshold_problem_3.png used on input line
+ 1367.
+(pdftex.def)             Requested size: 216.10109pt x 209.69025pt.
+
+<pics/static_threshold_problem_4.png, id=173, 476.55267pt x 475.12158pt>
+File: pics/static_threshold_problem_4.png Graphic file (type png)
+
+<use pics/static_threshold_problem_4.png>
+Package pdftex.def Info: pics/static_threshold_problem_4.png used on input line
+ 1371.
+(pdftex.def)             Requested size: 216.10109pt x 215.44843pt.
+
+<pics/static_threshold_problem_5.png, id=174, 482.27702pt x 470.82832pt>
+File: pics/static_threshold_problem_5.png Graphic file (type png)
+
+<use pics/static_threshold_problem_5.png>
+Package pdftex.def Info: pics/static_threshold_problem_5.png used on input line
+ 1375.
+(pdftex.def)             Requested size: 216.10109pt x 210.97275pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pics/roundstatic.png, id=175, 553.83148pt x 85.86534pt>
+File: pics/roundstatic.png Graphic file (type png)
+
+<use pics/roundstatic.png>
+Package pdftex.def Info: pics/roundstatic.png used on input line 1391.
+(pdftex.def)             Requested size: 308.71104pt x 47.86282pt.
+ [33 <./pics/roundstatic.png>] [34 <./pics/static_threshold_problem_2.png> <./p
+ics/static_threshold_problem_3.png> <./pics/static_threshold_problem_4.png> <./
+pics/static_threshold_problem_5.png>]
+<pics/dynamic_problem_2.png, id=183, 480.84595pt x 475.83713pt>
+File: pics/dynamic_problem_2.png Graphic file (type png)
+
+<use pics/dynamic_problem_2.png>
+Package pdftex.def Info: pics/dynamic_problem_2.png used on input line 1423.
+(pdftex.def)             Requested size: 216.10109pt x 213.84882pt.
+
+<pics/dynamic_problem_3.png, id=184, 475.83713pt x 467.96614pt>
+File: pics/dynamic_problem_3.png Graphic file (type png)
+
+<use pics/dynamic_problem_3.png>
+Package pdftex.def Info: pics/dynamic_problem_3.png used on input line 1427.
+(pdftex.def)             Requested size: 216.10109pt x 212.52505pt.
+
+<pics/dynamic_problem_4.png, id=185, 480.1304pt x 470.11278pt>
+File: pics/dynamic_problem_4.png Graphic file (type png)
+
+<use pics/dynamic_problem_4.png>
+Package pdftex.def Info: pics/dynamic_problem_4.png used on input line 1431.
+(pdftex.def)             Requested size: 216.10109pt x 211.59183pt.
+
+<pics/dynamic_problem_5.png, id=186, 481.56148pt x 470.82832pt>
+File: pics/dynamic_problem_5.png Graphic file (type png)
+
+<use pics/dynamic_problem_5.png>
+Package pdftex.def Info: pics/dynamic_problem_5.png used on input line 1435.
+(pdftex.def)             Requested size: 216.10109pt x 211.28886pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1451 ...             & 0.74 $\pm$ 0.013 \uparrow
+                                                    	 \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1452 p
+        roblem 3 & 0.80 $\pm$ 0.012            & 0.81 $\pm$ 0.012           ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1452 ...            & 0.815 $\pm$ 0.013 \uparrow
+                                                   		\\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1453 p
+        roblem 4 & 0.82 $\pm$ 0.012            & 0.86 $\pm$ 0.016           ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1453 ...             & 0.87 $\pm$ 0.014 \uparrow
+                                                    	\\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1454 p
+        roblem 5 & 0.80 $\pm$ 0.014            & 0.85 $\pm$ 0.023           ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1454 ...             & 0.86 $\pm$ 0.020 \uparrow
+                                                   	\\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1454 ...  & 0.86 $\pm$ 0.020 \uparrow 	\\ \hline
+                                                  
+? 
+[35 <./pics/dynamic_problem_2.png> <./pics/dynamic_problem_3.png> <./pics/dynam
+ic_problem_4.png> <./pics/dynamic_problem_5.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1481.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...ar}[c]{@{}c@{}}0.74 $\pm$ 0.013 \uparrow
+                                                  \\ 0.815 $\pm$ 0.013\\ 0.8...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...c]{@{}c@{}}0.74 $\pm$ 0.013 \uparrow\\ 0
+                                                  .815 $\pm$ 0.013\\ 0.87 $\...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ... $\pm$ 0.013\\ 0.87 $\pm$ 0.014 \uparrow
+                                                  \\ 0.86 $\pm$ 0.020  \upar...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...m$ 0.013\\ 0.87 $\pm$ 0.014 \uparrow\\ 0
+                                                  .86 $\pm$ 0.020  \uparrow\...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...14 \uparrow\\ 0.86 $\pm$ 0.020  \uparrow
+                                                  \end{tabular} & \begin{tab...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ... 0.86 $\pm$ 0.020  \uparrow\end{tabular}
+                                                   & \begin{tabular}[c]{@{}c...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...$\pm$ 0.011\\  0.83 $\pm$ 0.014 \uparrow
+                                                   \\ 0.85 $\pm$ 0.014\\ 0.8...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ... 0.011\\  0.83 $\pm$ 0.014 \uparrow \\ 0
+                                                  .85 $\pm$ 0.014\\ 0.85 $\p...
+
+? 
+<pics/transfer_problem2.png, id=194, 479.41486pt x 469.39723pt>
+File: pics/transfer_problem2.png Graphic file (type png)
+
+<use pics/transfer_problem2.png>
+Package pdftex.def Info: pics/transfer_problem2.png used on input line 1496.
+(pdftex.def)             Requested size: 216.10109pt x 211.58492pt.
+
+<pics/transfer_problem3.png, id=195, 480.1304pt x 467.2506pt>
+File: pics/transfer_problem3.png Graphic file (type png)
+
+<use pics/transfer_problem3.png>
+Package pdftex.def Info: pics/transfer_problem3.png used on input line 1500.
+(pdftex.def)             Requested size: 216.10109pt x 210.3036pt.
+
+<pics/transfer_problem4.png, id=196, 477.98376pt x 466.53505pt>
+File: pics/transfer_problem4.png Graphic file (type png)
+
+<use pics/transfer_problem4.png>
+Package pdftex.def Info: pics/transfer_problem4.png used on input line 1504.
+(pdftex.def)             Requested size: 216.10109pt x 210.92833pt.
+
+<pics/transfer_problem5.png, id=197, 480.1304pt x 468.68169pt>
+File: pics/transfer_problem5.png Graphic file (type png)
+
+<use pics/transfer_problem5.png>
+Package pdftex.def Info: pics/transfer_problem5.png used on input line 1508.
+(pdftex.def)             Requested size: 216.10109pt x 210.94771pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pics/combination_problem2.png, id=198, 479.41486pt x 470.82832pt>
+File: pics/combination_problem2.png Graphic file (type png)
+
+<use pics/combination_problem2.png>
+Package pdftex.def Info: pics/combination_problem2.png used on input line 1524.
+
+(pdftex.def)             Requested size: 216.10109pt x 212.23pt.
+
+<pics/combination_problem3.png, id=199, 482.99257pt x 472.2594pt>
+File: pics/combination_problem3.png Graphic file (type png)
+
+<use pics/combination_problem3.png>
+Package pdftex.def Info: pics/combination_problem3.png used on input line 1528.
+
+(pdftex.def)             Requested size: 216.10109pt x 211.29694pt.
+
+<pics/combination_problem4.png, id=200, 477.26822pt x 465.8195pt>
+File: pics/combination_problem4.png Graphic file (type png)
+
+<use pics/combination_problem4.png>
+Package pdftex.def Info: pics/combination_problem4.png used on input line 1532.
+
+(pdftex.def)             Requested size: 216.10109pt x 210.91756pt.
+
+<pics/combination_problem5.png, id=201, 482.27702pt x 470.82832pt>
+File: pics/combination_problem5.png Graphic file (type png)
+
+<use pics/combination_problem5.png>
+Package pdftex.def Info: pics/combination_problem5.png used on input line 1536.
+
+(pdftex.def)             Requested size: 216.10109pt x 210.97275pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36]
+Overfull \hbox (18.13231pt too wide) in paragraph at lines 1553--1557
+[]\OT1/ppl/m/n/10.95 Compared to NSPSO and NSGA-II, MOP-SOCD with dy-namic roun
+d-ing func-tion achieved
+ []
+
+[37 <./pics/transfer_problem2.png> <./pics/transfer_problem3.png> <./pics/trans
+fer_problem4.png> <./pics/transfer_problem5.png>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1582 ...{}}3.12E-03 $\pm$ 6.71E-04 $\uparrow\\ $
+                                                  0.12 $\pm$ 4.15E-03\\ 0.20...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1582 ...03 $\pm$ 6.71E-04 $\uparrow\\ $0.12 $\pm
+                                                  $ 4.15E-03\\ 0.20 $\pm$ 3....
+
+? 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1592.
+
+
+Overfull \hbox (9.88376pt too wide) in paragraph at lines 1628--1628
+ [][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1632.
+
+<pics/total1.png, id=211, 473.69049pt x 435.76663pt>
+File: pics/total1.png Graphic file (type png)
+ <use pics/total1.png>
+Package pdftex.def Info: pics/total1.png used on input line 1635.
+(pdftex.def)             Requested size: 132.30666pt x 121.70795pt.
+
+<pics/total2.png, id=212, 480.84595pt x 435.05109pt>
+File: pics/total2.png Graphic file (type png)
+ <use pics/total2.png>
+Package pdftex.def Info: pics/total2.png used on input line 1639.
+(pdftex.def)             Requested size: 132.30666pt x 119.70247pt.
+
+<pics/total3.png, id=213, 474.40604pt x 437.91327pt>
+File: pics/total3.png Graphic file (type png)
+ <use pics/total3.png>
+Package pdftex.def Info: pics/total3.png used on input line 1643.
+(pdftex.def)             Requested size: 132.30666pt x 122.12709pt.
+
+<pics/total4.png, id=214, 479.41486pt x 436.48218pt>
+File: pics/total4.png Graphic file (type png)
+ <use pics/total4.png>
+Package pdftex.def Info: pics/total4.png used on input line 1647.
+(pdftex.def)             Requested size: 132.30666pt x 120.45589pt.
+
+<pics/total5.png, id=215, 475.83713pt x 435.76663pt>
+File: pics/total5.png Graphic file (type png)
+ <use pics/total5.png>
+Package pdftex.def Info: pics/total5.png used on input line 1651.
+(pdftex.def)             Requested size: 132.30666pt x 121.16272pt.
+
+<pics/total6.png, id=216, 475.83713pt x 433.62pt>
+File: pics/total6.png Graphic file (type png)
+ <use pics/total6.png>
+Package pdftex.def Info: pics/total6.png used on input line 1655.
+(pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
+
+<pics/total7.png, id=217, 475.83713pt x 430.75783pt>
+File: pics/total7.png Graphic file (type png)
+ <use pics/total7.png>
+Package pdftex.def Info: pics/total7.png used on input line 1659.
+(pdftex.def)             Requested size: 132.30666pt x 119.77003pt.
+
+<pics/total8.png, id=218, 477.26822pt x 435.76663pt>
+File: pics/total8.png Graphic file (type png)
+ <use pics/total8.png>
+Package pdftex.def Info: pics/total8.png used on input line 1663.
+(pdftex.def)             Requested size: 132.30666pt x 120.79701pt.
+
+<pics/total9.png, id=219, 475.12158pt x 432.1889pt>
+File: pics/total9.png Graphic file (type png)
+ <use pics/total9.png>
+Package pdftex.def Info: pics/total9.png used on input line 1667.
+(pdftex.def)             Requested size: 132.30666pt x 120.3526pt.
+
+<pics/total10.png, id=220, 475.83713pt x 433.62pt>
+File: pics/total10.png Graphic file (type png)
+ <use pics/total10.png>
+Package pdftex.def Info: pics/total10.png used on input line 1671.
+(pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
+
+<pics/total11.png, id=221, 473.69049pt x 440.0599pt>
+File: pics/total11.png Graphic file (type png)
+ <use pics/total11.png>
+Package pdftex.def Info: pics/total11.png used on input line 1675.
+(pdftex.def)             Requested size: 132.30666pt x 122.90704pt.
+
+<pics/total12.png, id=222, 477.26822pt x 437.19772pt>
+File: pics/total12.png Graphic file (type png)
+ <use pics/total12.png>
+Package pdftex.def Info: pics/total12.png used on input line 1679.
+(pdftex.def)             Requested size: 132.30666pt x 121.19371pt.
+
+<pics/total13.png, id=223, 473.69049pt x 430.75783pt>
+File: pics/total13.png Graphic file (type png)
+ <use pics/total13.png>
+Package pdftex.def Info: pics/total13.png used on input line 1683.
+(pdftex.def)             Requested size: 132.30666pt x 120.30902pt.
+
+<pics/total14.png, id=224, 475.83713pt x 434.33554pt>
+File: pics/total14.png Graphic file (type png)
+ <use pics/total14.png>
+Package pdftex.def Info: pics/total14.png used on input line 1687.
+(pdftex.def)             Requested size: 132.30666pt x 120.7648pt.
+
+
+LaTeX Warning: Float too large for page by 39.89253pt on input line 1692.
+
+[38 <./pics/combination_problem2.png> <./pics/combination_problem3.png> <./pics
+/combination_problem4.png> <./pics/combination_problem5.png>] [39 <./pics/total
+1.png> <./pics/total2.png> <./pics/total3.png> <./pics/total4.png> <./pics/tota
+l5.png> <./pics/total6.png> <./pics/total7.png> <./pics/total8.png> <./pics/tot
+al9.png> <./pics/total10.png> <./pics/total11.png> <./pics/total12.png> <./pics
+/total13.png> <./pics/total14.png>]
+
+LaTeX Warning: Text page 40 contains only floats.
+
+[40]
+Overfull \hbox (2.45174pt too wide) in paragraph at lines 1702--1707
+\OT1/ppl/m/n/10.95 This chap-ter pro-posed a bi-nary ver-sion of MOP-SOCD to so
+lve the Web ser-vice location-
+ []
+
+) [41]
+\openout2 = `conclusion.aux'.
+
+ (./conclusion.tex [42
+
+
+
+]
+Chapter 6.
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+
+Overfull \hbox (3.89682pt too wide) in paragraph at lines 8--12
+[]\OT1/ppl/m/n/10.95 We ap-plied the Web ser-vice lo-ca-tion al-lo-ca-tion mode
+l in de-vel-op-ing two multi-objective
+ []
+
+) [43] [44
+
+
+] (./proj_report_outline.bbl
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
+ [45
+
+]
+Missing character: There is no √ in font pplr7t!
+Missing character: There is no ° in font pplr7t!
+ [46]
+Missing character: There is no Ã in font pplrc7t!
+Missing character: There is no Ä in font pplrc7t!
+Missing character: There is no ‚ in font pplri7t!
+Missing character: There is no Ä in font pplri7t!
+Missing character: There is no î in font pplri7t!
+Missing character: There is no √ in font pplr7t!
+Missing character: There is no ∫ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+
+Underfull \hbox (badness 2050) in paragraph at lines 269--273
+[]\OT1/ppl/m/sc/10.95 Organization for the Ad-vance-ment of Struc-tured In-for-
+ma-tion
+ []
+
+[47])
+
+! LaTeX Error: \begin{itemize} on input line 103 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \end{document}
+                    
+? 
+[48] (./proj_report_outline.aux (./introduction.aux) (./using.aux)
+(./conclusion.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 103 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 6664 strings out of 493089
+ 97367 string characters out of 6134842
+ 206330 words of memory out of 5000000
+ 9869 multiletter control sequences out of 15000+600000
+ 56205 words of font info for 154 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,20n,39p,803b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on proj_report_outline.pdf (54 pages, 917112 bytes).
+PDF statistics:
+ 295 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+

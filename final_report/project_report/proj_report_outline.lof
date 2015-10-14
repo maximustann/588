@@ -1,7 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \relax }}{6}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Matrix Flatten\relax }}{13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Convergence curve\relax }}{17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces BPSO Optmization Process\relax }}{18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces BPSO Experiments: Solutions of Problems 1 $\sim $ 6\relax }}{19}
 \addvspace {10\p@ }
-\contentsline {fig}{\numberline {4.1}{\ignorespaces The transition function of an NFA with $\Lambda $ transitions\relax }}{7}
-\contentsline {fig}{\numberline {4.2}{\ignorespaces The transition function of an FA to accept the same language.\relax }}{8}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mutation\relax }}{23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Crossover\relax }}{23}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces NSPSO, NSGA-II and BPSO Experiments: Solutions from Problems 1 $\sim $ 14\relax }}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Matrix Flatten\relax }}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces curve of three dynamic thresholds\relax }}{30}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Evolutionary process with an adaptive threshold\relax }}{31}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{33}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Static Rounding Function Experiments: Solutions from Problems 2 $\sim $ 5 with different static threshold values\relax }}{34}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Dynamic Rounding Function Experiments : Solutions from Problem 2 $\sim $ 5 with different dynamic functions\relax }}{35}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Adaptive Rounding Function Experiments: Solutions from Problems 2 $\sim $ 5 with adaptive function and reciprocal function\relax }}{37}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Combination of Static Function Experiments: Solutions from Problems 2 $\sim $ 5 with combination of static thresholds and reciprocal function \relax }}{38}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MOSPCOD, NSPSO and BPSO Experiments: Solutions from Problems 1 $\sim $ 14\relax }}{39}
 \addvspace {10\p@ }
