@@ -30,7 +30,7 @@ locations, Web service users would receive the lowest latency. However, increasi
 carefully. In this chapter, we focuses on developing a binary PSO with an aggregating approach.
 
 We first introduce the data that related to the problem and then model the problem with two objectives. In the second part, we apply a BPSO with 
-an aggregation approach to solve the problem. In the experiment, we first design 14 problems with increasing variable sizes 
+an aggregating approach to solve the problem. In the experiment, we first design 14 problems with increasing variable sizes 
 to test the performance of an algorithm. In addition, two small problems with small variable size are specifically designed for BPSO. 
 We conduct experiments on BPSO. The results are discussed carefully from the perspective of convergence, evolution process and overall performance.
 % Firstly, this model is based on a web service composition assumption, where all atomic services are composed to provide functionalities. Particularly,
@@ -154,7 +154,7 @@ by using service location allocation matrix $A = [a_{sj}]$ and network latency m
 {\centering
 	\begin{equation}
 	\label{eq:response}
-		r_{is} = MIN\{l_{ij} \mid j \in \{1, 2, ..., k\} \text{ and } a_{sj} = 1\}
+		r_{is} = \min\{l_{ij} \mid j \in \{1, 2, ..., k\} \text{ and } a_{sj} = 1\}
 	\end{equation}
 \\}
 For example, we can calculate overall network latency by using the two example matrices $L$ and $A$ presented above to construct the response time matrix $R$. 
@@ -195,7 +195,7 @@ We design two objective functions and one constraint.
 \end{equation}
 
 \emph{Cost} calculates the overall cost of deployed services, where $c_{sj}$ is the cost of deployed service $s$ at candidate location $j$, $a_{sj}$ represents whether service $s$ is allocated to candidate location $j$. The sum of the multiplication of 
-$c_{sj}$ and $a_{sj}$ is the total deployment cost.\end{flushleft}
+D$c_{sj}$ and $a_{sj}$ is the total deployment cost.\end{flushleft}
 
 % \begin{flushleft}For example, we use the above mentioned matrices $C$ and $A$.\end{flushleft}
 %   $$
@@ -234,13 +234,13 @@ That is, all row vectors in a matrix are concatenated from top row to bottom row
  \begin{figure}[H]
  \centering
    \includegraphics[width=0.7\textwidth]{pics/psorepresentation.png}
-   \caption{Matrix Flatten}
+   \caption{BPSO particle representation}
    \label{fig:flatten}
  \end{figure}
  
  \subsection{Fitness Function}
 To measure the goodness of solutions we need fitness functions.
-We employ a linear aggregation method to combine all normalized objectives into one value, with a weight assigned to each
+We employ a linear aggregating method to combine all normalized objectives into one value, with a weight assigned to each
 objective to indicate its relative importance (Equation \ref{eq:Fitness}).
 
 Since the maximum and minimum values for total cost and total latency are deterministic, we use exhaustive search to
@@ -269,7 +269,7 @@ The $gbest$ is the best solution in all $pbest$. Hence, it is updated when a cur
 \begin{minipage}{1.0\linewidth}
  \begin{algorithm}[H]
  \footnotesize
-	\caption{BPSO for Web Service Location-Allocation}
+	\caption{BPSO for Web Service Location Allocation}
 	\textbf{Inputs:} \\
 		Cost Matrix $C$, \\
 		Server network latency matrix $L$, \\
@@ -354,7 +354,7 @@ network latencies between candidate locations and user centers,  server rental c
 and Web service invocation frequencies information.
 
 Table \ref{tab:problem} shows the fourteen problems, 
-which are either generated from existing data or generated from a normal distribution (introduced in Section \ref{sec:costdata}, \ref{sec:frequencydata} and \ref{sec:latencydata}).  
+which are either generated from existing data or generated from a normal distribution (introduced in Section \emph{Cost}, \emph{Service Invocation Frequency} and \emph{Network Latency}).  
 The problems are in increasing size and difficulty which are used as representative samples of the Web service 
 location allocation problem.
 
@@ -393,7 +393,7 @@ Fixed deployment fees  mainly depend on the quantity, namely the number of serve
 reliability, network bandwidth. Variable fees include extra charges from exceeded storage and other limits.
 This project would only consider fixed deployment fees. The cost is under the following assumptions, 
 the fixed deployment of web services in the same candidate location are the same. 
-This project uses stimulate cost by randomly generating from a normal distribution where mean is 100, standard deviation is 20. 
+This project uses stimulated cost by randomly generating from a normal distribution where mean is 100, standard deviation is 20. 
 
 \subsubsection{Service Invocation Frequency}
 \label{sec:frequencydata}
@@ -453,12 +453,8 @@ Repeat the second step until all matrix has no $Null$ value.
 % The range of network latency is  [0, 20].
 % Over 90\% of the latency data are concentrated on [0, 2]. 
 
-
-
-
-\subsection{Experiment Design}
-We conduct experiment on problems 1 $\sim$ 6 and two small problems.
-The two small problems are designed to validate that our proposed BPSO algorithm for web service allocation is capable of finding near optima solutions.
+\subsubsection{Small Problems}
+Two small problems are designed to validate that our proposed BPSO algorithm for web service allocation is capable of finding near optima solutions.
 The two small problems are using small datasets so that it is feasible to use
 a brute-force algorithm (e.g. evaluate all permutation of the solutions) to find the optimal solutions.
 
@@ -543,6 +539,10 @@ C = \bbordermatrix{~ & j_{1} & j_{2} & j_{3} & j_{4}\cr
 					s_{2}	&70  &69 &91 &120\cr}
 $
 
+
+\subsection{Experiment Design}
+We conduct experiment on Problems 1 $\sim$ 6 and two small problems.
+
 The parameters of the BPSO algorithms are set as follows: $c1$ = 2, $c2$ = 2, population size is 50 and the max number of iteration is 50. 
 We assume both objectives are equally important, therefore, a weight $w$ for linear aggregation is set to 0.5. 
 
@@ -617,7 +617,7 @@ and 4. The reason is that the BPSO could not find better solutions so the swarm 
 In BPSO, each particle is a solution. We plot the particles from the last
 generation with two objectives in Figure \ref{fig:bpso_experiments} . The red points denote the solutions and the marked point denotes the solution with best fitness value. We draw a blue line with $slope = 1 $ passing through it.
 
-We found that, as we set the $weight$ in aggregation method to 0.5, the solutions are evolved
+We found that, as we set the $weight$ in aggregating method to 0.5, the solutions are evolved
 with the direction of $y = x$. 
 The solutions scattered along with the plane that orthogonal to the evolve direction. As there are two objectives in the problem, the plane is a line with $slope = -1$. Problem 2 $\sim$ 6 clearly shows this phenomenon. As we could observe that although the marked point has the best
 fitness value, it does not necessarily better than other solutions in the perspective of each objective.
@@ -730,7 +730,7 @@ BPSO does not necessarily find optima in every problem because of many reasons,
 
 In particular, we notice that in two small problems, all web services are deployed in the same locations. These are special cases which are not frequently
 happened. In a practical situation, optimal candidate locations for web services are not necessary the same. 
-The choices are highly dependent on the given attributes.
+The choices are highly dependent on the given attributes (latency, invocation frequency and cost).
 
 
 \section{Discussions}
@@ -749,14 +749,14 @@ WSPs may have their specific requirements, for example, financial service provid
 service providers prefer less expenditure even it means the decline of QoS. 
 Then the BPSO might not meet their needs. As we observed in Figure \ref{fig:bpso_experiments},
 clearly, the solutions are lack of diversity. 
-This is the major drawback of using an aggregation method to solve multi-objective problems. The linear
-aggregation method tries to optimize the overall fitness and ignore each objective. As a consequence, the 
+This is the major drawback of using an aggregating method to solve multi-objective problems. The linear
+aggregating method tries to optimize the overall fitness and ignore each objective. As a consequence, the 
 solutions are concentrated on a narrow region.
 
 
 \section{Summary} 
 This chapter first introduces a model for Web service location allocation problem with two objectives.
-Second, it presents a BPSO approach which employs an linear aggregation method to combine two objectives. 
+Second, it presents a BPSO approach which employs an linear aggregating method to combine two objectives. 
 The BPSO uses a ``death penalty'' constraint handling approach. Third, the chapter presents eight experiments over the BPSO  including six normal size problems and two small problems. 
 The results shown that BPSO and solve the problem we modeled and provides good 
 solutions. However, the drawback of BPSO is that it couldn't provide a variety of choices to let service providers to choose according to their preferences. 
@@ -766,7 +766,7 @@ In the next step, we are going to apply a multi-objective PSO approach to treat 
 \chapter{A Pareto-Front Multi-Objective to Web Service Location Allocation}
 \label{C:multi}
 \section{Introduction}
-In the previous chapter, we modeled the Web service location allocation problem and developed a BPSO with a linear aggregation approach.
+In the previous chapter, we modeled the Web service location allocation problem and developed a BPSO with a linear aggregating approach.
 The results show BPSO provides good solutions but with insufficient diversity. In order to improve diversity, 
 in this chapter, we develop a NSPSO-based approach with two separate fitness functions. 
 In addition, in order to show the effectiveness of NSPSO, we also employ a common multi-objective evolutionary algorithm - NSGA-II.
@@ -782,7 +782,7 @@ The constraint handling method is also ``death penalty'' as in BPSO (Section \re
 
 
 \begin{algorithm}[!h]
-	\caption{NSPSO for Web Service Location-Allocation}
+	\caption{NSPSO for Web Service Location Allocation}
 	\footnotesize
 	\textbf{Inputs:} \\
 		Cost Matrix $C$, \\
@@ -846,7 +846,7 @@ In NSPSO, we would address them as two fitness functions.
 
 
 
-\section{NSGA-II for service location-allocation}
+\section{NSGA-II for Service Location Allocation}
 NSGA-II is one of the most popular evolutionary multi-objective technique.
 In this section, we investigate a NSGA-II based multi-objective approach for Web service location allocation.
 There are two versions of NSGA-II, continuous and discrete. Because the Web service location allocation problem is a binary problem, we adopt the 
@@ -867,7 +867,7 @@ $$
 
 
 \begin{algorithm}[!htb]
-	\caption{NSGA-II for Web Service Location-Allocation}
+	\caption{NSGA-II for Web Service Location Allocation}
 	\footnotesize
 	\label{alg:NSGA2}
 	\textbf{Inputs:} \\
@@ -935,7 +935,10 @@ are generated after this operation.
 
 \subsection{Constraint Handling}
 In Section \ref{C:single}, we defined the Web service location allocation problem with single constraint. In order to fulfill the constraint,
-a repair function (Algorithm \ref{alg:repairfunctions}) is developed to fix the invalid chromosomes. 
+we develop a repair function (Algorithm \ref{alg:repairfunctions}) to fix the invalid chromosomes. The reason that we use a repair function instead of
+``death penalty'' is that ``death penalty'' is considered harmful in GA-based approaches. In GA-based approaches, chromosomes with bad fitness value
+have large probability been removed from the population in the next generation. Hence, the algorithm would lose chance to search these areas. In contrast, 
+in PSO-based approaches, particles with bad fitness value remain in the population. The invalid particles could move out of invalid regions in the next generation.
 % The first function checks the Web service number constraint and fix the chromosome by randomly deploying a service to a candidate location.
 The function checks the constraint and fix an invalid chromosome by randomly deploying a web service to a candidate location.
 
@@ -985,7 +988,7 @@ in this project). Hypervolume measures both diversity as well as convergence.
 The parameters are shown in Table \ref{tab:para}. Specifically, we treat both objectives equally important, so the weight parameter $w$ in BPSO is set 
 to 0.5. Each algorithm is conducted 40 runs to meet the statistical minimum requirements.
 
-BPSO with aggregation approach outputs a solution set without using a non-dominated sorting.  In order to compare
+BPSO with an aggregating approach outputs a solution set without using a non-dominated sorting.  In order to compare
 with other multi-objective algorithms, the non-dominated solutions are extracted from its output.
 
 To show the performance of the three algorithms, we compare the \emph{best solutions} generated by the algorithm and the \emph{average solutions} generated
@@ -1172,7 +1175,7 @@ $pbest$ is the personal best solution of each particle in population. The $pbest
 In the BMOPSOCD, any non-dominated solutions in the archive can be a $gbest$, therefore, it is important to ensure the particles move to an unexplored area. The $gbest$ is selected from non-dominated solutions with highest crowding distance value. It ensures the swarm move to a least crowded area.
 
 \begin{algorithm}[!htb]
-	\caption{BMOPSOCD for Web Service Location-Allocation}
+	\caption{BMOPSOCD for Web Service Location Allocation}
 	\footnotesize
 	\textbf{Inputs:} \\
 		Cost Matrix $C$, \\
@@ -1216,7 +1219,7 @@ We also employ the flatten method as described in the previous section.
  \begin{figure}[H]
  \centering
    \includegraphics[width=0.7\textwidth]{pics/flatten.png}
-   \caption{Matrix Flatten}
+   \caption{BMOPSOCD particle representation}
    \label{fig:flatten}
  \end{figure}
 
@@ -1318,7 +1321,7 @@ The performance of these rounding functions is studied in the Section \ref{sec:e
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.5\textwidth]{pics/dynamic.png}
-  \caption{curve of three dynamic thresholds}
+  \caption{Curve of three dynamic thresholds}
   \label{fig:dynamic}
 \end{figure}
 % 
@@ -1332,7 +1335,7 @@ It is necessary to build a system that has the ability to reuse the learned know
 Transfer learning is a process to reuse the knowledge in solving unseen tasks \cite{olivas}. 
 In this section, we proposed an adaptive threshold that embodied in the transfer learning process.
 
-Figure \ref{fig:adaptive} shows the process of a transfer learning process.
+Figure \ref{fig:adaptive} shows the evolutionary process with an adaptive threshold.
 % The idea of transfer learning is inspired by \cite{Verbancsics}. 
 Initially, the threshold $t$ is set to a upper boundary $u$ (e.g. 0.7). Then the PSO running with this setting for a 
 predefined interval $i$ (e.g. 10 generations). In the beginning of next interval (e.g. 11 generation), the threshold $t$ is changed according to
@@ -1384,7 +1387,7 @@ For our problem, the true Pareto front is unknown, therefore, a approximated tru
 We use hypervolume and IGD as the evaluation metrics.
 
 \subsection{Experiments on Rounding Functions}
-This section designs four experiments to study the effect of different types of rounding functions. Four datasets (problem 2 $\sim$ 5) are used, chosen from the Table \ref{tab:problem}. 
+This section designs four experiments to study the effect of different types of rounding functions. Four datasets (Problems 2 $\sim$ 5) are used, chosen from the Table \ref{tab:problem}. 
 
 % The cost constraint is not considered in these experiments since it is not the study priority.
 % The repair function of NSGA-II will also only use the Web service number constraint.
@@ -1533,7 +1536,7 @@ However the problem of reciprocal function is that the solutions are not complet
        \includegraphics[width=\textwidth]{pics/dynamic_problem_5.png}
 	   \caption{}
    \end{subfigure}
-   \caption{Dynamic Rounding Function Experiments : Solutions from Problem 2 $\sim$ 5 with different dynamic functions}
+   \caption{Dynamic Rounding Function Experiments : The non-dominated solutions among the sets obtained by 40 independent runs of the algorithms}
    \label{fig:dynamicFunctions}
 \end{figure}
 
@@ -1541,7 +1544,7 @@ However the problem of reciprocal function is that the solutions are not complet
 \begin{table}[H]
 \centering
 \footnotesize
-\caption{Dynamic Functions Experiments using Hypervolume}
+\caption{The mean and standard deviation of the hypervolume values over the 40 independent runs}
 \label{tab:hyperDynamic}
 \begin{tabular}{l|c|c|c}
 \hline
@@ -1572,7 +1575,7 @@ the major goal of this project.
 \subsubsection{An Adaptive Threshold Approach}
 We compared the performance of the adaptive threshold approach with reciprocal rounding function.
 Table \ref{tab:transfercomp} clearly shows reciprocal function dominates the adaptive threshold approach in the most cases. 
-However, Figure \ref{fig:transfer} shows the adaptive threshold approach dominates in problem 3 and has better diversity in problem 4.
+However, Figure \ref{fig:transfer} shows the adaptive threshold approach dominates in Problem 3 and has better diversity in Problem 4.
 The results show another desired feature of the adaptive threshold approach. It could provide an uniformly distributed non-dominated set.
 Overall, the performance of the adaptive threshold approach is very close to reciprocal function.
 
@@ -1644,7 +1647,7 @@ However, the major problem is that this method takes five times longer execution
 The result is shown in Table \ref{tab:results}. In this table, ``Ave-'', ``Std-'' illustrate the average and standard deviation 
 of four approaches over the 40 independent runs.
 It can be seen from Table \ref{tab:results}, on all datasets except one, BMOPSOCD dominates other algorithms in both hypervolume and IGD. The only exception
-is problem 1, where BPSO has the best hypervolume value. On all datasets, only BMOPSOCD remains a good performance on hypervolume where there are obvious decreasing
+is Problem 1, where BPSO has the best hypervolume value. On all datasets, only BMOPSOCD remains a good performance on hypervolume where there are obvious decreasing
 trends in other three algorithms along with the number of variable increases. On all datasets, BMOPSOCD achieved a considerably better performance than other three
 algorithms in IGD which indicates a high coverage.
 
@@ -1797,11 +1800,11 @@ These techniques can also be applied in other continuous algorithms.
 BMOPSOCD shows 2 major desirable features. 
 \begin{enumerate}
 	\item The solution set has a good diversity which covers most of the Pareto front.
-	\item BMOPSOCD could produce good solutions regardless of problem size.
+	\item BMOPSOCD could produce good solutions regardless of increasing problem size.
 \end{enumerate}
 
 \subsection{Summary}
-This chapter proposed a BMOPSOCD to solve the Web service location-allocation problem. We introduce a rounding function technique 
+This chapter proposed a BMOPSOCD to solve the Web service location allocation problem. We introduce a rounding function technique 
 enables the continuous algorithm to handle binary problems. Meanwhile, an adaptive threshold embodies the idea of transfer
 learning.
 The proposed algorithm was compared with previous approaches. The results show that, on most datasets, BMOPSOCD can achieve much better result in both convergence and diversity than other three

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2015.6.17)  14 OCT 2015 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2015.6.17)  16 OCT 2015 10:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,7 +416,8 @@ VUW Honours reports modifications -- Mar 1995
 Modified to handle different degrees 2003
 Modified to handle duplex printing properly 2006
 \@abstract=\box32
-) (./proj_report_outline.aux (./introduction.aux) (./using.aux
+) (./proj_report_outline.aux (./acknowledge.aux) (./introduction.aux)
+(./using.aux
 
 LaTeX Warning: Label `eq:cost_prime' multiply defined.
 
@@ -461,9 +462,15 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ <VUWlogo.png, id=1, 325.215pt x 152.10313pt>
+File: VUWlogo.png Graphic file (type png)
+ <use VUWlogo.png>
+Package pdftex.def Info: VUWlogo.png used on input line 105.
+(pdftex.def)             Requested size: 158.76663pt x 74.25731pt.
 LaTeX Font Info:    Try loading font information for OML+zplm on input line 105
 .
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Try loading font information for OMS+zplm on input line 105
@@ -506,24 +513,43 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 105.
  [-1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./VUWlogo.png>] [0]
+\openout2 = `acknowledge.aux'.
+
+ (./acknowledge.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 109.
- (./proj_report_outline.toc [1
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
+)
+[1
 
 
-])
+
+] [2
+
+
+] (./proj_report_outline.toc [3])
 \tf@toc=\write4
 \openout4 = `proj_report_outline.toc'.
 
- [2]
-(./proj_report_outline.lof)
+ [4] (./proj_report_outline.lof
+Overfull \hbox (8.87979pt too wide) in paragraph at lines 12--12
+ [][] []\OT1/ppl/m/n/10.95 NSPSO, NSGA-II and BPSO Ex-per-i-ments: The non-domi
+nated so-lu-tions among 
+ []
+
+
+Overfull \hbox (16.39166pt too wide) in paragraph at lines 20--20
+ [][] []\OT1/ppl/m/n/10.95 Adaptive Round-ing Func-tion Ex-per-i-ments: The non
+-dominated so-lu-tions among 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `proj_report_outline.lof'.
 
- [3
+ [5
 
-] [4
+] [6
 
 ]
 \openout2 = `introduction.aux'.
@@ -541,7 +567,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 
 ]
 Chapter 2.
-[5] <pics/web1.png, id=42, 843.65187pt x 536.50438pt>
+[5] <pics/web1.png, id=49, 843.65187pt x 536.50438pt>
 File: pics/web1.png Graphic file (type png)
  <use pics/web1.png>
 Package pdftex.def Info: pics/web1.png used on input line 163.
@@ -549,7 +575,7 @@ Package pdftex.def Info: pics/web1.png used on input line 163.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 164.
 
-<pics/web2.png, id=44, 843.65187pt x 518.43687pt>
+<pics/web2.png, id=51, 843.65187pt x 518.43687pt>
 File: pics/web2.png Graphic file (type png)
  <use pics/web2.png>
 Package pdftex.def Info: pics/web2.png used on input line 167.
@@ -604,18 +630,14 @@ Type  H <return>  for immediate help.
                                                   
 l.198 ...the total deployment cost.\end{flushleft}
                                                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.198 ...the total deployment cost.\end{flushleft}
                                                   
-Things are pretty mixed up, but I think the worst is over.
-
-[12] <pics/psorepresentation.png, id=74, 435.87843pt x 189.70876pt>
+? 
+[12] <pics/psorepresentation.png, id=81, 435.87843pt x 189.70876pt>
 File: pics/psorepresentation.png Graphic file (type png)
 
 <use pics/psorepresentation.png>
@@ -635,11 +657,9 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 269--295
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.494 }
+l.489 }
        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
+? 
 
 ! LaTeX Error: There's no line here to end.
 
@@ -647,136 +667,127 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.494 }
+l.489 }
        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.494 }
+l.489 }
        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+? 
 
-
-Overfull \hbox (19.08049pt too wide) in paragraph at lines 526--537
+Overfull \hbox (19.08049pt too wide) in paragraph at lines 521--532
 []$[]$ $[]$ 
  []
 
-[16] <pics/convergence1.png, id=89, 482.99257pt x 475.12158pt>
+[16] <pics/convergence1.png, id=95, 482.99257pt x 475.12158pt>
 File: pics/convergence1.png Graphic file (type png)
 
 <use pics/convergence1.png>
-Package pdftex.def Info: pics/convergence1.png used on input line 560.
+Package pdftex.def Info: pics/convergence1.png used on input line 559.
 (pdftex.def)             Requested size: 132.30666pt x 130.14772pt.
 
-<pics/convergence2.png, id=90, 477.26822pt x 470.82832pt>
+<pics/convergence2.png, id=96, 477.26822pt x 470.82832pt>
 File: pics/convergence2.png Graphic file (type png)
 
 <use pics/convergence2.png>
-Package pdftex.def Info: pics/convergence2.png used on input line 564.
+Package pdftex.def Info: pics/convergence2.png used on input line 563.
 (pdftex.def)             Requested size: 132.30666pt x 130.51631pt.
 
-<pics/convergence3.png, id=91, 480.1304pt x 472.97495pt>
+<pics/convergence3.png, id=97, 480.1304pt x 472.97495pt>
 File: pics/convergence3.png Graphic file (type png)
 
 <use pics/convergence3.png>
-Package pdftex.def Info: pics/convergence3.png used on input line 568.
+Package pdftex.def Info: pics/convergence3.png used on input line 567.
 (pdftex.def)             Requested size: 132.30666pt x 130.33192pt.
 
-<pics/convergence4.png, id=92, 475.12158pt x 471.54385pt>
+<pics/convergence4.png, id=98, 475.12158pt x 471.54385pt>
 File: pics/convergence4.png Graphic file (type png)
 
 <use pics/convergence4.png>
-Package pdftex.def Info: pics/convergence4.png used on input line 572.
+Package pdftex.def Info: pics/convergence4.png used on input line 571.
 (pdftex.def)             Requested size: 132.30666pt x 131.31186pt.
 
-<pics/convergence5.png, id=93, 479.41486pt x 473.69049pt>
+<pics/convergence5.png, id=99, 479.41486pt x 473.69049pt>
 File: pics/convergence5.png Graphic file (type png)
 
 <use pics/convergence5.png>
-Package pdftex.def Info: pics/convergence5.png used on input line 576.
+Package pdftex.def Info: pics/convergence5.png used on input line 575.
 (pdftex.def)             Requested size: 132.30666pt x 130.72424pt.
 
-<pics/convergence6.png, id=94, 477.98376pt x 470.82832pt>
+<pics/convergence6.png, id=100, 477.98376pt x 470.82832pt>
 File: pics/convergence6.png Graphic file (type png)
 
 <use pics/convergence6.png>
-Package pdftex.def Info: pics/convergence6.png used on input line 580.
+Package pdftex.def Info: pics/convergence6.png used on input line 579.
 (pdftex.def)             Requested size: 132.30666pt x 130.32951pt.
 
-<pics/binaryevolve1.png, id=95, 485.85475pt x 402.85158pt>
+<pics/binaryevolve1.png, id=101, 485.85475pt x 437.19772pt>
 File: pics/binaryevolve1.png Graphic file (type png)
 
 <use pics/binaryevolve1.png>
-Package pdftex.def Info: pics/binaryevolve1.png used on input line 595.
-(pdftex.def)             Requested size: 176.40439pt x 146.26814pt.
+Package pdftex.def Info: pics/binaryevolve1.png used on input line 594.
+(pdftex.def)             Requested size: 176.40439pt x 158.73862pt.
 
-<pics/binaryevolve2.png, id=96, 482.27702pt x 440.0599pt>
+<pics/binaryevolve2.png, id=102, 482.27702pt x 440.0599pt>
 File: pics/binaryevolve2.png Graphic file (type png)
 
 <use pics/binaryevolve2.png>
-Package pdftex.def Info: pics/binaryevolve2.png used on input line 599.
+Package pdftex.def Info: pics/binaryevolve2.png used on input line 598.
 (pdftex.def)             Requested size: 176.40439pt x 160.95963pt.
 
-<pics/binaryevolve3.png, id=97, 478.69931pt x 441.491pt>
+<pics/binaryevolve3.png, id=103, 478.69931pt x 441.491pt>
 File: pics/binaryevolve3.png Graphic file (type png)
 
 <use pics/binaryevolve3.png>
-Package pdftex.def Info: pics/binaryevolve3.png used on input line 603.
+Package pdftex.def Info: pics/binaryevolve3.png used on input line 602.
 (pdftex.def)             Requested size: 176.40439pt x 162.69565pt.
 
-<pics/binaryevolve4.png, id=98, 481.56148pt x 440.77545pt>
+<pics/binaryevolve4.png, id=104, 481.56148pt x 440.77545pt>
 File: pics/binaryevolve4.png Graphic file (type png)
 
 <use pics/binaryevolve4.png>
-Package pdftex.def Info: pics/binaryevolve4.png used on input line 607.
+Package pdftex.def Info: pics/binaryevolve4.png used on input line 606.
 (pdftex.def)             Requested size: 176.40439pt x 161.46347pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17 <./pics/convergence1.png> <./pics/convergence2.png> <./pics/convergence3.pn
-g> <./pics/convergence4.png> <./pics/convergence5.png> <./pics/convergence6.png
->] <pics/binary1.png, id=108, 479.41486pt x 436.48218pt>
+ [17 <./pics/convergence1.png> <./pics/convergence2.png> <./pics/convergence3.p
+ng> <./pics/convergence4.png> <./pics/convergence5.png> <./pics/convergence6.pn
+g>]
+<pics/binary1.png, id=115, 480.1304pt x 435.76663pt>
 File: pics/binary1.png Graphic file (type png)
+ <use pics/binary1.png>
+Package pdftex.def Info: pics/binary1.png used on input line 629.
+(pdftex.def)             Requested size: 132.30666pt x 120.07889pt.
 
-<use pics/binary1.png>
-Package pdftex.def Info: pics/binary1.png used on input line 630.
-(pdftex.def)             Requested size: 132.30666pt x 120.45589pt.
- <pics/binary2.png, id=109, 475.12158pt x 440.0599pt>
+<pics/binary2.png, id=116, 477.98376pt x 435.76663pt>
 File: pics/binary2.png Graphic file (type png)
+ <use pics/binary2.png>
+Package pdftex.def Info: pics/binary2.png used on input line 633.
+(pdftex.def)             Requested size: 132.30666pt x 120.62413pt.
 
-<use pics/binary2.png>
-Package pdftex.def Info: pics/binary2.png used on input line 634.
-(pdftex.def)             Requested size: 132.30666pt x 122.54445pt.
- <pics/binary3.png, id=110, 478.69931pt x 436.48218pt>
+<pics/binary3.png, id=117, 482.27702pt x 432.90445pt>
 File: pics/binary3.png Graphic file (type png)
+ <use pics/binary3.png>
+Package pdftex.def Info: pics/binary3.png used on input line 637.
+(pdftex.def)             Requested size: 132.30666pt x 118.76173pt.
 
-<use pics/binary3.png>
-Package pdftex.def Info: pics/binary3.png used on input line 638.
-(pdftex.def)             Requested size: 132.30666pt x 120.63571pt.
- <pics/binary4.png, id=111, 477.98376pt x 433.62pt>
+<pics/binary4.png, id=118, 477.98376pt x 435.76663pt>
 File: pics/binary4.png Graphic file (type png)
+ <use pics/binary4.png>
+Package pdftex.def Info: pics/binary4.png used on input line 641.
+(pdftex.def)             Requested size: 132.30666pt x 120.62413pt.
 
-<use pics/binary4.png>
-Package pdftex.def Info: pics/binary4.png used on input line 642.
-(pdftex.def)             Requested size: 132.30666pt x 120.02992pt.
- <pics/binary5.png, id=112, 479.41486pt x 437.19772pt>
+<pics/binary5.png, id=119, 480.1304pt x 437.19772pt>
 File: pics/binary5.png Graphic file (type png)
+ <use pics/binary5.png>
+Package pdftex.def Info: pics/binary5.png used on input line 645.
+(pdftex.def)             Requested size: 132.30666pt x 120.47324pt.
 
-<use pics/binary5.png>
-Package pdftex.def Info: pics/binary5.png used on input line 646.
-(pdftex.def)             Requested size: 132.30666pt x 120.65335pt.
- <pics/binary6.png, id=113, 476.55267pt x 435.05109pt>
+<pics/binary6.png, id=120, 481.56148pt x 442.20653pt>
 File: pics/binary6.png Graphic file (type png)
-
-<use pics/binary6.png>
-Package pdftex.def Info: pics/binary6.png used on input line 650.
-(pdftex.def)             Requested size: 132.30666pt x 120.78453pt.
+ <use pics/binary6.png>
+Package pdftex.def Info: pics/binary6.png used on input line 649.
+(pdftex.def)             Requested size: 132.30666pt x 121.49583pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -784,62 +795,51 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.678 7 \sim
+l.677 7 \sim
              50 & 0.099   & 001100   \\ \hline
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
+? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.678 7 \sim 50 &
+l.677 7 \sim 50 &
                   0.099   & 001100   \\ \hline
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
+? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.696 7 \sim
+l.695 7 \sim
              50    & 0.021   & 1111000000000000   \\ \hline
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
+? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.696 7 \sim 50    &
+l.695 7 \sim 50    &
                      0.021   & 1111000000000000   \\ \hline
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
+? 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (19.08049pt too wide) in paragraph at lines 710--725
+Overfull \hbox (19.08049pt too wide) in paragraph at lines 709--724
 []$[]$ $[]$
  []
 
-[18 <./pics/binaryevolve1.png> <./pics/binaryevolve2.png> <./pics/binaryevolve3
-.png> <./pics/binaryevolve4.png>] [19 <./pics/binary1.png> <./pics/binary2.png>
- <./pics/binary3.png> <./pics/binary4.png> <./pics/binary5.png> <./pics/binary6
-.png>]
-Overfull \hbox (5.0247pt too wide) in paragraph at lines 758--764
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./pics/binaryevolve1.png> <./pics/binaryevolve2.png> <./pics/binaryevolve
+3.png> <./pics/binaryevolve4.png>] [19 <./pics/binary1.png> <./pics/binary2.png
+> <./pics/binary3.png> <./pics/binary4.png> <./pics/binary5.png> <./pics/binary
+6.png>]
+Overfull \hbox (5.13419pt too wide) in paragraph at lines 757--763
 \OT1/ppl/m/n/10.95 ob-jec-tives. Sec-ond, it presents a BPSO ap-proach which em
--ploys an lin-ear ag-gre-ga-tion method
+-ploys an lin-ear ag-gre-gat-ing method
  []
 
 [20]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--791
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
 
  []
 
@@ -849,23 +849,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 873--877
+Underfull \hbox (badness 10000) in paragraph at lines 872--876
 
  []
 
-<pics/mutation.png, id=137, 513.04544pt x 138.1001pt>
+<pics/mutation.png, id=143, 513.04544pt x 138.1001pt>
 File: pics/mutation.png Graphic file (type png)
  <use pics/mutation.png>
-Package pdftex.def Info: pics/mutation.png used on input line 918.
+Package pdftex.def Info: pics/mutation.png used on input line 917.
 (pdftex.def)             Requested size: 220.50885pt x 59.35658pt.
 
-[22] <pics/crossover.png, id=141, 992.95969pt x 212.29312pt>
+[22] <pics/crossover.png, id=147, 992.95969pt x 212.29312pt>
 File: pics/crossover.png Graphic file (type png)
 
 <use pics/crossover.png>
-Package pdftex.def Info: pics/crossover.png used on input line 931.
+Package pdftex.def Info: pics/crossover.png used on input line 930.
 (pdftex.def)             Requested size: 308.71104pt x 66.0013pt.
-
+ [23 <./pics/mutation.png> <./pics/crossover.png>]
 
 ! Package algorithmicx Error: Some blocks are not closed!!!.
 
@@ -873,608 +873,580 @@ See the algorithmicx package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.972 	\end{algorithmic}
+l.974 	\end{algorithmic}
                         
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
+? 
+
+Overfull \hbox (7.99767pt too wide) in paragraph at lines 990--992
+[]\OT1/ppl/m/n/10.95 BPSO with an ag-gre-gat-ing ap-proach out-puts a so-lu-tio
+n set with-out us-ing a non-dominated
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./pics/mutation.png> <./pics/crossover.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pics/nsgabpso1.png, id=147, 477.98376pt x 437.19772pt>
+<pics/nsgabpso1.png, id=154, 477.98376pt x 437.19772pt>
 File: pics/nsgabpso1.png Graphic file (type png)
 
 <use pics/nsgabpso1.png>
-Package pdftex.def Info: pics/nsgabpso1.png used on input line 1058.
+Package pdftex.def Info: pics/nsgabpso1.png used on input line 1060.
 (pdftex.def)             Requested size: 132.30666pt x 121.02026pt.
 
-<pics/nsgabpso2.png, id=148, 477.98376pt x 435.76663pt>
+<pics/nsgabpso2.png, id=155, 477.98376pt x 435.76663pt>
 File: pics/nsgabpso2.png Graphic file (type png)
 
 <use pics/nsgabpso2.png>
-Package pdftex.def Info: pics/nsgabpso2.png used on input line 1062.
+Package pdftex.def Info: pics/nsgabpso2.png used on input line 1064.
 (pdftex.def)             Requested size: 132.30666pt x 120.62413pt.
 
-<pics/nsgabpso3.png, id=149, 478.69931pt x 436.48218pt>
+<pics/nsgabpso3.png, id=156, 478.69931pt x 436.48218pt>
 File: pics/nsgabpso3.png Graphic file (type png)
 
 <use pics/nsgabpso3.png>
-Package pdftex.def Info: pics/nsgabpso3.png used on input line 1066.
+Package pdftex.def Info: pics/nsgabpso3.png used on input line 1068.
 (pdftex.def)             Requested size: 132.30666pt x 120.63571pt.
 
-<pics/nsgabpso4.png, id=150, 480.1304pt x 434.33554pt>
+<pics/nsgabpso4.png, id=157, 480.1304pt x 434.33554pt>
 File: pics/nsgabpso4.png Graphic file (type png)
 
 <use pics/nsgabpso4.png>
-Package pdftex.def Info: pics/nsgabpso4.png used on input line 1070.
+Package pdftex.def Info: pics/nsgabpso4.png used on input line 1072.
 (pdftex.def)             Requested size: 132.30666pt x 119.68454pt.
 
-<pics/nsgabpso5.png, id=151, 480.84595pt x 434.33554pt>
+<pics/nsgabpso5.png, id=158, 480.84595pt x 434.33554pt>
 File: pics/nsgabpso5.png Graphic file (type png)
 
 <use pics/nsgabpso5.png>
-Package pdftex.def Info: pics/nsgabpso5.png used on input line 1074.
+Package pdftex.def Info: pics/nsgabpso5.png used on input line 1076.
 (pdftex.def)             Requested size: 132.30666pt x 119.5056pt.
- <pics/nsgabpso6.png, id=152, 477.26822pt x 433.62pt>
+ <pics/nsgabpso6.png, id=159, 477.26822pt x 433.62pt>
 File: pics/nsgabpso6.png Graphic file (type png)
 
 <use pics/nsgabpso6.png>
-Package pdftex.def Info: pics/nsgabpso6.png used on input line 1078.
+Package pdftex.def Info: pics/nsgabpso6.png used on input line 1080.
 (pdftex.def)             Requested size: 132.30666pt x 120.20195pt.
- <pics/nsgabpso7.png, id=153, 475.83713pt x 433.62pt>
+ <pics/nsgabpso7.png, id=160, 475.83713pt x 433.62pt>
 File: pics/nsgabpso7.png Graphic file (type png)
 
 <use pics/nsgabpso7.png>
-Package pdftex.def Info: pics/nsgabpso7.png used on input line 1082.
+Package pdftex.def Info: pics/nsgabpso7.png used on input line 1084.
 (pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
 
-<pics/nsgabpso8.png, id=154, 476.55267pt x 434.33554pt>
+<pics/nsgabpso8.png, id=161, 476.55267pt x 434.33554pt>
 File: pics/nsgabpso8.png Graphic file (type png)
 
 <use pics/nsgabpso8.png>
-Package pdftex.def Info: pics/nsgabpso8.png used on input line 1086.
+Package pdftex.def Info: pics/nsgabpso8.png used on input line 1088.
 (pdftex.def)             Requested size: 132.30666pt x 120.58586pt.
 
-<pics/nsgabpso9.png, id=155, 472.2594pt x 431.47337pt>
+<pics/nsgabpso9.png, id=162, 472.2594pt x 431.47337pt>
 File: pics/nsgabpso9.png Graphic file (type png)
 
 <use pics/nsgabpso9.png>
-Package pdftex.def Info: pics/nsgabpso9.png used on input line 1090.
+Package pdftex.def Info: pics/nsgabpso9.png used on input line 1092.
 (pdftex.def)             Requested size: 132.30666pt x 120.87755pt.
 
-<pics/nsgabpso10.png, id=156, 479.41486pt x 434.33554pt>
+<pics/nsgabpso10.png, id=163, 479.41486pt x 434.33554pt>
 File: pics/nsgabpso10.png Graphic file (type png)
 
 <use pics/nsgabpso10.png>
-Package pdftex.def Info: pics/nsgabpso10.png used on input line 1094.
+Package pdftex.def Info: pics/nsgabpso10.png used on input line 1096.
 (pdftex.def)             Requested size: 132.30666pt x 119.86348pt.
 
-<pics/nsgabpso11.png, id=157, 482.27702pt x 435.76663pt>
+<pics/nsgabpso11.png, id=164, 482.27702pt x 435.76663pt>
 File: pics/nsgabpso11.png Graphic file (type png)
 
 <use pics/nsgabpso11.png>
-Package pdftex.def Info: pics/nsgabpso11.png used on input line 1098.
+Package pdftex.def Info: pics/nsgabpso11.png used on input line 1100.
 (pdftex.def)             Requested size: 132.30666pt x 119.54695pt.
 
-<pics/nsgabpso12.png, id=158, 480.1304pt x 435.05109pt>
+<pics/nsgabpso12.png, id=165, 480.1304pt x 435.05109pt>
 File: pics/nsgabpso12.png Graphic file (type png)
 
 <use pics/nsgabpso12.png>
-Package pdftex.def Info: pics/nsgabpso12.png used on input line 1102.
+Package pdftex.def Info: pics/nsgabpso12.png used on input line 1104.
 (pdftex.def)             Requested size: 132.30666pt x 119.88171pt.
 
-<pics/nsgabpso13.png, id=159, 477.98376pt x 435.05109pt>
+<pics/nsgabpso13.png, id=166, 477.98376pt x 435.05109pt>
 File: pics/nsgabpso13.png Graphic file (type png)
 
 <use pics/nsgabpso13.png>
-Package pdftex.def Info: pics/nsgabpso13.png used on input line 1106.
+Package pdftex.def Info: pics/nsgabpso13.png used on input line 1108.
 (pdftex.def)             Requested size: 132.30666pt x 120.42606pt.
 
-<pics/nsgabpso14.png, id=160, 484.42366pt x 433.62pt>
+<pics/nsgabpso14.png, id=167, 484.42366pt x 433.62pt>
 File: pics/nsgabpso14.png Graphic file (type png)
 
 <use pics/nsgabpso14.png>
-Package pdftex.def Info: pics/nsgabpso14.png used on input line 1110.
+Package pdftex.def Info: pics/nsgabpso14.png used on input line 1112.
 (pdftex.def)             Requested size: 132.30666pt x 118.42873pt.
 
 
-LaTeX Warning: Float too large for page by 60.54161pt on input line 1114.
+LaTeX Warning: Float too large for page by 71.54161pt on input line 1116.
 
-[24] [25] [26 <./pics/nsgabpso1.png> <./pics/nsgabpso2.png> <./pics/nsgabpso3.p
-ng> <./pics/nsgabpso4.png> <./pics/nsgabpso5.png> <./pics/nsgabpso6.png> <./pic
-s/nsgabpso7.png> <./pics/nsgabpso8.png> <./pics/nsgabpso9.png> <./pics/nsgabpso
-10.png> <./pics/nsgabpso11.png> <./pics/nsgabpso12.png> <./pics/nsgabpso13.png>
- <./pics/nsgabpso14.png>]
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26] [27 <./pics/nsgabpso1.png> <./pics/nsgabpso2.png> <./pics/nsgabpso3.png> <
+./pics/nsgabpso4.png> <./pics/nsgabpso5.png> <./pics/nsgabpso6.png> <./pics/nsg
+abpso7.png> <./pics/nsgabpso8.png> <./pics/nsgabpso9.png> <./pics/nsgabpso10.pn
+g> <./pics/nsgabpso11.png> <./pics/nsgabpso12.png> <./pics/nsgabpso13.png> <./p
+ics/nsgabpso14.png>] [28
+
+]
 Chapter 5.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.1185 		\State
-                Initialize a population $P$ with random real values $\in$ (0...
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.1185 		\State
-                Initialize a population $P$ with random real values $\in$ (0...
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
 l.1186 		\State
-                Initialize velocity[i] = 0
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+                Initialize a population $P$ with random real values $\in$ (0...
 
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
 l.1186 		\State
+                Initialize a population $P$ with random real values $\in$ (0...
+
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1187 		\State
                 Initialize velocity[i] = 0
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.1187 		\State
-                \textbf{Each individual $i$ in $P$ using the rounding functi...
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
 l.1187 		\State
+                Initialize velocity[i] = 0
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1188 		\State
                 \textbf{Each individual $i$ in $P$ using the rounding functi...
-I'm ignoring this, since I wasn't doing a \csname.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.1188 		\State
-                Initialize personal best of each individual $i$.
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
 l.1188 		\State
+                \textbf{Each individual $i$ in $P$ using the rounding functi...
+
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1189 		\State
                 Initialize personal best of each individual $i$.
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.1189 		\State
-                Initialize $GBEST$
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
 l.1189 		\State
+                Initialize personal best of each individual $i$.
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1190 		\State
                 Initialize $GBEST$
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.1190 		\State
-                Initialize $Archive$ with non-dominated vectors found in $P$
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
 l.1190 		\State
+                Initialize $GBEST$
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1191 		\State
                 Initialize $Archive$ with non-dominated vectors found in $P$
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.1192 		\Repeat
-                
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.1192 		\Repeat
-                
-I'm ignoring this, since I wasn't doing a \csname.
-
+l.1191 		\State
+                Initialize $Archive$ with non-dominated vectors found in $P$
+? 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.1206 		\State
-                return $Archive$
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
+l.1193 		\Repeat
+                
+? 
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.1206 		\State
+l.1193 		\Repeat
+                
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.1207 		\State
                 return $Archive$
-I'm ignoring this, since I wasn't doing a \csname.
-
+? 
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.1207 		\State
+                return $Archive$
+? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \ALG@currentblock@0 
-l.1207 	\end{algorithmic}
+l.1208 	\end{algorithmic}
                          
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
+? 
 ! Missing = inserted for \ifnum.
 <to be read again> 
                    \ALG@currentblock@0 
-l.1207 	\end{algorithmic}
+l.1208 	\end{algorithmic}
                          
-I was expecting to see `<', `=', or `>'. Didn't.
-
+? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \ALG@currentblock@0 
-l.1207 	\end{algorithmic}
+l.1208 	\end{algorithmic}
                          
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<pics/flatten.png, id=185, 404.99821pt x 168.15297pt>
+? 
+<pics/flatten.png, id=197, 404.99821pt x 168.15297pt>
 File: pics/flatten.png Graphic file (type png)
  <use pics/flatten.png>
-Package pdftex.def Info: pics/flatten.png used on input line 1218.
+Package pdftex.def Info: pics/flatten.png used on input line 1219.
 (pdftex.def)             Requested size: 308.71104pt x 128.18243pt.
 
 Underfull \vbox (badness 3343) has occurred while \output is active []
 
- [27
-
-]
-[28 <./pics/flatten.png>] [29]
-<pics/dynamic.png, id=196, 472.97495pt x 433.62pt>
+ [29]
+[30 <./pics/flatten.png>] [31]
+<pics/dynamic.png, id=209, 472.97495pt x 433.62pt>
 File: pics/dynamic.png Graphic file (type png)
  <use pics/dynamic.png>
-Package pdftex.def Info: pics/dynamic.png used on input line 1320.
+Package pdftex.def Info: pics/dynamic.png used on input line 1321.
 (pdftex.def)             Requested size: 220.50885pt x 202.16054pt.
 
-<pics/transfer.png, id=197, 631.82584pt x 294.80435pt>
+<pics/transfer.png, id=210, 631.82584pt x 294.80435pt>
 File: pics/transfer.png Graphic file (type png)
  <use pics/transfer.png>
-Package pdftex.def Info: pics/transfer.png used on input line 1350.
+Package pdftex.def Info: pics/transfer.png used on input line 1351.
 (pdftex.def)             Requested size: 308.71104pt x 144.04153pt.
 
 Underfull \vbox (badness 3525) has occurred while \output is active []
 
- [30 <./pics/dynamic.png>] [31 <./pics/transfer.png>] [32]
-<pics/static_threshold_problem_2.png, id=210, 480.84595pt x 480.84595pt>
+ [32 <./pics/dynamic.png>] [33 <./pics/transfer.png>] [34]
+<pics/static_threshold_problem_2.png, id=222, 480.84595pt x 480.84595pt>
 File: pics/static_threshold_problem_2.png Graphic file (type png)
 
 <use pics/static_threshold_problem_2.png>
 Package pdftex.def Info: pics/static_threshold_problem_2.png used on input line
- 1467.
+ 1468.
 (pdftex.def)             Requested size: 216.10109pt x 216.09985pt.
 
-<pics/static_threshold_problem_3.png, id=211, 482.27702pt x 467.96614pt>
+<pics/static_threshold_problem_3.png, id=223, 482.27702pt x 467.96614pt>
 File: pics/static_threshold_problem_3.png Graphic file (type png)
 
 <use pics/static_threshold_problem_3.png>
 Package pdftex.def Info: pics/static_threshold_problem_3.png used on input line
- 1471.
+ 1472.
 (pdftex.def)             Requested size: 216.10109pt x 209.69025pt.
 
-<pics/static_threshold_problem_4.png, id=212, 476.55267pt x 475.12158pt>
+<pics/static_threshold_problem_4.png, id=224, 476.55267pt x 475.12158pt>
 File: pics/static_threshold_problem_4.png Graphic file (type png)
 
 <use pics/static_threshold_problem_4.png>
 Package pdftex.def Info: pics/static_threshold_problem_4.png used on input line
- 1475.
+ 1476.
 (pdftex.def)             Requested size: 216.10109pt x 215.44843pt.
 
-<pics/static_threshold_problem_5.png, id=213, 482.27702pt x 470.82832pt>
+<pics/static_threshold_problem_5.png, id=225, 482.27702pt x 470.82832pt>
 File: pics/static_threshold_problem_5.png Graphic file (type png)
 
 <use pics/static_threshold_problem_5.png>
 Package pdftex.def Info: pics/static_threshold_problem_5.png used on input line
- 1479.
+ 1480.
 (pdftex.def)             Requested size: 216.10109pt x 210.97275pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/roundstatic.png, id=214, 553.83148pt x 85.86534pt>
+<pics/roundstatic.png, id=226, 553.83148pt x 85.86534pt>
 File: pics/roundstatic.png Graphic file (type png)
 
 <use pics/roundstatic.png>
-Package pdftex.def Info: pics/roundstatic.png used on input line 1495.
+Package pdftex.def Info: pics/roundstatic.png used on input line 1496.
 (pdftex.def)             Requested size: 308.71104pt x 47.86282pt.
- [33 <./pics/roundstatic.png>]
-<pics/dynamic_problem_2.png, id=219, 480.84595pt x 475.83713pt>
+ [35 <./pics/roundstatic.png>]
+<pics/dynamic_problem_2.png, id=232, 480.84595pt x 475.83713pt>
 File: pics/dynamic_problem_2.png Graphic file (type png)
 
 <use pics/dynamic_problem_2.png>
-Package pdftex.def Info: pics/dynamic_problem_2.png used on input line 1521.
+Package pdftex.def Info: pics/dynamic_problem_2.png used on input line 1522.
 (pdftex.def)             Requested size: 216.10109pt x 213.84882pt.
 
-<pics/dynamic_problem_3.png, id=220, 475.83713pt x 467.96614pt>
+<pics/dynamic_problem_3.png, id=233, 475.83713pt x 467.96614pt>
 File: pics/dynamic_problem_3.png Graphic file (type png)
 
 <use pics/dynamic_problem_3.png>
-Package pdftex.def Info: pics/dynamic_problem_3.png used on input line 1525.
+Package pdftex.def Info: pics/dynamic_problem_3.png used on input line 1526.
 (pdftex.def)             Requested size: 216.10109pt x 212.52505pt.
 
-<pics/dynamic_problem_4.png, id=221, 480.1304pt x 470.11278pt>
+<pics/dynamic_problem_4.png, id=234, 480.1304pt x 470.11278pt>
 File: pics/dynamic_problem_4.png Graphic file (type png)
 
 <use pics/dynamic_problem_4.png>
-Package pdftex.def Info: pics/dynamic_problem_4.png used on input line 1529.
+Package pdftex.def Info: pics/dynamic_problem_4.png used on input line 1530.
 (pdftex.def)             Requested size: 216.10109pt x 211.59183pt.
 
-<pics/dynamic_problem_5.png, id=222, 481.56148pt x 470.82832pt>
+<pics/dynamic_problem_5.png, id=235, 481.56148pt x 470.82832pt>
 File: pics/dynamic_problem_5.png Graphic file (type png)
 
 <use pics/dynamic_problem_5.png>
-Package pdftex.def Info: pics/dynamic_problem_5.png used on input line 1533.
+Package pdftex.def Info: pics/dynamic_problem_5.png used on input line 1534.
 (pdftex.def)             Requested size: 216.10109pt x 211.28886pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7981) has occurred while \output is active []
 
- [34 <./pics/static_threshold_problem_2.png> <./pics/static_threshold_problem_3
+ [36 <./pics/static_threshold_problem_2.png> <./pics/static_threshold_problem_3
 .png> <./pics/static_threshold_problem_4.png> <./pics/static_threshold_problem_
 5.png>]
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
- [35 <./pics/dynamic_problem_2.png> <./pics/dynamic_problem_3.png> <./pics/dyna
-mic_problem_4.png> <./pics/dynamic_problem_5.png>]
+[37 <./pics/dynamic_problem_2.png> <./pics/dynamic_problem_3.png> <./pics/dynam
+ic_problem_4.png> <./pics/dynamic_problem_5.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1579.
+               Default added (so using `tbp') on input line 1580.
 
-<pics/transfer_problem2.png, id=237, 479.41486pt x 469.39723pt>
+<pics/transfer_problem2.png, id=250, 479.41486pt x 469.39723pt>
 File: pics/transfer_problem2.png Graphic file (type png)
 
 <use pics/transfer_problem2.png>
-Package pdftex.def Info: pics/transfer_problem2.png used on input line 1594.
+Package pdftex.def Info: pics/transfer_problem2.png used on input line 1595.
 (pdftex.def)             Requested size: 216.10109pt x 211.58492pt.
 
-<pics/transfer_problem3.png, id=238, 480.1304pt x 467.2506pt>
+<pics/transfer_problem3.png, id=251, 480.1304pt x 467.2506pt>
 File: pics/transfer_problem3.png Graphic file (type png)
 
 <use pics/transfer_problem3.png>
-Package pdftex.def Info: pics/transfer_problem3.png used on input line 1598.
+Package pdftex.def Info: pics/transfer_problem3.png used on input line 1599.
 (pdftex.def)             Requested size: 216.10109pt x 210.3036pt.
 
-<pics/transfer_problem4.png, id=239, 477.98376pt x 466.53505pt>
+<pics/transfer_problem4.png, id=252, 477.98376pt x 466.53505pt>
 File: pics/transfer_problem4.png Graphic file (type png)
 
 <use pics/transfer_problem4.png>
-Package pdftex.def Info: pics/transfer_problem4.png used on input line 1602.
+Package pdftex.def Info: pics/transfer_problem4.png used on input line 1603.
 (pdftex.def)             Requested size: 216.10109pt x 210.92833pt.
 
-<pics/transfer_problem5.png, id=240, 480.1304pt x 468.68169pt>
+<pics/transfer_problem5.png, id=253, 480.1304pt x 468.68169pt>
 File: pics/transfer_problem5.png Graphic file (type png)
 
 <use pics/transfer_problem5.png>
-Package pdftex.def Info: pics/transfer_problem5.png used on input line 1606.
+Package pdftex.def Info: pics/transfer_problem5.png used on input line 1607.
 (pdftex.def)             Requested size: 216.10109pt x 210.94771pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/combination_problem2.png, id=241, 479.41486pt x 470.82832pt>
+<pics/combination_problem2.png, id=254, 479.41486pt x 470.82832pt>
 File: pics/combination_problem2.png Graphic file (type png)
 
 <use pics/combination_problem2.png>
-Package pdftex.def Info: pics/combination_problem2.png used on input line 1622.
+Package pdftex.def Info: pics/combination_problem2.png used on input line 1624.
 
 (pdftex.def)             Requested size: 216.10109pt x 212.23pt.
 
-<pics/combination_problem3.png, id=242, 482.99257pt x 472.2594pt>
+<pics/combination_problem3.png, id=255, 482.99257pt x 472.2594pt>
 File: pics/combination_problem3.png Graphic file (type png)
 
 <use pics/combination_problem3.png>
-Package pdftex.def Info: pics/combination_problem3.png used on input line 1626.
+Package pdftex.def Info: pics/combination_problem3.png used on input line 1628.
 
 (pdftex.def)             Requested size: 216.10109pt x 211.29694pt.
 
-<pics/combination_problem4.png, id=243, 477.26822pt x 465.8195pt>
+<pics/combination_problem4.png, id=256, 477.26822pt x 465.8195pt>
 File: pics/combination_problem4.png Graphic file (type png)
 
 <use pics/combination_problem4.png>
-Package pdftex.def Info: pics/combination_problem4.png used on input line 1630.
+Package pdftex.def Info: pics/combination_problem4.png used on input line 1632.
 
 (pdftex.def)             Requested size: 216.10109pt x 210.91756pt.
 
-<pics/combination_problem5.png, id=244, 482.27702pt x 470.82832pt>
+<pics/combination_problem5.png, id=257, 482.27702pt x 470.82832pt>
 File: pics/combination_problem5.png Graphic file (type png)
 
 <use pics/combination_problem5.png>
-Package pdftex.def Info: pics/combination_problem5.png used on input line 1634.
+Package pdftex.def Info: pics/combination_problem5.png used on input line 1636.
 
 (pdftex.def)             Requested size: 216.10109pt x 210.97275pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36]
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
- [37 <./pics/transfer_problem2.png> <./pics/transfer_problem3.png> <./pics/tran
-sfer_problem4.png> <./pics/transfer_problem5.png>]
+[38]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1691.
+               Default added (so using `tbp') on input line 1695.
 
 
-Overfull \hbox (1.92725pt too wide) in paragraph at lines 1727--1727
+Overfull \hbox (1.92725pt too wide) in paragraph at lines 1731--1731
  [][] 
  []
 
 
-Overfull \hbox (12.71883pt too wide) in paragraph at lines 1727--1727
+Overfull \hbox (12.71883pt too wide) in paragraph at lines 1731--1731
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1731.
+               Default added (so using `tbp') on input line 1735.
 
-<pics/total1.png, id=256, 473.69049pt x 435.76663pt>
+<pics/total1.png, id=261, 473.69049pt x 435.76663pt>
 File: pics/total1.png Graphic file (type png)
  <use pics/total1.png>
-Package pdftex.def Info: pics/total1.png used on input line 1734.
+Package pdftex.def Info: pics/total1.png used on input line 1740.
 (pdftex.def)             Requested size: 132.30666pt x 121.70795pt.
 
-<pics/total2.png, id=257, 480.84595pt x 435.05109pt>
+<pics/total2.png, id=262, 480.84595pt x 435.05109pt>
 File: pics/total2.png Graphic file (type png)
  <use pics/total2.png>
-Package pdftex.def Info: pics/total2.png used on input line 1738.
+Package pdftex.def Info: pics/total2.png used on input line 1744.
 (pdftex.def)             Requested size: 132.30666pt x 119.70247pt.
 
-<pics/total3.png, id=258, 474.40604pt x 437.91327pt>
+<pics/total3.png, id=263, 474.40604pt x 437.91327pt>
 File: pics/total3.png Graphic file (type png)
  <use pics/total3.png>
-Package pdftex.def Info: pics/total3.png used on input line 1742.
+Package pdftex.def Info: pics/total3.png used on input line 1748.
 (pdftex.def)             Requested size: 132.30666pt x 122.12709pt.
 
-<pics/total4.png, id=259, 479.41486pt x 436.48218pt>
+<pics/total4.png, id=264, 479.41486pt x 436.48218pt>
 File: pics/total4.png Graphic file (type png)
  <use pics/total4.png>
-Package pdftex.def Info: pics/total4.png used on input line 1746.
+Package pdftex.def Info: pics/total4.png used on input line 1752.
 (pdftex.def)             Requested size: 132.30666pt x 120.45589pt.
 
-<pics/total5.png, id=260, 475.83713pt x 435.76663pt>
+<pics/total5.png, id=265, 475.83713pt x 435.76663pt>
 File: pics/total5.png Graphic file (type png)
  <use pics/total5.png>
-Package pdftex.def Info: pics/total5.png used on input line 1750.
+Package pdftex.def Info: pics/total5.png used on input line 1756.
 (pdftex.def)             Requested size: 132.30666pt x 121.16272pt.
 
-<pics/total6.png, id=261, 475.83713pt x 433.62pt>
+<pics/total6.png, id=266, 475.83713pt x 433.62pt>
 File: pics/total6.png Graphic file (type png)
  <use pics/total6.png>
-Package pdftex.def Info: pics/total6.png used on input line 1754.
+Package pdftex.def Info: pics/total6.png used on input line 1760.
 (pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
 
-<pics/total7.png, id=262, 475.83713pt x 430.75783pt>
+<pics/total7.png, id=267, 475.83713pt x 430.75783pt>
 File: pics/total7.png Graphic file (type png)
  <use pics/total7.png>
-Package pdftex.def Info: pics/total7.png used on input line 1758.
+Package pdftex.def Info: pics/total7.png used on input line 1764.
 (pdftex.def)             Requested size: 132.30666pt x 119.77003pt.
 
-<pics/total8.png, id=263, 477.26822pt x 435.76663pt>
+<pics/total8.png, id=268, 477.26822pt x 435.76663pt>
 File: pics/total8.png Graphic file (type png)
  <use pics/total8.png>
-Package pdftex.def Info: pics/total8.png used on input line 1762.
+Package pdftex.def Info: pics/total8.png used on input line 1768.
 (pdftex.def)             Requested size: 132.30666pt x 120.79701pt.
 
-<pics/total9.png, id=264, 475.12158pt x 432.1889pt>
+<pics/total9.png, id=269, 475.12158pt x 432.1889pt>
 File: pics/total9.png Graphic file (type png)
  <use pics/total9.png>
-Package pdftex.def Info: pics/total9.png used on input line 1766.
+Package pdftex.def Info: pics/total9.png used on input line 1772.
 (pdftex.def)             Requested size: 132.30666pt x 120.3526pt.
 
-<pics/total10.png, id=265, 475.83713pt x 433.62pt>
+<pics/total10.png, id=270, 475.83713pt x 433.62pt>
 File: pics/total10.png Graphic file (type png)
  <use pics/total10.png>
-Package pdftex.def Info: pics/total10.png used on input line 1770.
+Package pdftex.def Info: pics/total10.png used on input line 1776.
 (pdftex.def)             Requested size: 132.30666pt x 120.56586pt.
 
-<pics/total11.png, id=266, 473.69049pt x 440.0599pt>
+<pics/total11.png, id=271, 473.69049pt x 440.0599pt>
 File: pics/total11.png Graphic file (type png)
  <use pics/total11.png>
-Package pdftex.def Info: pics/total11.png used on input line 1774.
+Package pdftex.def Info: pics/total11.png used on input line 1780.
 (pdftex.def)             Requested size: 132.30666pt x 122.90704pt.
 
-<pics/total12.png, id=267, 477.26822pt x 437.19772pt>
+<pics/total12.png, id=272, 477.26822pt x 437.19772pt>
 File: pics/total12.png Graphic file (type png)
  <use pics/total12.png>
-Package pdftex.def Info: pics/total12.png used on input line 1778.
+Package pdftex.def Info: pics/total12.png used on input line 1784.
 (pdftex.def)             Requested size: 132.30666pt x 121.19371pt.
 
-<pics/total13.png, id=268, 473.69049pt x 430.75783pt>
+<pics/total13.png, id=273, 473.69049pt x 430.75783pt>
 File: pics/total13.png Graphic file (type png)
  <use pics/total13.png>
-Package pdftex.def Info: pics/total13.png used on input line 1782.
+Package pdftex.def Info: pics/total13.png used on input line 1788.
 (pdftex.def)             Requested size: 132.30666pt x 120.30902pt.
 
-<pics/total14.png, id=269, 475.83713pt x 434.33554pt>
+<pics/total14.png, id=274, 475.83713pt x 434.33554pt>
 File: pics/total14.png Graphic file (type png)
  <use pics/total14.png>
-Package pdftex.def Info: pics/total14.png used on input line 1786.
+Package pdftex.def Info: pics/total14.png used on input line 1792.
 (pdftex.def)             Requested size: 132.30666pt x 120.7648pt.
 
 
-LaTeX Warning: Float too large for page by 39.89253pt on input line 1791.
+LaTeX Warning: Float too large for page by 76.89275pt on input line 1796.
 
-[38 <./pics/combination_problem2.png> <./pics/combination_problem3.png> <./pics
-/combination_problem4.png> <./pics/combination_problem5.png>] [39 <./pics/total
-1.png> <./pics/total2.png> <./pics/total3.png> <./pics/total4.png> <./pics/tota
-l5.png> <./pics/total6.png> <./pics/total7.png> <./pics/total8.png> <./pics/tot
-al9.png> <./pics/total10.png> <./pics/total11.png> <./pics/total12.png> <./pics
-/total13.png> <./pics/total14.png>]
 
-LaTeX Warning: Text page 40 contains only floats.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[40]) [41]
+ [39 <./pics/transfer_problem2.png> <./pics/transfer_problem3.png> <./pics/tran
+sfer_problem4.png> <./pics/transfer_problem5.png>]
+Underfull \vbox (badness 3343) has occurred while \output is active []
+
+ [40 <./pics/combination_problem2.png> <./pics/combination_problem3.png> <./pic
+s/combination_problem4.png> <./pics/combination_problem5.png>] [41 <./pics/tota
+l1.png> <./pics/total2.png> <./pics/total3.png> <./pics/total4.png> <./pics/tot
+al5.png> <./pics/total6.png> <./pics/total7.png> <./pics/total8.png> <./pics/to
+tal9.png> <./pics/total10.png> <./pics/total11.png> <./pics/total12.png> <./pic
+s/total13.png> <./pics/total14.png>]) [42] [43] [44]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex [42
-
-
-
-]
+ (./conclusion.tex
 Chapter 6.
-[43]) [44] (./proj_report_outline.bbl
+[45
+
+
+
+]) [46] (./proj_report_outline.bbl
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no “ in font pplr7t!
- [45
+ [47
 
 
 
-] [46]
+] [48]
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¡ in font pplr7t!
 Missing character: There is no Ì in font pplrc7t!
 Missing character: There is no € in font pplrc7t!
- [47]
+ [49]
 Missing character: There is no â in font pplri7t!
 Missing character: There is no € in font pplri7t!
 Missing character: There is no ” in font pplri7t!
- [48]) [49]
-(./proj_report_outline.aux (./introduction.aux) (./using.aux) (./conclusion.aux
-))
+ [50]) [51]
+(./proj_report_outline.aux (./acknowledge.aux) (./introduction.aux)
+(./using.aux) (./conclusion.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6688 strings out of 493918
- 96618 string characters out of 6158781
- 195826 words of memory out of 5000000
- 9672 multiletter control sequences out of 15000+600000
- 57256 words of font info for 157 fonts, out of 8000000 for 9000
+ 6701 strings out of 493918
+ 96815 string characters out of 6158781
+ 198353 words of memory out of 5000000
+ 9678 multiletter control sequences out of 15000+600000
+ 57233 words of font info for 156 fonts, out of 8000000 for 9000
  774 hyphenation exceptions out of 8191
  42i,20n,39p,803b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
@@ -1486,11 +1458,11 @@ b></usr/pkg/share/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/s
 hare/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/pkg/share/
 texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
-ino/uplri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (55 pages, 3055968 bytes).
+ino/uplri8a.pfb>
+Output written on proj_report_outline.pdf (59 pages, 3055456 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 376 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 346 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

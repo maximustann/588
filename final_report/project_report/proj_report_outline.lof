@@ -1,23 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces \relax }}{6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces User distribution of two web services\relax }}{6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Matrix Flatten\relax }}{13}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Convergence curve\relax }}{17}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces BPSO Optmization Process\relax }}{18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces BPSO particle representation\relax }}{13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Convergence curve by averaging 40 independent runs\relax }}{17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces BPSO Optimization Process\relax }}{18}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces BPSO Experiments: Solutions of Problems 1 $\sim $ 6\relax }}{19}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Mutation\relax }}{23}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Crossover\relax }}{23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces NSPSO, NSGA-II and BPSO Experiments: Solutions from Problems 1 $\sim $ 14\relax }}{26}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces NSPSO, NSGA-II and BPSO Experiments: The non-dominated solutions among the set obtained by 40 independent runs\relax }}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Matrix Flatten\relax }}{28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces curve of three dynamic thresholds\relax }}{30}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Evolutionary process with an adaptive threshold\relax }}{31}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{33}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Static Rounding Function Experiments: Solutions from Problems 2 $\sim $ 5 with different static threshold values\relax }}{34}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Dynamic Rounding Function Experiments : Solutions from Problem 2 $\sim $ 5 with different dynamic functions\relax }}{35}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Adaptive Rounding Function Experiments: Solutions from Problems 2 $\sim $ 5 with adaptive function and reciprocal function\relax }}{37}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Combination of Static Function Experiments: Solutions from Problems 2 $\sim $ 5 with combination of static thresholds and reciprocal function \relax }}{38}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces MOSPCOD, NSPSO and BPSO Experiments: Solutions from Problems 1 $\sim $ 14\relax }}{39}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces BMOPSOCD particle representation\relax }}{30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Curve of three dynamic thresholds\relax }}{32}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Evolutionary process with an adaptive threshold\relax }}{33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Rounding process\relax }}{35}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Static Rounding Function Experiments: Solutions from Problems 2 $\sim $ 5 with different static threshold values\relax }}{36}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Dynamic Rounding Function Experiments : The non-dominated solutions among the sets obtained by 40 independent runs of BMOPSOCD with different dynamic functions\relax }}{37}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Adaptive Rounding Function Experiments: The non-dominated solutions among the sets obtained by 40 independent runs of adaptive function and reciprocal function\relax }}{39}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Combination of Static Function Experiments: The non-dominated solutions among the sets obtained by 40 independent runs of combination of static thresholds and reciprocal function\relax }}{40}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MOPSOCD, NSPSO and BPSO Experiments: The non-dominated solutions among the sets obtained by 40 independent runs of different algorithms\relax }}{41}
 \addvspace {10\p@ }

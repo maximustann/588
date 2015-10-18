@@ -17,26 +17,26 @@ and are independent of the state or context of other services \cite{Ran}.
 A web service is a software system allowing to expose web services via the Internet. The 
 SOA promotes the composition of coarse-grained web services to build more complex
 web applications using standards such as WS-BPEL \cite{std/ws-bpel2}. Because of the convenience, 
-low cost and capacity \cite{Aboolian} to be composed into high-level business processes, Web service technology is becoming increasingly popular.
+low cost and capacity \cite{Aboolian} to be composed into high-level business processes, web service technology is becoming increasingly popular.
 
 
-With the ever increasing number of functional similar web services being available on the the Internet, the Web service providers (WSPs) are trying to improve the quality of service (QoS) to become competitive in the market.  
+With the ever increasing number of functional similar web services being available on the the Internet, the Web Service Providers (WSPs) are trying to improve the quality of service (QoS) to become competitive in the market.  
 QoS, also known as non-functional requirements to  web service, is the degree to which a web service meets specified requirements or user needs \cite{4061431}, such as response time, security and availability. 
 Among numerous QoS measurements, service response time is a critical factor for many real-time services, e.g. traffic service or finance service. 
 
 Service response time has two components: transmission time (variable with message size) and network latency \cite{Johansson}. 
 Study \cite{916684} shows that network latency is a significant component of web service response delay.
 Ignoring network latency will underestimate response time by more than 80 percent \cite{Sun}, since network latency is related to network topology as well as physical distance \cite{distanceMetrics}. 
-To reduce the network latency, large Web service providers like Google, Facebook or Microsoft have their own high-bandwidth data centers. The majority of WSPs
+To reduce the network latency, large web service providers like Google, Facebook or Microsoft have their own high-bandwidth data centers. The majority of WSPs
 can not afford to build a data center, therefore they rent servers provided by Web Server Hosting Providers (WSHPs). WSPs need to allocate their services wisely so that the overall network latency is minimized. 
-According to a popular Web traffic analyzing company Alexa, 96\% of top one million web services were hosted
+According to a popular web traffic analyzing company Alexa, 96\% of top one million web services were hosted
 in heterogeneous server clusters or co-location centers \cite{He} that were widely distributed across different geographic regions. 
 Hence, it is necessary to provide an effective web services allocation guide to WSPs so that they can be benefited.
 
 
 The Web service location allocation problem is very challenging because it is a combinatorial optimization problem. A combinatorial optimization has 
-a huge search space (combinatorial explosion) which is infeasible to use a brute-force approach. Furthermore, Web service location allocation problem is
-essentially a multi-objective optimization problem \cite{Multiobjective} for which there are two conflicting objectives, to minimize latency and total cost.
+a non-continuous and rugged search space, which makes it difficult to search for the optimal solutions. Furthermore, Web service location allocation problem is
+essential a multi-objective optimization problem \cite{Multiobjective} for which there are two conflicting objectives, to minimize latency and total cost.
 Previous researches \cite{Aboolian, Sun} use integer programming and greedy algorithm to solve this problem. However, these approaches are either easy to be stuck at 
 local optima or performs poorly when problem size increases.
 
@@ -51,7 +51,7 @@ Therefore, PSO-based algorithms are chosen to solve the problem.
 
 \section{Objectives}
 The overall goal is to develop a new PSO-based approach to the Web service location allocation problem by considering two potentially 
-conflicting objectives - cost and network latency. 
+conflicting objectives - minimizing cost and minimizing network latency. 
 
 To accomplish this goal, we design three objectives:
 \begin{enumerate}
@@ -68,15 +68,15 @@ To accomplish this goal, we design three objectives:
 \section{Major Contributions}
  The project has three contributions. 
  \begin{enumerate}
- \item This project shows that an aggregating approach could solve the Web service location allocation problem. However, the solutions are lack of diversity.
- \item This project shows that a NSPSO Pareto front approach achieve better performance than aggregating approach. It provides diverse solutions. On the 
-	other hand, its performance drops when the problem size increases.
+ \item This project shows that an aggregating approach converge well and be able to achieve the optimal solution in small problems.
+ \item This project shows that a NSPSO Pareto front approach achieve better performance than aggregating approach. It can provide a set of solutions that are distributed more diversely
+ than the aggregating approach.
   \item This project presents a new multi-objective PSO-based approach with two major improvements. 
       Firstly, We develop a rounding function mechanism which transforms a continuous algorithm to a binary algorithm. 
       The dynamic rounding function provides better results with good diversity. 
       Secondly, we develop an adaptive threshold mechanism which embodies the idea of transfer learning. 
       Similar to dynamic rounding function, it also provides the ability to solve binary problem and promising results.
-      Another desired feature of dynamic and adaptive rounding functions is that they perform well regardless of increasing problem size.
+      Another desired feature of dynamic and adaptive rounding functions is that they perform well regardless of the sizes of problems.
  \end{enumerate}
 
 \section{Organization}
@@ -107,7 +107,7 @@ SOC depends on service-oriented architecture (SOA) to organize applications and 
 
 In order to provide good Quality of Service (QoS), the fundamental objectives are optimizing the properties of QoS such as
 availability, security and response time. Availability \cite{Kritikos} represents the probability that a service in available, a large value denotes the service is always ready to use while a small value denotes the service is unstable. Security \cite{Anisetti} is a measurement of web service of providing access control, encrypting messages. Security is now becoming more important because web service invocation occurs over the public Internet.
-Response time is a major measurement of service performance, lower latency values represent good of a web service. Latency
+Response time is a major measurement of service performance while low latency values indicate low response time. Latency
 is the round trip time between sending a request and receiving the response.  Latency is now the main impediment to improving performance \cite{Flach}. Since network latency is related to network topology
 as well as physical distance \cite{distanceMetrics}, it is hard to reduce latency by analysing the underlying network topology.
 A straightforward way to reduce latency is that treat network as a black box and allocate services according to round trip experiments \cite{cha2008design}. 
@@ -119,23 +119,23 @@ Some service users may have specific requirements such as fast response time and
  WSHPs might charge different prices. There are two ways to reduce the overall cost, deploying less
  services or deploying services in locations with low price.
  In addition, 
- a common constraint is the service number constraint which ensures every service is at least deployed in one location.
+ a common constraint is the service number constraint which ensures every service is deployed at least to one location.
 
 In this project, we consider minimizing latency and overall cost as the objectives because response time is one of the most important service performance measurements and the overall cost is the major concern of WSPs. For the sake of simplicity, we
 only consider a service number constraint.
 
 We introduce some terminologies used in a Web service location allocation context.
 To solve the Web service location allocation problem, 
-some basic information must be provided by \emph{Web service Providers (WSPs)}. A WSP must provide a list 
+some basic information must be provided by \emph{Web Service Providers (WSPs)}. A WSP must provide a list 
 of \emph{user centers} and a list of \emph{candidate locations}. A user center indicates a center city of an \emph{user concentrated area}. 
-This step can be achieved by analyzing Web requests data from existing web services or conducting a market survey. 
+This step can be achieved by analyzing web service requests data from existing web services or conducting a market survey. 
 A candidate location is the geometric location that is suitable to 
 deploy web services (e.g. existing \emph{Web Server Hosting Providers (WSHPs)}). 
-The selection of a candidate location is based on other criteria such as facilities or fees of servers. 
+The selection of a candidate location is based on other criteria such as facilities or rental fees of servers. 
 User centers and candidate locations are not necessarily overlapped.
 A WSP also need to provide \emph{service invocation frequency}, \emph{network latency} and \emph{web service fixed deployment cost} at each candidate location. 
 \emph{Service invocation frequency} denotes the number of invocations from an user center
-to a web service within a period of time; \emph{average network latency} denotes the latency between user centers and candidate locations over a period of time.
+to a web service within a period of time; \emph{network latency} denotes the average latency between user centers and candidate locations over a period of time;
 \emph{web service fixed deployment cost} denotes the rental of a server in each candidate location.
 
 In summary, the list below shows some critical information that should be provided by the WSPs.
@@ -153,7 +153,7 @@ It is worth noting that the data in the above list are changing over time and so
 for example, the invocation frequency from a user center $U$ to a web service $W$ drops rapidly. 
 It indicates that the web service $W$ was once popular in $U$ became unfrequented.
 At this point, existing web services need to be re-allocated in order to adapt the market. Other scenarios such as,
-the network latencies vary in different time period within a day. Existing web services do not need to re-allocated because 
+the network latencies vary in different time periods within a day. Existing web services do not need to re-allocated because 
 the average network latency remains stable.
 
 
@@ -167,7 +167,7 @@ the average network latency remains stable.
        \includegraphics[width=\textwidth]{pics/web2.png}
 	   \caption{web service $B$}
    \end{subfigure}
-   \caption{}
+   \caption{User distribution of two web services}
    \label{fig:users}
 \end{figure}
 
@@ -176,17 +176,17 @@ We illustrate these terminologies with a simple example (Figure \ref{fig:users})
 A Web service provider has $N$ web services initially deployed in San Francisco, California (red pin on Figure \ref{fig:users}). During the next a few months, the WSP constantly received complaints
 from all over the country about the high response time of the services. The WSP seeks some ways to improve the quality. They found a straightforward
 way to re-allocate the web services. Therefore, they conducted a statistical analysis over the 
-raw data that are collected from web services. Based on the data analysis, the WSP found each web service has its own user concentrated area. 
-For example, Figure \ref{fig:users} shows the popularity of web services $A$ and $B$ across the country. Each state is an \emph{user concentrated area}.
+raw data that are collected from web services. Based on the data analysis, the WSP found each web service has its own \emph{user concentrated area} (each state) . 
+For example, Figure \ref{fig:users} shows the popularity of web services $A$ and $B$ across the country.
 Red denotes high popularity while green denotes low. In each state, a city is selected as the \emph{user center} (e.g. the capital city).
 The black pins denote the \emph{candidate locations} which are also cities select from states. 
-As we can see the user distributions are quite distinct for $A$ and $B$. Now WSP would choose locations for these web services.
+As we can see the user distributions are quite distinct for $A$ and $B$. Now the WSP would choose locations for these web services.
 The WSP soon realized the problem is too complex to use any analytical methods for the following reasons:
 \begin{enumerate}
  \item Large number of web services
  \item Large number of candidate locations and user centers
  \item Trade-off between minimizing cost and minimizing network latency
- \item Constraints, e.g minimal web service number requirement
+ \item Constraints (e.g. minimal web service number requirement)
 \end{enumerate}
 
 
@@ -210,7 +210,7 @@ Evolutionary strategies as developed by Rechenberg \cite{rechenberg1971} and Sch
 and continuous, mainly experimental, parameter optimization problems \cite{klock}. 
 
 In the next a few sections, we introduce the background knowledge of each
-algorithm we used in this project.
+algorithm we will use in this project.
 
 
 \subsection{Particle Swarm Optimization (PSO)}
@@ -348,7 +348,7 @@ with an additional local search process.
 
 Previous researchers have studied the Web service location allocation problem with single-objective algorithm, linear programming technique and 
 greedy algorithm. These approaches have many obvious disadvantages (Section \ref{sec:drawbacks}). 
-Web service location-allocation problem in nature is a multi-objective problem which should be addressed by multi-objective algorithms. 
+Web service location allocation problem in nature is a multi-objective problem which should be addressed by multi-objective algorithms. 
 From previous study, we found MOEAs are promising. Specifically, among many MOEAs, 
 multi-objective particle swarm optimization with crowding distance (MOPSOCD) is a recent development. It outperforms other approaches including NSGA-II, PAES
 in various aspects. 

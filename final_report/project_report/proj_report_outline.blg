@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
+A level-1 auxiliary file: acknowledge.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: using.aux
 A level-1 auxiliary file: conclusion.aux
@@ -11,7 +12,7 @@ Warning--empty publisher in rechenberg1971
 Warning--empty school in Sun:2003:
 You've used 62 entries,
             2253 wiz_defined-function locations,
-            925 strings with 16102 characters,
+            926 strings with 16117 characters,
 and the built_in function-call counts, 23972 in all, are:
 = -- 2334
 > -- 1027
